@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+import {OnInit} from '@angular/core';
+import {Hero} from './hero';
+import {HeroService} from './hero.service';
 
 
 
@@ -15,23 +18,15 @@ import {Component} from '@angular/core';
             <input [(ngModel)]="hero.name" placeholder="name">
         </div>
     
-    <div *ngIf="selectedHero">    
-        <h2>{{selectedHero.name}} details</h2>    
-
-        <div><label>Id:</label>{{selectedHero.id}}</div>
-        <div>
-            <label>Name:</label>
-            <input [(ngModel)]="selectedHero.name" placeholder="name">
-        </div>
-    </div>
-
     <h2>my heroes</h2>
     <ul class="heroes">
         <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero==selectedHero">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
         </li>
-    </ul>`,
+    </ul>
+    <my-hero-detail [hero]="selectedHero"> </my-hero-detail>
 
+    `,
     styles: [`
         .selected {
             background-color: #CFD8DC !important;
@@ -79,13 +74,16 @@ import {Component} from '@angular/core';
             height: 1.8em;
             margin-right: .8em;
             border-radius: 4px 0 0 4px;
-        }
-        `]
+        }`]
+        ,
+        providers:[HeroService]
 })
 
-export class AppComponent{
+export class AppComponent implements OnInit{   
+
     title = 'Tour of Heroes';
-    heroes = HEROES;
+    heroes = [];   
+    
     hero : Hero={
         id:1,
         name:'windstorm'
@@ -95,24 +93,16 @@ export class AppComponent{
     onSelect(hero:Hero):void{
         this.selectedHero=hero;
     }
+
+    constructor(private heroService:HeroService){}
+    getHeroes():void{
+        this.heroService.getHeroesSlowly().then(h=>this.heroes=h);
+    }
+    ngOnInit():void{
+       this.getHeroes();
+    }
+
 }
 
-export class Hero{
-    id:number;
-    name:string;
-}
-
-const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
-];
 
 
