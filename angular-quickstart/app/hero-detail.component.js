@@ -24,14 +24,26 @@ var HeroDetailComponent = (function () {
     };
     HeroDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.params.switchMap(function (params) { return _this.heroService.getHero(+params['id']); })
-            .subscribe(function (herodetail) { return _this.hero = herodetail; });
+        this.route.params
+            .switchMap(function (params) { return _this.heroService.getHero(+params['id']); })
+            .subscribe(function (hero) { return _this.getHero(hero); });
     };
+    HeroDetailComponent.prototype.getHero = function (hero) {
+        this.hero = hero;
+    };
+    Object.defineProperty(HeroDetailComponent.prototype, "debug", {
+        get: function () {
+            return JSON.stringify(this.hero);
+        },
+        enumerable: true,
+        configurable: true
+    });
     HeroDetailComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-hero-detail',
-            templateUrl: 'hero-detail.component.html'
+            templateUrl: 'hero-detail.component.html',
+            styleUrls: ['hero-detail.component.css']
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute, common_1.Location])
     ], HeroDetailComponent);

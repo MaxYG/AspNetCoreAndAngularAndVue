@@ -6,13 +6,24 @@ import {HeroService} from './hero.service';
 @Component({
     moduleId:module.id,
     selector:'my-dashboard',
-    templateUrl:'dashboard.component.html'
+    templateUrl:'dashboard.component.html',
+    styleUrls:['dashboard.component.css']
 })
 
-export class DashboardComponent{
+export class DashboardComponent implements OnInit{
     heroes:Hero[]=[];
     constructor(private heroService:HeroService){}
     ngOnInit():void{
-        this.heroService.getHeroesSlowly().then(h=>this.heroes=h.splice(1,5));
+        this.heroService.getHeroes().then(
+            h=>this.getHeroSplice(h)
+        );        
+    }
+    
+    getHeroSplice(h):void{
+        
+        let oldHeroBackup=Object.assign([], h); 
+        console.log({old:"old",oldHero:oldHeroBackup});
+        this.heroes=h.splice(1,5)
+        console.log({new:"new",newHero:this.heroes});
     }
 }

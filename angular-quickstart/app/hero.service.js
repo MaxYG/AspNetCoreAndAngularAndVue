@@ -8,28 +8,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var mock_heroes_1 = require('./mock-heroes');
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+var mock_heroes_1 = require('./mock-heroes');
+require('rxjs/add/operator/toPromise');
 var HeroService = (function () {
-    function HeroService() {
+    function HeroService(http) {
+        this.http = http;
+        this.heroesUrl = 'app/heroes';
     }
     HeroService.prototype.getHeroes = function () {
         return Promise.resolve(mock_heroes_1.HEROES);
     };
-    HeroService.prototype.getHeroesSlowly = function () {
-        var _this = this;
-        return new Promise(function (resolve) {
-            return setTimeout(resolve, 2000);
-        })
-            .then(function () { return _this.getHeroes(); });
+    HeroService.prototype.getHeroesByHttp = function () {
+        return this.http.get(this.heroesUrl)
+            .toPromise()
+            .then(function (response) { return response.json().data; })
+            .catch(this.handleError);
     };
+    // getHeroesSlowly(): Promise<Hero[]> {
+    //   return new Promise<Hero[]>(resolve =>setTimeout(resolve, 2000))
+    //     .then(() => this.getHeroes());
+    // }
     HeroService.prototype.getHero = function (id) {
-        return this.getHeroes()
+        return this.getHeroesByHttp()
             .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
+    };
+    HeroService.prototype.handleError = function (error) {
+        console.error("有一个错误出现", error);
+        return Promise.reject(error.message || error);
     };
     HeroService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], HeroService);
     return HeroService;
 }());
