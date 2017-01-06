@@ -17,13 +17,14 @@ var DashboardComponent = (function () {
     }
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.heroService.getHeroes().then(function (h) { return _this.getHeroSplice(h); });
+        this.heroService.getHeroesByHttp().then(function (h) { return _this.getHeroSplice(h); });
     };
     DashboardComponent.prototype.getHeroSplice = function (h) {
-        var oldHeroBackup = Object.assign([], h);
-        console.log({ old: "old", oldHero: oldHeroBackup });
+        //todo:
+        //let oldHeroBackup=Object.assign([], h); 
+        //console.log({old:"old",oldHero:oldHeroBackup});
         this.heroes = h.splice(1, 5);
-        console.log({ new: "new", newHero: this.heroes });
+        //console.log({new:"new",newHero:this.heroes});
     };
     DashboardComponent = __decorate([
         core_1.Component({

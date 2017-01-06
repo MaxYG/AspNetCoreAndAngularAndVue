@@ -14,16 +14,16 @@ export class DashboardComponent implements OnInit{
     heroes:Hero[]=[];
     constructor(private heroService:HeroService){}
     ngOnInit():void{
-        this.heroService.getHeroes().then(
+        this.heroService.getHeroesByHttp().then(
             h=>this.getHeroSplice(h)
         );        
     }
     
     getHeroSplice(h):void{
-        
-        let oldHeroBackup=Object.assign([], h); 
-        console.log({old:"old",oldHero:oldHeroBackup});
+        //todo:
+        //let oldHeroBackup=Object.assign([], h); 
+        //console.log({old:"old",oldHero:oldHeroBackup});
         this.heroes=h.splice(1,5)
-        console.log({new:"new",newHero:this.heroes});
+        //console.log({new:"new",newHero:this.heroes});
     }
 }

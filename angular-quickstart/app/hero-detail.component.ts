@@ -40,6 +40,10 @@ export class HeroDetailComponent implements OnInit{
     get debug(){
         return JSON.stringify(this.hero);
     }
+
+    save():void{
+        this.heroService.update(this.hero).then(()=>this.goBack());
+    }
 }
 
 

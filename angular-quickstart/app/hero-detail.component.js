@@ -38,6 +38,10 @@ var HeroDetailComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    HeroDetailComponent.prototype.save = function () {
+        var _this = this;
+        this.heroService.update(this.hero).then(function () { return _this.goBack(); });
+    };
     HeroDetailComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

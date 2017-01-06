@@ -12,9 +12,9 @@ export class HeroService {
 
   constructor(private http:Http){}
 
-  getHeroes(): Promise<Hero[]> {
-    return Promise.resolve(HEROES);
-  }
+  // getHeroes(): Promise<Hero[]> {
+  //   return Promise.resolve(HEROES);
+  // }
 
   getHeroesByHttp(): Promise<Hero[]> {
       return this.http.get(this.heroesUrl)
@@ -33,6 +33,33 @@ export class HeroService {
                .then(heroes => heroes.find(hero => hero.id === id));
   }
 
+  update(hero:Hero):Promise<Hero>{
+    const url = `${this.heroesUrl}/${hero.id}`;
+
+    return this.http.put(url,JSON.stringify(hero),{headers:this.headers})
+             .toPromise()
+             .then(()=>hero)
+             .catch(this.handleError);
+  }
+
+  create(name:string):Promise<Hero>{
+    return this.http.post(this.heroesUrl,JSON.stringify({name:name}),{headers:this.headers})
+                    .toPromise()
+                    .then(response=>response.json().data)
+                    .catch(this.handleError)
+
+  }
+  
+  delete(id:number):Promise<Hero>{
+    const url = `${this.heroesUrl}/${id}`;
+    return this.http.delete(url,{headers:this.headers})
+                    .toPromise()
+                    .then(()=>null)
+                    .catch(this.handleError);
+  
+  }
+
+  private headers = new Headers({'Content-Type':'application/json'});
   private heroesUrl='app/heroes';
   private handleError(error:any):Promise<any>{
     console.error("有一个错误出现", error);
