@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit{
         //todo:
         //let oldHeroBackup=Object.assign([], h); 
         //console.log({old:"old",oldHero:oldHeroBackup});
-        this.heroes=h.splice(1,5)
+        this.heroes = h.splice(1, 5);
         //console.log({new:"new",newHero:this.heroes});
     }
 }
