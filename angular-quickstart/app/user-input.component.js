@@ -18,6 +18,7 @@ var UserInputComponent = (function () {
         this.valuesxx = '';
         this.Entervalue = '';
         this.blurvalue = '';
+        this.isShowClass = true;
     }
     UserInputComponent.prototype.onkey = function (event) {
         //this.values+=event.target.value+'  |  ';
@@ -39,7 +40,8 @@ var UserInputComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'user-input',
-            templateUrl: 'user-input.component.html'
+            templateUrl: 'user-input.component.html',
+            styleUrls: ['user-input.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], UserInputComponent);

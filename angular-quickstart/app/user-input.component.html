@@ -28,5 +28,11 @@
            (keyup.enter)="update(boxblur.value)"
            (blur)="update(boxblur.value)">
 
-    <p>{{blurvalue}}</p>
+    <p class="color-green">{{blurvalue}}</p>
+</div>
+
+<div>
+    <div class="color-green" [class.color-red]="color-red">Bad curly</div>
+
+    <div class="color-red font-style-test" [class.color-green]="isShowClass">1111111</div>
 </div>

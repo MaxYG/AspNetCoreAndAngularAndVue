@@ -1,0 +1,18 @@
+.color-red {
+	font-family : fantasy;
+	font-size : xx-large;
+	font-weight : bold;
+	color : #EC5800;
+}
+
+
+.color-green {
+	font-family : fantasy;
+	font-size : xx-large;
+	font-weight : bold;
+	color : #009C04;
+}
+
+.font-style-test{
+    font-style : italic;
+}

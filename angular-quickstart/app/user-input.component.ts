@@ -4,7 +4,9 @@ import {Component} from '@angular/core';
 @Component({
     moduleId:module.id,
     selector:'user-input',
-    templateUrl:'user-input.component.html'    
+    templateUrl:'user-input.component.html',
+    styleUrls:['user-input.component.css']
+
 })
 
 export class UserInputComponent{
@@ -36,4 +38,6 @@ export class UserInputComponent{
         //this.values+=event.target.value+'  |  ';
         this.blurvalue+=value+'  |  ';
     }
+
+    isShowClass=true;
 }
