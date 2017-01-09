@@ -30,11 +30,11 @@ export class HeroesComponent implements OnInit{
     onSelect(hero:Hero):void{
         this.selectedHero=hero;
     }
-
+    
     constructor(
         private heroService:HeroService,
         private route: ActivatedRoute,
-        private router:Router
+        private router:Router,        
      ){}
 
     getHeroes():void{

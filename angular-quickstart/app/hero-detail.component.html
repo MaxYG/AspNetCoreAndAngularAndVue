@@ -5,9 +5,14 @@
         <div><label>Id:</label>{{hero.id}}</div>
         <div>
             <label>Name:</label>
-            <input [(ngModel)]="hero.name" placeholder="name">
+            <input [(ngModel)]="hero.name" placeholder="name" required #spy>
         </div>
-
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+        
+    </div>
+    <div>
+        <br>TODO: remove this: {{spy.className}}
+    </div>
         <button (click)="goBack()">Back</button>
         <button (click)="save()">save</button>
 </div>

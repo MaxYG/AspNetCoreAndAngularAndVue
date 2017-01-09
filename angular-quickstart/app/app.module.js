@@ -23,6 +23,7 @@ var hero_detail_component_1 = require('./hero-detail.component');
 var hero_service_1 = require('./hero.service');
 var dashboard_component_1 = require('./dashboard.component');
 var hero_search_component_1 = require('./hero-search.component');
+var user_input_component_1 = require('./user-input.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -40,7 +41,8 @@ var AppModule = (function () {
                 heroes_component_1.HeroesComponent,
                 hero_detail_component_1.HeroDetailComponent,
                 dashboard_component_1.DashboardComponent,
-                hero_search_component_1.HeroSearchComponent
+                hero_search_component_1.HeroSearchComponent,
+                user_input_component_1.UserInputComponent
             ],
             providers: [
                 hero_service_1.HeroService

@@ -7,9 +7,11 @@ import { HEROES } from './mock-heroes';
 
 import 'rxjs/add/operator/toPromise';
 
+//Injectable 
 @Injectable()
 export class HeroService {
-
+  
+//todo:工厂方法注入可以研究下
   constructor(private http:Http){}
 
   // getHeroes(): Promise<Hero[]> {

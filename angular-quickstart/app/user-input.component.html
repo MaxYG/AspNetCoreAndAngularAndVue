@@ -1,0 +1,32 @@
+
+
+<div>
+    <input (keyup)="onkey($event)" />
+
+    <p>{{values}}</p>
+</div>
+<div>
+    <input #box (keyup)="0"/>
+    <p>{{box.value}}</p>
+
+</div>
+
+<div>
+    <input #boxx (keyup)="onkeyxx(boxx.value)"/>
+    <p>{{valuesxx}}</p>
+</div>
+
+<div>
+    enter
+    <input #boxEnter (keyup.enter)="onEnter(boxEnter.value)">
+    <p>{{Entervalue}}</p>
+</div>
+
+<div>
+    blur
+    <input #boxblur
+           (keyup.enter)="update(boxblur.value)"
+           (blur)="update(boxblur.value)">
+
+    <p>{{blurvalue}}</p>
+</div>
