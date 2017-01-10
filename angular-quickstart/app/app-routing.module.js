@@ -15,7 +15,7 @@ var hero_detail_component_1 = require('./hero-detail.component');
 var dashboard_component_1 = require('./dashboard.component');
 var user_input_component_1 = require('./user-input.component');
 var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    { path: '', redirectTo: '/user-input', pathMatch: 'full' },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
     { path: 'detail/:id', component: hero_detail_component_1.HeroDetailComponent },
     { path: 'user-input', component: user_input_component_1.UserInputComponent },

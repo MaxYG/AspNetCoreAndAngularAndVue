@@ -20,3 +20,8 @@ es6
 6.数组引用怎么整 差看demo dashboard例子
 7.<input #heroName /> 这个语法...
 8.内存模拟 id会自增
+
+
+
+angularjs2 写法
+样式最好不要用- eg: color-red 用 colorRed  ngstyle 和ngclass都可以用

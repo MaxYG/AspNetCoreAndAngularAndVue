@@ -8,7 +8,7 @@ import {DashboardComponent} from './dashboard.component';
 import {UserInputComponent} from './user-input.component';
 
 const routes:Routes=[
-   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+   { path: '', redirectTo: '/user-input', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'user-input', component: UserInputComponent },
