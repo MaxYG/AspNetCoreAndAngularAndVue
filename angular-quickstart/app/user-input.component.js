@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
+var core_1 = require("@angular/core");
+var mock_heroes_1 = require("./mock-heroes");
 var UserInputComponent = (function () {
     function UserInputComponent() {
         this.values = '';
@@ -96,24 +96,24 @@ var UserInputComponent = (function () {
     UserInputComponent.prototype.callFax = function (fax) {
         alert(fax);
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
-    ], UserInputComponent.prototype, "size", void 0);
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], UserInputComponent.prototype, "sizeChange", void 0);
-    UserInputComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'user-input',
-            styleUrls: ['user-input.component.css'],
-            templateUrl: 'user-input.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], UserInputComponent);
     return UserInputComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], UserInputComponent.prototype, "size", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], UserInputComponent.prototype, "sizeChange", void 0);
+UserInputComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'user-input',
+        styleUrls: ['user-input.component.css'],
+        templateUrl: 'user-input.component.html'
+    }),
+    __metadata("design:paramtypes", [])
+], UserInputComponent);
 exports.UserInputComponent = UserInputComponent;
 //# sourceMappingURL=user-input.component.js.map

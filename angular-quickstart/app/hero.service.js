@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/toPromise');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/toPromise");
 //Injectable 
 var HeroService = (function () {
     //todo:工厂方法注入可以研究下
@@ -60,11 +60,11 @@ var HeroService = (function () {
         console.error("有一个错误出现", error);
         return Promise.reject(error.message || error);
     };
-    HeroService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], HeroService);
     return HeroService;
 }());
+HeroService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], HeroService);
 exports.HeroService = HeroService;
 //# sourceMappingURL=hero.service.js.map

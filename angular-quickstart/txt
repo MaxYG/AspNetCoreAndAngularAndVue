@@ -25,3 +25,8 @@ es6
 
 angularjs2 写法
 样式最好不要用- eg: color-red 用 colorRed  ngstyle 和ngclass都可以用
+
+遇到问题 
+1.在国际化时遇到问题 升级部分包
+TypeError: Cannot read property 'create' of undefined
+    at Function.Extractor.create (F:\study\Angularjs2

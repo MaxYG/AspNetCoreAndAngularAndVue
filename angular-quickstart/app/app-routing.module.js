@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var heroes_component_1 = require('./heroes.component');
-var hero_detail_component_1 = require('./hero-detail.component');
-var dashboard_component_1 = require('./dashboard.component');
-var user_input_component_1 = require('./user-input.component');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var heroes_component_1 = require("./heroes.component");
+var hero_detail_component_1 = require("./hero-detail.component");
+var dashboard_component_1 = require("./dashboard.component");
+var user_input_component_1 = require("./user-input.component");
 var routes = [
     { path: '', redirectTo: '/user-input', pathMatch: 'full' },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
@@ -24,14 +24,14 @@ var routes = [
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
-    AppRoutingModule = __decorate([
-        core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(routes)],
-            exports: [router_1.RouterModule]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppRoutingModule);
     return AppRoutingModule;
 }());
+AppRoutingModule = __decorate([
+    core_1.NgModule({
+        imports: [router_1.RouterModule.forRoot(routes)],
+        exports: [router_1.RouterModule]
+    }),
+    __metadata("design:paramtypes", [])
+], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
 //# sourceMappingURL=app-routing.module.js.map
