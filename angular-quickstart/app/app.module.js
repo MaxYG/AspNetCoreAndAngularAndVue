@@ -24,6 +24,7 @@ var hero_service_1 = require("./hero.service");
 var dashboard_component_1 = require("./dashboard.component");
 var hero_search_component_1 = require("./hero-search.component");
 var user_input_component_1 = require("./user-input.component");
+var internationalization_component_1 = require("./internationalization.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -44,7 +45,8 @@ AppModule = __decorate([
             hero_detail_component_1.HeroDetailComponent,
             dashboard_component_1.DashboardComponent,
             hero_search_component_1.HeroSearchComponent,
-            user_input_component_1.UserInputComponent
+            user_input_component_1.UserInputComponent,
+            internationalization_component_1.InternationalizationComponent
         ],
         providers: [
             hero_service_1.HeroService

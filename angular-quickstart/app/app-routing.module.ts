@@ -6,12 +6,14 @@ import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
 import {DashboardComponent} from './dashboard.component';
 import {UserInputComponent} from './user-input.component';
+import {InternationalizationComponent} from './internationalization.component';
 
 const routes:Routes=[
-   { path: '', redirectTo: '/user-input', pathMatch: 'full' },
+   { path: '', redirectTo: '/internationalization', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'user-input', component: UserInputComponent },
+  { path: 'internationalization', component: InternationalizationComponent },  
   { path: 'heroes',     component: HeroesComponent }
 ];
 
