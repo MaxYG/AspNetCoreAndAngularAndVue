@@ -1,2 +1,9 @@
 /angular-quickstart/node_modules
 /Angularjs2TypeScriptStudy/packages
+/AngularjsQuickStart/packages
+/AngularjsQuickStart/Data/bin
+/AngularjsQuickStart/Data/obj/Debug/*.Cache
+/AngularjsQuickStart/Repository/obj/Debug/*.cache
+/AngularjsQuickStart/Service/obj/Debug/*.cache
+/AngularjsQuickStart/ViewModel/obj/Debug/*.cache
+/AngularjsQuickStart/Data/obj
