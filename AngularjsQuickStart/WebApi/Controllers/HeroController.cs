@@ -15,8 +15,9 @@ namespace WebAPI.Controllers
         {
             _heroService = heroService;
         }
-        
-        public List<HeroViewModel> Get()
+        [Route("api/heros")]
+        [HttpGet]
+        public List<HeroViewModel> GetHeros()
         {
             var result=_heroService.GetHeros().Select(x=>new HeroViewModel()
             {

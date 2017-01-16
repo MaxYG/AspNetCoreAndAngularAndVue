@@ -26,6 +26,9 @@ namespace Data.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Heros.AddOrUpdate(h=>h.Name,
+                new Hero() {Name = "Hello Hero"});
         }
     }
 }
