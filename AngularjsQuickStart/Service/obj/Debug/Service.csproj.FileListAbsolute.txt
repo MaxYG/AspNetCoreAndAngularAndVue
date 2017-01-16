@@ -1,0 +1,16 @@
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Service.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Service.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\obj\Debug\Service.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\obj\Debug\Service.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Service.dll.config
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Castle.Core.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Castle.Windsor.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Castle.Core.xml
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Castle.Windsor.xml
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Data.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Repository.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\EntityFramework.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Data.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\Repository.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Service\bin\Debug\EntityFramework.xml

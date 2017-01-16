@@ -1,0 +1,16 @@
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Data.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Data.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Data.dll.config
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\EntityFramework.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\EntityFramework.xml
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.Migrations.AddHeroTable.resources
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.csproj.GenerateResource.Cache
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Castle.Core.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Castle.Windsor.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Castle.Core.xml
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Castle.Windsor.xml

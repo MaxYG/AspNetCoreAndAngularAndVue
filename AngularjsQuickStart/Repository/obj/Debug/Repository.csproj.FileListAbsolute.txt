@@ -1,0 +1,16 @@
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Repository.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Repository.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\obj\Debug\Repository.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\obj\Debug\Repository.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Repository.dll.config
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Castle.Core.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Castle.Windsor.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Data.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\EntityFramework.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\EntityFramework.SqlServer.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Data.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Castle.Core.xml
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\Castle.Windsor.xml
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\EntityFramework.xml
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\Repository\bin\Debug\EntityFramework.SqlServer.xml

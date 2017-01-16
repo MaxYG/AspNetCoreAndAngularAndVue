@@ -1,0 +1,5 @@
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\bin\Debug\ViewModel.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\bin\Debug\ViewModel.pdb
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\ViewModel.dll
+F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\ViewModel.pdb
