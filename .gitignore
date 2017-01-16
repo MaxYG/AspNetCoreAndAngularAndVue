@@ -11,3 +11,17 @@
 /AngularjsQuickStart/WebApi/bin/*.xml
 /AngularjsQuickStart/WebApi/bin/*.dll
 /AngularjsQuickStart/WebApi/obj/Debug/*.cache
+/AngularjsQuickStart/ViewModel/bin/Debug/*.dll
+/AngularjsQuickStart/ViewModel/bin/Debug/ViewModel.pdb
+/AngularjsQuickStart/ViewModel/obj/Debug/ViewModel.dll
+/AngularjsQuickStart/ViewModel/obj/Debug/ViewModel.pdb
+/AngularjsQuickStart/Web/Bin/*.dll
+/AngularjsQuickStart/Repository/bin/Debug/*.dll
+/AngularjsQuickStart/Repository/bin/Debug/*.xml
+/AngularjsQuickStart/Repository/bin/*
+/AngularjsQuickStart/Repository/obj/*
+/AngularjsQuickStart/Service/bin/*
+/AngularjsQuickStart/Service/obj/*
+/AngularjsQuickStart/WebApi/bin/*
+/AngularjsQuickStart/WebApi/obj/*
+/AngularjsQuickStart/ViewModel/bin/*

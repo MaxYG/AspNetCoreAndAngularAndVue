@@ -3,3 +3,10 @@ F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\bin\Debug\ViewModel.
 F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\Model.csprojResolveAssemblyReference.cache
 F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\ViewModel.dll
 F:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\ViewModel.pdb
+D:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\bin\Debug\ViewModel.dll
+D:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\bin\Debug\ViewModel.pdb
+D:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\bin\Debug\Castle.Core.dll
+D:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\bin\Debug\Castle.Core.xml
+D:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\ViewModel.dll
+D:\study\Angularjs2TypeScript\AngularjsQuickStart\ViewModel\obj\Debug\ViewModel.pdb

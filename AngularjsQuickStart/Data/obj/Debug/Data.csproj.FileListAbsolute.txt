@@ -25,7 +25,6 @@ D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Castle.Core.xml
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\Castle.Windsor.xml
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\EntityFramework.xml
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\bin\Debug\EntityFramework.SqlServer.xml
-D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.Migrations.AddHeroTable.resources
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.csproj.GenerateResource.Cache
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.dll
