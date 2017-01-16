@@ -7,3 +7,7 @@
 /AngularjsQuickStart/Service/obj/Debug/*.cache
 /AngularjsQuickStart/ViewModel/obj/Debug/*.cache
 /AngularjsQuickStart/Data/obj
+/AngularjsQuickStart/.vs/AngularjsQuickStart/v14/*.suo
+/AngularjsQuickStart/WebApi/bin/*.xml
+/AngularjsQuickStart/WebApi/bin/*.dll
+/AngularjsQuickStart/WebApi/obj/Debug/*.cache
