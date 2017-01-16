@@ -17,13 +17,14 @@ var HeroService = (function () {
     function HeroService(http) {
         this.http = http;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        this.heroesUrl = 'app/heroes';
+        this.webApiUrl = 'http://localhost:36385/';
     }
     // getHeroes(): Promise<Hero[]> {
     //   return Promise.resolve(HEROES);
     // }
     HeroService.prototype.getHeroesByHttp = function () {
-        return this.http.get(this.heroesUrl)
+        var getApi = this.webApiUrl + "api/heros";
+        return this.http.get(getApi)
             .toPromise()
             .then(function (response) { return response.json().data; })
             .catch(this.handleError);
@@ -37,20 +38,20 @@ var HeroService = (function () {
             .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
     };
     HeroService.prototype.update = function (hero) {
-        var url = this.heroesUrl + "/" + hero.id;
+        var url = this.webApiUrl + "/" + hero.id;
         return this.http.put(url, JSON.stringify(hero), { headers: this.headers })
             .toPromise()
             .then(function () { return hero; })
             .catch(this.handleError);
     };
     HeroService.prototype.create = function (name) {
-        return this.http.post(this.heroesUrl, JSON.stringify({ name: name }), { headers: this.headers })
+        return this.http.post(this.webApiUrl, JSON.stringify({ name: name }), { headers: this.headers })
             .toPromise()
             .then(function (response) { return response.json().data; })
             .catch(this.handleError);
     };
     HeroService.prototype.delete = function (id) {
-        var url = this.heroesUrl + "/" + id;
+        var url = this.webApiUrl + "/" + id;
         return this.http.delete(url, { headers: this.headers })
             .toPromise()
             .then(function () { return null; })

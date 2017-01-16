@@ -29,3 +29,4 @@ D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.Migrations
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.csproj.GenerateResource.Cache
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.dll
 D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.pdb
+D:\study\Angularjs2TypeScript\AngularjsQuickStart\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache

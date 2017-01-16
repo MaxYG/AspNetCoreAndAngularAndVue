@@ -19,7 +19,8 @@ export class HeroService {
   // }
 
   getHeroesByHttp(): Promise<Hero[]> {
-      return this.http.get(this.heroesUrl)
+     const getApi=this.webApiUrl+"api/heros";  
+      return this.http.get(getApi)
       .toPromise()
       .then(response=>response.json().data as Hero[])
       .catch(this.handleError);     
@@ -36,7 +37,7 @@ export class HeroService {
   }
 
   update(hero:Hero):Promise<Hero>{
-    const url = `${this.heroesUrl}/${hero.id}`;
+    const url = `${this.webApiUrl}/${hero.id}`;
 
     return this.http.put(url,JSON.stringify(hero),{headers:this.headers})
              .toPromise()
@@ -45,7 +46,7 @@ export class HeroService {
   }
 
   create(name:string):Promise<Hero>{
-    return this.http.post(this.heroesUrl,JSON.stringify({name:name}),{headers:this.headers})
+    return this.http.post(this.webApiUrl,JSON.stringify({name:name}),{headers:this.headers})
                     .toPromise()
                     .then(response=>response.json().data)
                     .catch(this.handleError)
@@ -53,7 +54,7 @@ export class HeroService {
   }
   
   delete(id:number):Promise<Hero>{
-    const url = `${this.heroesUrl}/${id}`;
+    const url = `${this.webApiUrl}/${id}`;
     return this.http.delete(url,{headers:this.headers})
                     .toPromise()
                     .then(()=>null)
@@ -62,7 +63,7 @@ export class HeroService {
   }
 
   private headers = new Headers({'Content-Type':'application/json'});
-  private heroesUrl='app/heroes';
+  private webApiUrl='http://localhost:36385/';
   private handleError(error:any):Promise<any>{
     console.error("有一个错误出现", error);
     return Promise.reject(error.message || error);

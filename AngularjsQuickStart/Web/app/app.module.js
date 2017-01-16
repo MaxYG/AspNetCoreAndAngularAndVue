@@ -14,6 +14,8 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 require("./rxjs-extensions");
 var app_routing_module_1 = require("./app-routing.module");
+//imports for loading & configuring the in memory web api
+//import {InMemoryDataService} from './in-memory-data.service';
 var app_component_1 = require("./app.component");
 var heroes_component_1 = require("./heroes.component");
 var hero_detail_component_1 = require("./hero-detail.component");
