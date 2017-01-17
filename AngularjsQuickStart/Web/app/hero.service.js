@@ -18,40 +18,52 @@ var HeroService = (function () {
         this.http = http;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.webApiUrl = 'http://localhost:36385/';
+        this.addHeroWebApiUrl = this.webApiUrl + "/api/heros/";
+        this.updateHeroWebApiUrl = this.webApiUrl + "/api/heros/";
+        this.deleteHeroWebApiUrl = this.webApiUrl + "/api/heros/";
     }
     // getHeroes(): Promise<Hero[]> {
     //   return Promise.resolve(HEROES);
     // }
     HeroService.prototype.getHeroesByHttp = function () {
+        var _this = this;
         var getApi = this.webApiUrl + "api/heros";
         return this.http.get(getApi)
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (response) { return _this.returnHeros(response); })
             .catch(this.handleError);
+    };
+    HeroService.prototype.returnHeros = function (response) {
+        console.log("return hero response", response.json());
+        return response.json();
     };
     // getHeroesSlowly(): Promise<Hero[]> {
     //   return new Promise<Hero[]>(resolve =>setTimeout(resolve, 2000))
     //     .then(() => this.getHeroes());
     // }
-    HeroService.prototype.getHero = function (id) {
+    HeroService.prototype.getHero = function (Id) {
+        var _this = this;
         return this.getHeroesByHttp()
-            .then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
+            .then(function (heroes) { return _this.findHero(heroes, Id); });
+    };
+    HeroService.prototype.findHero = function (heroes, Id) {
+        return heroes.find(function (hero) { return hero.Id === Id; });
     };
     HeroService.prototype.update = function (hero) {
-        var url = this.webApiUrl + "/" + hero.id;
-        return this.http.put(url, JSON.stringify(hero), { headers: this.headers })
+        var url = this.webApiUrl + "/" + hero.Id;
+        return this.http.put(this.updateHeroWebApiUrl, JSON.stringify(hero), { headers: this.headers })
             .toPromise()
             .then(function () { return hero; })
             .catch(this.handleError);
     };
     HeroService.prototype.create = function (name) {
-        return this.http.post(this.webApiUrl, JSON.stringify({ name: name }), { headers: this.headers })
+        return this.http.post(this.addHeroWebApiUrl, JSON.stringify({ Name: name }), { headers: this.headers })
             .toPromise()
             .then(function (response) { return response.json().data; })
             .catch(this.handleError);
     };
     HeroService.prototype.delete = function (id) {
-        var url = this.webApiUrl + "/" + id;
+        var url = this.deleteHeroWebApiUrl + "/" + id;
         return this.http.delete(url, { headers: this.headers })
             .toPromise()
             .then(function () { return null; })

@@ -1,13 +1,13 @@
 {{debug}}
 <div *ngIf="hero">    
-        <h2>{{hero.name}} details</h2>    
+        <h2>{{hero.Name}} details</h2>    
 
-        <div><label>Id:</label>{{hero.id}}</div>
+        <div><label>Id:</label>{{hero.Id}}</div>
         <div>
             <label>Name:</label>
-            <input [(ngModel)]="hero.name" placeholder="name" required #spy>
+            <input [(ngModel)]="hero.Name" placeholder="name" required #spy>
         </div>
-    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+    <div [hidden]="Name.valid || Name.pristine" class="alert alert-danger">
         
     </div>
     <div>

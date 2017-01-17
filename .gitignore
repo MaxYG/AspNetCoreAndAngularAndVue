@@ -2,11 +2,10 @@
 /Angularjs2TypeScriptStudy/packages
 /AngularjsQuickStart/packages
 /AngularjsQuickStart/Data/bin
-/AngularjsQuickStart/Data/obj/Debug/*.Cache
-/AngularjsQuickStart/Repository/obj/Debug/*.cache
-/AngularjsQuickStart/Service/obj/Debug/*.cache
-/AngularjsQuickStart/ViewModel/obj/Debug/*.cache
-/AngularjsQuickStart/Data/obj
+/AngularjsQuickStart/Data/obj/
+/AngularjsQuickStart/Repository/obj/
+/AngularjsQuickStart/Service/obj/
+/AngularjsQuickStart/ViewModel/obj/
 /AngularjsQuickStart/.vs/AngularjsQuickStart/v14/*.suo
 /AngularjsQuickStart/WebApi/bin/*.xml
 /AngularjsQuickStart/WebApi/bin/*.dll
@@ -34,3 +33,9 @@
 
 
 /AngularjsQuickStart/Web/node_modules
+/AngularjsQuickStart/Data/obj
+/AngularjsQuickStart/Repository/obj
+/AngularjsQuickStart/Service/obj
+
+/AngularjsQuickStart/ViewModel/obj
+/AngularjsQuickStart/WebApi/obj

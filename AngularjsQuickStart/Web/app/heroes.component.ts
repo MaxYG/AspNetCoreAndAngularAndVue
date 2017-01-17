@@ -22,8 +22,8 @@ export class HeroesComponent implements OnInit{
     heroes = [];   
     
     hero : Hero={
-        id:1,
-        name:'windstorm'
+        Id : 1,
+        Name : 'windstorm'
     };
 
     selectedHero:Hero;
@@ -38,7 +38,7 @@ export class HeroesComponent implements OnInit{
      ){}
 
     getHeroes():void{
-        this.heroService.getHeroesByHttp().then(h=>this.heroes=h);
+        this.heroService.getHeroesByHttp().then(h=>this.initHeros(h));
     }
 
     ngOnInit():void{
@@ -46,7 +46,7 @@ export class HeroesComponent implements OnInit{
     }
 
     gotoDetail():void{
-        this.router.navigate(['/detail',this.selectedHero.id]);
+        this.router.navigate(['/detail',this.selectedHero.Id]);
     }
 
     add(name:string):void{
@@ -60,13 +60,18 @@ export class HeroesComponent implements OnInit{
     }
 
     delete(hero:Hero):void{
-        this.heroService.delete(hero.id)
+        this.heroService.delete(hero.Id)
                         .then(()=>{
                             this.heroes=this.heroes.filter(h=>h!==hero);
                             if(this.selectedHero===hero){
                                 this.selectedHero=null;
                             }
                         })
+    }
+
+    initHeros(heros):void{
+        this.heroes=heros;
+        console.log("all heros:", this.heroes);
     }
 
 }

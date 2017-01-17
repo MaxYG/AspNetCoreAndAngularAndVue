@@ -11,7 +11,7 @@ import {InternationalizationComponent} from './internationalization.component';
 const routes:Routes=[
    { path: '', redirectTo: '/internationalization', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
-  { path: 'detail/:id', component: HeroDetailComponent },
+  { path: 'detail/:Id', component: HeroDetailComponent },
   { path: 'user-input', component: UserInputComponent },
   { path: 'internationalization', component: InternationalizationComponent },  
   { path: 'heroes',     component: HeroesComponent }

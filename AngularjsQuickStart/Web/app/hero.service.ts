@@ -22,31 +22,40 @@ export class HeroService {
      const getApi=this.webApiUrl+"api/heros";  
       return this.http.get(getApi)
       .toPromise()
-      .then(response=>response.json().data as Hero[])
+      .then(response=>this.returnHeros(response))
       .catch(this.handleError);     
   }
 
+  returnHeros(response):Promise<Hero[]>{
+      console.log("return hero response",response.json());
+      return response.json();
+
+  }
   // getHeroesSlowly(): Promise<Hero[]> {
   //   return new Promise<Hero[]>(resolve =>setTimeout(resolve, 2000))
   //     .then(() => this.getHeroes());
   // }
 
-  getHero(id: number): Promise<Hero> {
+  getHero(Id: number): Promise<Hero> {
     return this.getHeroesByHttp()
-               .then(heroes => heroes.find(hero => hero.id === id));
+               .then(heroes => this.findHero(heroes,Id));
+  }
+
+  findHero(heroes,Id):Promise<Hero>{
+      return heroes.find(hero => hero.Id === Id);
   }
 
   update(hero:Hero):Promise<Hero>{
-    const url = `${this.webApiUrl}/${hero.id}`;
+    const url = `${this.webApiUrl}/${hero.Id}`;
 
-    return this.http.put(url,JSON.stringify(hero),{headers:this.headers})
+    return this.http.put(this.updateHeroWebApiUrl,JSON.stringify(hero),{headers:this.headers})
              .toPromise()
              .then(()=>hero)
              .catch(this.handleError);
   }
 
   create(name:string):Promise<Hero>{
-    return this.http.post(this.webApiUrl,JSON.stringify({name:name}),{headers:this.headers})
+    return this.http.post(this.addHeroWebApiUrl,JSON.stringify({Name:name}),{headers:this.headers})
                     .toPromise()
                     .then(response=>response.json().data)
                     .catch(this.handleError)
@@ -54,7 +63,7 @@ export class HeroService {
   }
   
   delete(id:number):Promise<Hero>{
-    const url = `${this.webApiUrl}/${id}`;
+    const url = `${this.deleteHeroWebApiUrl}/${id}`;
     return this.http.delete(url,{headers:this.headers})
                     .toPromise()
                     .then(()=>null)
@@ -64,6 +73,9 @@ export class HeroService {
 
   private headers = new Headers({'Content-Type':'application/json'});
   private webApiUrl='http://localhost:36385/';
+  private addHeroWebApiUrl=this.webApiUrl+"/api/heros/";
+  private updateHeroWebApiUrl=this.webApiUrl+"/api/heros/";
+  private deleteHeroWebApiUrl=this.webApiUrl+"/api/heros/";
   private handleError(error:any):Promise<any>{
     console.error("有一个错误出现", error);
     return Promise.reject(error.message || error);

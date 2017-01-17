@@ -120,6 +120,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="proxy.html" />
+    <Content Include="proxy_files\xdomain.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
