@@ -2,13 +2,11 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="8def8481e91291a52f9baa31cbdb313e6a6ca02b" datatype="html">
+      <trans-unit id="af2ccf4b5dba59616e92cf1531505af02da8f6d2" datatype="html">
         <source>Hello i18n!</source>
-        <target>你好 i18n<target/>
-      </trans-unit>
-      <trans-unit id="801ebd128d066af165032908048bf85435e62e0a" datatype="html">
-        <source>Hello world!</source>
-        <target>你好<target/>
+        <target>你好 i18n!</target>
+        <note priority="1" from="description">An introduction header for this sample</note>
+        <note priority="1" from="meaning">User welcome</note>
       </trans-unit>
     </body>
   </file>

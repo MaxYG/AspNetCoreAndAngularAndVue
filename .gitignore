@@ -25,3 +25,11 @@
 /AngularjsQuickStart/WebApi/bin/*
 /AngularjsQuickStart/WebApi/obj/*
 /AngularjsQuickStart/ViewModel/bin/*
+
+/AngularjsQuickStart/*.ncrunchsolution
+
+/AngularjsQuickStart/ViewModel/*.ncrunchproject
+
+/AngularjsQuickStart/Data/*.ncrunchproject
+
+/AngularjsQuickStart/Web/node-modules/*
