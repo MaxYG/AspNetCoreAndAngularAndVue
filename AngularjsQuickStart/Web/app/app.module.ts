@@ -12,13 +12,13 @@ import {AppRoutingModule} from './app-routing.module';
 //import {InMemoryDataService} from './in-memory-data.service';
 
 import {AppComponent} from './app.component';
-import {HeroesComponent} from './heroes.component';
-import {HeroDetailComponent} from './hero-detail.component';
-import {HeroService} from './hero.service';
-import {DashboardComponent} from './dashboard.component';
-import {HeroSearchComponent} from './hero-search.component';
-import {UserInputComponent} from './user-input.component';
-import {InternationalizationComponent} from './internationalization.component';
+import {HeroesComponent} from './hero/heroes.component';
+import {HeroDetailComponent} from './hero/hero-detail.component';
+import {HeroService} from './hero/hero.service';
+import {DashboardComponent} from './hero/dashboard.component';
+import {HeroSearchComponent} from './hero/hero-search.component';
+import {UserInputComponent} from './hero/user-input.component';
+import {InternationalizationComponent} from './hero/internationalization.component';
 
 @NgModule({
     imports: [

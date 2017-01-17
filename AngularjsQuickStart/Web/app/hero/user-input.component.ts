@@ -17,9 +17,9 @@ export class UserInputComponent{
         this.values+=event.key+'  |  ';
     }
 
-    // onkey(event:KeyboardEvent){
-    //     this.values+=(<HTMLInputElement>event.target).value+"   |   ";
-    // }
+    //  onkey(event:KeyboardEvent){
+    //      this.values+=(<HTMLInputElement>event.target).value+"   |   ";
+    //  }
 
      valuesxx='';
     onkeyxx(value:string){
@@ -49,16 +49,16 @@ export class UserInputComponent{
     }
 
     hero:Hero={
-        id:2,
-        name:""
+        Id:2,
+        Name:""
     }
 
     heroes:Hero[]=HEROES;
 
     deleteHeroRequest=new EventEmitter<Hero>();
     deleteHero(hero):void{
-         alert(hero.id);
-        alert(this.hero.id);
+         alert(hero.Id);
+        alert(this.hero.Id);
         this.deleteHeroRequest.emit(this.hero);
     }
 
@@ -78,8 +78,8 @@ export class UserInputComponent{
         this.resize(+1);
     }
 
-      setUpperCaseName(name: string) {          
-            this.hero.name = name.toUpperCase();
+      setUpperCaseName(Name: string) {          
+            this.hero.Name = Name.toUpperCase();
         }
 
         isUnchanged=false;
@@ -104,12 +104,13 @@ export class UserInputComponent{
         toeChoice="Eenie";
 
         trackByHeroes(index:number,hero:Hero){
-            return hero.id
+            return hero.Id
         }
 
         callPhone(phone:string){
             alert(phone);
         }
+
         callFax(fax:string){
             alert(fax);
         }

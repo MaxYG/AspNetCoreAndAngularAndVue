@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {RouterModule,Routes} from '@angular/router';
 
 
-import {HeroesComponent} from './heroes.component';
-import {HeroDetailComponent} from './hero-detail.component';
-import {DashboardComponent} from './dashboard.component';
-import {UserInputComponent} from './user-input.component';
-import {InternationalizationComponent} from './internationalization.component';
+import {HeroesComponent} from './hero/heroes.component';
+import {HeroDetailComponent} from './hero/hero-detail.component';
+import {DashboardComponent} from './hero/dashboard.component';
+import {UserInputComponent} from './hero/user-input.component';
+import {InternationalizationComponent} from './hero/internationalization.component';
 
 const routes:Routes=[
    { path: '', redirectTo: '/internationalization', pathMatch: 'full' },

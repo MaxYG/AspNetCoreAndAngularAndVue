@@ -39,3 +39,8 @@
 
 /AngularjsQuickStart/ViewModel/obj
 /AngularjsQuickStart/WebApi/obj
+
+/AngularjsQuickStart/Repository/*.ncrunchproject
+
+/AngularjsQuickStart/Service/*.ncrunchproject
+/AngularjsQuickStart/WebApi/*.ncrunchproject

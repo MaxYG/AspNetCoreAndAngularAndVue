@@ -10,11 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var heroes_component_1 = require("./heroes.component");
-var hero_detail_component_1 = require("./hero-detail.component");
-var dashboard_component_1 = require("./dashboard.component");
-var user_input_component_1 = require("./user-input.component");
-var internationalization_component_1 = require("./internationalization.component");
+var heroes_component_1 = require("./hero/heroes.component");
+var hero_detail_component_1 = require("./hero/hero-detail.component");
+var dashboard_component_1 = require("./hero/dashboard.component");
+var user_input_component_1 = require("./hero/user-input.component");
+var internationalization_component_1 = require("./hero/internationalization.component");
 var routes = [
     { path: '', redirectTo: '/internationalization', pathMatch: 'full' },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },

@@ -37,7 +37,8 @@ DashboardComponent = __decorate([
         templateUrl: 'dashboard.component.html',
         styleUrls: ['dashboard.component.css']
     }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService])
+    __metadata("design:paramtypes", [typeof (_a = typeof hero_service_1.HeroService !== "undefined" && hero_service_1.HeroService) === "function" && _a || Object])
 ], DashboardComponent);
 exports.DashboardComponent = DashboardComponent;
+var _a;
 //# sourceMappingURL=dashboard.component.js.map

@@ -3,7 +3,7 @@
 <form (ngSubmit)="onSubmit(theForm)" #theForm="ngForm">
   <div class="form-group">
     <label for="name">Name</label>
-    <input class="form-control" name="name" required [(ngModel)]="currentHero.firstName">
+    <input class="form-control" name="name" required [(ngModel)]="hero.Name">
   </div>
   <button type="submit" [disabled]="!theForm.form.valid">Submit</button>
 </form>
@@ -47,7 +47,7 @@ ngclass
     <button (click)="inc()" title="bigger">+</button>
     <label [style.font-size.px]="size">fontsize:{{size}}px</label>
 
-    <input  [ngModel]="hero.name"
+    <input  [ngModel]="hero.Name"
         (ngModelChange)="setUpperCaseName($event)">
 </div>
 
@@ -59,7 +59,7 @@ ngclass
         <li *ngFor="let hero of heroes;let i=index;trackBy:trackByHeroes"
              [class.selected]="hero==selectedHero"
              >
-            <span class="badge">{{hero.id}}</span> {{hero.name}}{{i+1}}
+            <span class="badge">{{hero.Id}}</span> {{hero.Name}}{{i+1}}
             <button class="delete-button" (click)="deleteHero(hero)">delete</button>           
         </li>
 
@@ -70,9 +70,9 @@ ngclass
 <br>
 $event
 <div>
-<input [value]="hero.name"
-       (input)="hero.name=$event.target.value" />
-       <label>hero name is {{hero.name}}</label>
+<input [value]="hero.Name"
+       (input)="hero.Name=$event.target.value" />
+       <label>hero name is {{hero.Name}}</label>
 </div>
 
 <br>

@@ -7,7 +7,7 @@
             <label>Name:</label>
             <input [(ngModel)]="hero.Name" placeholder="name" required #spy>
         </div>
-    <div [hidden]="Name.valid || Name.pristine" class="alert alert-danger">
+    <div [hidden]="hero.Name.valid || hero.Name.pristine" class="alert alert-danger">
         
     </div>
     <div>

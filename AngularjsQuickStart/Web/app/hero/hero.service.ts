@@ -27,7 +27,6 @@ export class HeroService {
   }
 
   returnHeros(response):Promise<Hero[]>{
-      console.log("return hero response",response.json());
       return response.json();
 
   }
@@ -77,7 +76,7 @@ export class HeroService {
   private updateHeroWebApiUrl=this.webApiUrl+"/api/heros/";
   private deleteHeroWebApiUrl=this.webApiUrl+"/api/heros/";
   private handleError(error:any):Promise<any>{
-    console.error("有一个错误出现", error);
+    console.error("system error:", error);
     return Promise.reject(error.message || error);
   }
 }

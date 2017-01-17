@@ -17,13 +17,13 @@ var app_routing_module_1 = require("./app-routing.module");
 //imports for loading & configuring the in memory web api
 //import {InMemoryDataService} from './in-memory-data.service';
 var app_component_1 = require("./app.component");
-var heroes_component_1 = require("./heroes.component");
-var hero_detail_component_1 = require("./hero-detail.component");
-var hero_service_1 = require("./hero.service");
-var dashboard_component_1 = require("./dashboard.component");
-var hero_search_component_1 = require("./hero-search.component");
-var user_input_component_1 = require("./user-input.component");
-var internationalization_component_1 = require("./internationalization.component");
+var heroes_component_1 = require("./hero/heroes.component");
+var hero_detail_component_1 = require("./hero/hero-detail.component");
+var hero_service_1 = require("./hero/hero.service");
+var dashboard_component_1 = require("./hero/dashboard.component");
+var hero_search_component_1 = require("./hero/hero-search.component");
+var user_input_component_1 = require("./hero/user-input.component");
+var internationalization_component_1 = require("./hero/internationalization.component");
 var AppModule = (function () {
     function AppModule() {
     }
