@@ -16,7 +16,7 @@ var dashboard_component_1 = require("./hero/dashboard.component");
 var user_input_component_1 = require("./hero/user-input.component");
 var internationalization_component_1 = require("./hero/internationalization.component");
 var routes = [
-    { path: '', redirectTo: '/internationalization', pathMatch: 'full' },
+    { path: '', redirectTo: '/heroes', pathMatch: 'full' },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
     { path: 'detail/:Id', component: hero_detail_component_1.HeroDetailComponent },
     { path: 'user-input', component: user_input_component_1.UserInputComponent },

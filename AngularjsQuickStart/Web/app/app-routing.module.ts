@@ -9,7 +9,7 @@ import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
 
 const routes:Routes=[
-   { path: '', redirectTo: '/internationalization', pathMatch: 'full' },
+   { path: '', redirectTo: '/heroes', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'detail/:Id', component: HeroDetailComponent },
   { path: 'user-input', component: UserInputComponent },

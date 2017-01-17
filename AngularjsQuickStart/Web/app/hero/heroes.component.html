@@ -1,13 +1,26 @@
-<h2>my heroes</h2>
-    <ul class="heroes">
-        <li *ngFor="let hero of heroes"
-             [class.selected]="hero==selectedHero"
-             (click)="onSelect(hero)">
-            <span class="badge">{{hero.Id}}</span> {{hero.Name}}
-            <button class="delete-button" (click)="delete(hero);$event.stopPropagation()">delete</button>
-        </li>
 
-    </ul>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let hero of heroes">
+        <tr>
+            <td>{{hero.Name}}</td>
+            <td>Email</td>
+            <td>
+                <span class="glyphicon glyphicon-edit hand" (click)="onSelect(hero)"></span>
+                <span class="glyphicon glyphicon-trash hand" (click)="delete(hero);$event.stopPropagation()" title="remove"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>my heroes</h2>
+ 
 
 <div *ngIf="selectedHero">
     <h2>
