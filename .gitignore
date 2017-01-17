@@ -32,4 +32,5 @@
 
 /AngularjsQuickStart/Data/*.ncrunchproject
 
-/AngularjsQuickStart/Web/node-modules/*
+
+/AngularjsQuickStart/Web/node_modules
