@@ -6,6 +6,8 @@ import {HttpModule} from '@angular/http';
 
 import './rxjs-extensions';
 
+
+
 import {AppRoutingModule} from './app-routing.module';
 
 //imports for loading & configuring the in memory web api
@@ -20,12 +22,15 @@ import {HeroSearchComponent} from './hero/hero-search.component';
 import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
 
+import { ModalModule } from 'ng2-bootstrap';
+
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         AppRoutingModule,
-        HttpModule       
+        HttpModule,
+        ModalModule.forRoot()            
     ],
     declarations: [ 
         AppComponent ,

@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import {Http,Headers} from '@angular/http';
+import {Http,Headers,Response} from '@angular/http';
 
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
-
+import {Observable} from 'rxjs/observable'
 
 import 'rxjs/add/operator/toPromise';
+
 
 //Injectable 
 @Injectable()
@@ -53,12 +54,25 @@ export class HeroService {
              .catch(this.handleError);
   }
 
-  create(name:string):Promise<Hero>{
-    return this.http.post(this.addHeroWebApiUrl,JSON.stringify({Name:name}),{headers:this.headers})
-                    .toPromise()
-                    .then(response=>response.json().data)
-                    .catch(this.handleError)
+  // create(hero:Hero):Promise<Hero>{
+  //   return this.http.post(this.addHeroWebApiUrl,JSON.stringify(hero),{headers:this.headers})
+  //                   .toPromise()
+  //                   .then(response=>this.responseAfterCreate(response))
+  //                   .catch(this.handleError)
 
+  // }
+  
+  create(hero:Hero):Observable<Hero>{
+    return this.http.post(this.addHeroWebApiUrl,JSON.stringify({Name:hero.Name}),{headers:this.headers})
+                    .map(x=>this.extractData).share() 
+                    .catch(this.handleError)
+                    
+  }
+
+
+  responseAfterCreate(response):Promise<Hero>{
+      console.log(response.json());
+      return response.json();
   }
   
   delete(id:number):Promise<Hero>{
@@ -69,7 +83,10 @@ export class HeroService {
                     .catch(this.handleError);
   
   }
-
+ private extractData(res: Response) {
+    let body = res.json();
+    return body || { };
+  }
   private headers = new Headers({'Content-Type':'application/json'});
   private webApiUrl='http://localhost:36385/';
   private addHeroWebApiUrl=this.webApiUrl+"/api/heros/";

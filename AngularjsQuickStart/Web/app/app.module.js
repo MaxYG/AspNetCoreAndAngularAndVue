@@ -24,6 +24,7 @@ var dashboard_component_1 = require("./hero/dashboard.component");
 var hero_search_component_1 = require("./hero/hero-search.component");
 var user_input_component_1 = require("./hero/user-input.component");
 var internationalization_component_1 = require("./hero/internationalization.component");
+var ng2_bootstrap_1 = require("ng2-bootstrap");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -35,7 +36,8 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
             app_routing_module_1.AppRoutingModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            ng2_bootstrap_1.ModalModule.forRoot()
         ],
         declarations: [
             app_component_1.AppComponent,

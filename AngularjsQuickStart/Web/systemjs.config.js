@@ -22,8 +22,13 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
+
+      
+
       // other libraries
-      'rxjs':                      'npm:rxjs'
+      'rxjs': 'npm:rxjs',
+      'moment': 'node_modules/moment',
+      'ng2-bootstrap': 'node_modules/ng2-bootstrap'
       
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -31,10 +36,17 @@
       app: {
         main: './main.js',
         defaultExtension: 'js'
+       
       },
       rxjs: {
         defaultExtension: 'js'
-      }
+      },
+      'ng2-bootstrap': { 
+            format: 'cjs', 
+            main: 'bundles/ng2-bootstrap.umd.js', 
+            defaultExtension: 'js' 
+      },
+      'moment': { main: 'moment.js', defaultExtension: 'js' }
     }
   });
 })(this);

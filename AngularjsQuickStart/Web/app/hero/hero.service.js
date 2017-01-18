@@ -55,11 +55,21 @@ var HeroService = (function () {
             .then(function () { return hero; })
             .catch(this.handleError);
     };
-    HeroService.prototype.create = function (name) {
-        return this.http.post(this.addHeroWebApiUrl, JSON.stringify({ Name: name }), { headers: this.headers })
-            .toPromise()
-            .then(function (response) { return response.json().data; })
+    // create(hero:Hero):Promise<Hero>{
+    //   return this.http.post(this.addHeroWebApiUrl,JSON.stringify(hero),{headers:this.headers})
+    //                   .toPromise()
+    //                   .then(response=>this.responseAfterCreate(response))
+    //                   .catch(this.handleError)
+    // }
+    HeroService.prototype.create = function (hero) {
+        var _this = this;
+        return this.http.post(this.addHeroWebApiUrl, JSON.stringify({ Name: hero.Name }), { headers: this.headers })
+            .map(function (x) { return _this.extractData; }).share()
             .catch(this.handleError);
+    };
+    HeroService.prototype.responseAfterCreate = function (response) {
+        console.log(response.json());
+        return response.json();
     };
     HeroService.prototype.delete = function (id) {
         var url = this.deleteHeroWebApiUrl + "/" + id;
@@ -67,6 +77,10 @@ var HeroService = (function () {
             .toPromise()
             .then(function () { return null; })
             .catch(this.handleError);
+    };
+    HeroService.prototype.extractData = function (res) {
+        var body = res.json();
+        return body || {};
     };
     HeroService.prototype.handleError = function (error) {
         console.error("system error:", error);

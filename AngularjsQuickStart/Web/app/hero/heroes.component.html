@@ -1,4 +1,5 @@
 
+<button class="btn btn-primary pull-right" (click)="lgModal.show()">Large modal</button>
 <table class="table table-hover">
     <thead>
         <tr>
@@ -19,9 +20,37 @@
     </tbody>
 </table>
 
-<h2>my heroes</h2>
- 
+<div  id="addHeroModel" bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Hero</h4>
+                <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" [(ngModel)]="heroForm.Name" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" (click)="lgModal.hide()" aria-label="Close">Close</button>
+                <button type="button" class="btn btn-primary" (click)="save(heroForm);">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+<!--<h2>my heroes</h2>
 <div *ngIf="selectedHero">
     <h2>
         {{selectedHero.Name | uppercase }} is my hero
@@ -33,4 +62,4 @@
     <label>hero name:</label>
     <input #heroName/>
     <button (click)="add(heroName.value);heroName.value=''">New</button>
-</div>
+</div>-->
