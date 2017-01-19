@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component,ViewChild } from '@angular/core';
 import {OnInit} from '@angular/core';
 import {RouterModule,ActivatedRoute,Router} from '@angular/router';
+import { ModalDirective } from 'ng2-bootstrap';
 
 
 import {Hero} from './hero';
@@ -17,17 +18,19 @@ import {HeroService} from './hero.service';
 })
 
 export class HeroesComponent implements OnInit{   
-
+    @ViewChild('lgModal') public addHeroModal:ModalDirective;
     heroes = [];   
     
-    hero : Hero={Id:0,Name:""};
-    heroForm : Hero={Id:0,Name:""};
-
+    hero : Hero={Id:0,Name:""};   
     // selectedHero:Hero;
     // onSelect(hero:Hero):void{
     //     this.selectedHero=hero;
     // }
-    
+
+    cleanHeroValue(){
+        this.hero={Id:0,Name:""};
+    }
+
     constructor(
         private heroService:HeroService,
         private route: ActivatedRoute,
@@ -57,14 +60,13 @@ export class HeroesComponent implements OnInit{
     // }
 
 
-    save():void{
-        this.hero={
-            Id:this.heroForm.Id,
-            Name:this.heroForm.Name
-        }
-        //Name:string;
-        this.heroService.create(Name)
-                       .subscribe(success=>this.getHeroes(),error=>console.log(error))
+    save():void{          
+        this.heroService.create(this.hero)
+                        .then(hero=>{                           
+                            this.getHeroes();
+                            this.cleanHeroValue();
+                            this.addHeroModal.hide();
+                        });                      
     }
 
     delete(hero:Hero):void{

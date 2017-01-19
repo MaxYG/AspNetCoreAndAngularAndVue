@@ -62,9 +62,10 @@ export class HeroService {
 
   // }
   
-  create(hero:Hero):Observable<Hero>{
-    return this.http.post(this.addHeroWebApiUrl,JSON.stringify({Name:hero.Name}),{headers:this.headers})
-                    .map(x=>this.extractData).share() 
+  create(hero:Hero):Promise<Hero>{   
+    return this.http.post(this.addHeroWebApiUrl,JSON.stringify(hero),{headers:this.headers})
+                    .toPromise()
+                    .then(response=>null)
                     .catch(this.handleError)
                     
   }
@@ -89,9 +90,9 @@ export class HeroService {
   }
   private headers = new Headers({'Content-Type':'application/json'});
   private webApiUrl='http://localhost:36385/';
-  private addHeroWebApiUrl=this.webApiUrl+"/api/heros/";
-  private updateHeroWebApiUrl=this.webApiUrl+"/api/heros/";
-  private deleteHeroWebApiUrl=this.webApiUrl+"/api/heros/";
+  private addHeroWebApiUrl=this.webApiUrl+"api/heros/";
+  private updateHeroWebApiUrl=this.webApiUrl+"api/heros/";
+  private deleteHeroWebApiUrl=this.webApiUrl+"api/heros/";
   private handleError(error:any):Promise<any>{
     console.error("system error:", error);
     return Promise.reject(error.message || error);

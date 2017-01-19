@@ -10,20 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var ng2_bootstrap_1 = require("ng2-bootstrap");
 var hero_service_1 = require("./hero.service");
 var HeroesComponent = (function () {
-    // selectedHero:Hero;
-    // onSelect(hero:Hero):void{
-    //     this.selectedHero=hero;
-    // }
     function HeroesComponent(heroService, route, router) {
         this.heroService = heroService;
         this.route = route;
         this.router = router;
         this.heroes = [];
         this.hero = { Id: 0, Name: "" };
-        this.heroForm = { Id: 0, Name: "" };
     }
+    // selectedHero:Hero;
+    // onSelect(hero:Hero):void{
+    //     this.selectedHero=hero;
+    // }
+    HeroesComponent.prototype.cleanHeroValue = function () {
+        this.hero = { Id: 0, Name: "" };
+    };
     HeroesComponent.prototype.getHeroes = function () {
         var _this = this;
         this.heroService.getHeroesByHttp().then(function (h) { return _this.initHeros(h); });
@@ -45,13 +48,12 @@ var HeroesComponent = (function () {
     // }
     HeroesComponent.prototype.save = function () {
         var _this = this;
-        this.hero = {
-            Id: this.heroForm.Id,
-            Name: this.heroForm.Name
-        };
-        //Name:string;
-        this.heroService.create(Name)
-            .subscribe(function (success) { return _this.getHeroes(); }, function (error) { return console.log(error); });
+        this.heroService.create(this.hero)
+            .then(function (hero) {
+            _this.getHeroes();
+            _this.cleanHeroValue();
+            _this.addHeroModal.hide();
+        });
     };
     HeroesComponent.prototype.delete = function (hero) {
         var _this = this;
@@ -65,6 +67,10 @@ var HeroesComponent = (function () {
     };
     return HeroesComponent;
 }());
+__decorate([
+    core_1.ViewChild('lgModal'),
+    __metadata("design:type", ng2_bootstrap_1.ModalDirective)
+], HeroesComponent.prototype, "addHeroModal", void 0);
 HeroesComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

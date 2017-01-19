@@ -18,9 +18,9 @@ var HeroService = (function () {
         this.http = http;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.webApiUrl = 'http://localhost:36385/';
-        this.addHeroWebApiUrl = this.webApiUrl + "/api/heros/";
-        this.updateHeroWebApiUrl = this.webApiUrl + "/api/heros/";
-        this.deleteHeroWebApiUrl = this.webApiUrl + "/api/heros/";
+        this.addHeroWebApiUrl = this.webApiUrl + "api/heros/";
+        this.updateHeroWebApiUrl = this.webApiUrl + "api/heros/";
+        this.deleteHeroWebApiUrl = this.webApiUrl + "api/heros/";
     }
     // getHeroes(): Promise<Hero[]> {
     //   return Promise.resolve(HEROES);
@@ -62,9 +62,9 @@ var HeroService = (function () {
     //                   .catch(this.handleError)
     // }
     HeroService.prototype.create = function (hero) {
-        var _this = this;
-        return this.http.post(this.addHeroWebApiUrl, JSON.stringify({ Name: hero.Name }), { headers: this.headers })
-            .map(function (x) { return _this.extractData; }).share()
+        return this.http.post(this.addHeroWebApiUrl, JSON.stringify(hero), { headers: this.headers })
+            .toPromise()
+            .then(function (response) { return null; })
             .catch(this.handleError);
     };
     HeroService.prototype.responseAfterCreate = function (response) {
