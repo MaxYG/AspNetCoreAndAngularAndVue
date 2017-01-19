@@ -19,11 +19,12 @@ var HeroesComponent = (function () {
         this.router = router;
         this.heroes = [];
         this.hero = { Id: 0, Name: "" };
+        this.heroDelete = { Id: 0, Name: "" };
     }
-    // selectedHero:Hero;
-    // onSelect(hero:Hero):void{
-    //     this.selectedHero=hero;
-    // }
+    HeroesComponent.prototype.onSelect = function (hero) {
+        this.hero = Object.assign({}, hero);
+        this.addOrEditHeroModal.show();
+    };
     HeroesComponent.prototype.cleanHeroValue = function () {
         this.hero = { Id: 0, Name: "" };
     };
@@ -48,18 +49,44 @@ var HeroesComponent = (function () {
     // }
     HeroesComponent.prototype.save = function () {
         var _this = this;
-        this.heroService.create(this.hero)
-            .then(function (hero) {
-            _this.getHeroes();
-            _this.cleanHeroValue();
-            _this.addHeroModal.hide();
-        });
+        if (this.hero.Id === 0) {
+            this.heroService.create(this.hero)
+                .then(function (hero) {
+                _this.getHeroes();
+                _this.cleanHeroValue();
+                _this.addOrEditHeroModal.hide();
+            });
+        }
+        else {
+            this.heroService.update(this.hero)
+                .then(function (hero) {
+                _this.getHeroes();
+                _this.cleanHeroValue();
+                _this.addOrEditHeroModal.hide();
+            });
+        }
     };
+    // delete(hero:Hero):void{
+    //     this.deleteModal.show();        
+    //     this.heroService.delete(hero.Id)
+    //                     .then(()=>{
+    //                         this.heroes=this.heroes.filter(h=>h!==hero);                            
+    //                     })
+    // }
     HeroesComponent.prototype.delete = function (hero) {
+        this.heroDelete = hero;
+        this.commonDeleteModal.show();
+        // this.heroService.delete(hero.Id)
+        //                 .then(()=>{
+        //                     this.heroes=this.heroes.filter(h=>h!==hero);                            
+        //                 })
+    };
+    HeroesComponent.prototype.deleteHero = function () {
         var _this = this;
-        this.heroService.delete(hero.Id)
+        this.heroService.delete(this.heroDelete.Id)
             .then(function () {
-            _this.heroes = _this.heroes.filter(function (h) { return h !== hero; });
+            _this.getHeroes();
+            _this.commonDeleteModal.hide();
         });
     };
     HeroesComponent.prototype.initHeros = function (heros) {
@@ -70,7 +97,11 @@ var HeroesComponent = (function () {
 __decorate([
     core_1.ViewChild('lgModal'),
     __metadata("design:type", ng2_bootstrap_1.ModalDirective)
-], HeroesComponent.prototype, "addHeroModal", void 0);
+], HeroesComponent.prototype, "addOrEditHeroModal", void 0);
+__decorate([
+    core_1.ViewChild('deleteModal'),
+    __metadata("design:type", ng2_bootstrap_1.ModalDirective)
+], HeroesComponent.prototype, "commonDeleteModal", void 0);
 HeroesComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

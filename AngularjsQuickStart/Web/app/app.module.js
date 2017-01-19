@@ -24,6 +24,7 @@ var dashboard_component_1 = require("./hero/dashboard.component");
 var hero_search_component_1 = require("./hero/hero-search.component");
 var user_input_component_1 = require("./hero/user-input.component");
 var internationalization_component_1 = require("./hero/internationalization.component");
+var delete_modal_component_1 = require("./commonComponent/delete.modal.component");
 var ng2_bootstrap_1 = require("ng2-bootstrap");
 var AppModule = (function () {
     function AppModule() {
@@ -46,7 +47,8 @@ AppModule = __decorate([
             dashboard_component_1.DashboardComponent,
             hero_search_component_1.HeroSearchComponent,
             user_input_component_1.UserInputComponent,
-            internationalization_component_1.InternationalizationComponent
+            internationalization_component_1.InternationalizationComponent,
+            delete_modal_component_1.DeleteModalComponent
         ],
         providers: [
             hero_service_1.HeroService

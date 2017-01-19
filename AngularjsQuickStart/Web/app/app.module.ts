@@ -21,6 +21,8 @@ import {DashboardComponent} from './hero/dashboard.component';
 import {HeroSearchComponent} from './hero/hero-search.component';
 import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
+import {DeleteModalComponent} from './commonComponent/delete.modal.component';
+
 
 import { ModalModule } from 'ng2-bootstrap';
 
@@ -39,7 +41,8 @@ import { ModalModule } from 'ng2-bootstrap';
         DashboardComponent,
         HeroSearchComponent,
         UserInputComponent,
-        InternationalizationComponent
+        InternationalizationComponent,
+        DeleteModalComponent
     ],
     providers:[
         HeroService

@@ -7,6 +7,7 @@ import {HeroDetailComponent} from './hero/hero-detail.component';
 import {DashboardComponent} from './hero/dashboard.component';
 import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
+import {DeleteModalComponent} from './commonComponent/delete.modal.component';
 
 const routes:Routes=[
    { path: '', redirectTo: '/heroes', pathMatch: 'full' },

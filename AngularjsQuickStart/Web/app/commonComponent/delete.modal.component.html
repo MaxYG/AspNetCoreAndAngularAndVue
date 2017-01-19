@@ -1,0 +1,19 @@
+<div  id="commonDeleteModel" bsModal #deleteModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Confirm delete</h4>
+                <button type="button" class="close pull-right" (click)="deleteModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure delete this information?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" (click)="deleteModal.hide()" aria-label="Close">Close</button>
+                <button type="button" class="btn btn-primary" (click)="commonDelete();">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

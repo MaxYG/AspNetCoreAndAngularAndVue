@@ -7,8 +7,6 @@ import { ModalDirective } from 'ng2-bootstrap';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
 
-
-
 @Component({
     moduleId:module.id,
     selector:'my-heroes',
@@ -18,14 +16,17 @@ import {HeroService} from './hero.service';
 })
 
 export class HeroesComponent implements OnInit{   
-    @ViewChild('lgModal') public addHeroModal:ModalDirective;
+    @ViewChild('lgModal') public addOrEditHeroModal:ModalDirective;
+    @ViewChild('deleteModal') public commonDeleteModal:ModalDirective;
     heroes = [];   
     
-    hero : Hero={Id:0,Name:""};   
-    // selectedHero:Hero;
-    // onSelect(hero:Hero):void{
-    //     this.selectedHero=hero;
-    // }
+    hero : Hero={Id:0,Name:""};
+    heroDelete:Hero={Id:0,Name:""}
+   
+    onSelect(hero:Hero):void{
+        this.hero=Object.assign({},hero);
+        this.addOrEditHeroModal.show();
+    }
 
     cleanHeroValue(){
         this.hero={Id:0,Name:""};
@@ -60,20 +61,49 @@ export class HeroesComponent implements OnInit{
     // }
 
 
-    save():void{          
-        this.heroService.create(this.hero)
+    save():void{    
+        if(this.hero.Id===0){
+            this.heroService.create(this.hero)
+                            .then(hero=>{                           
+                                this.getHeroes();
+                                this.cleanHeroValue();
+                                this.addOrEditHeroModal.hide();
+                            });   
+        }else{
+            
+            this.heroService.update(this.hero)
                         .then(hero=>{                           
                             this.getHeroes();
                             this.cleanHeroValue();
-                            this.addHeroModal.hide();
-                        });                      
+                            this.addOrEditHeroModal.hide();
+                        });   
+        }    
+                           
     }
 
+    // delete(hero:Hero):void{
+    //     this.deleteModal.show();        
+    //     this.heroService.delete(hero.Id)
+    //                     .then(()=>{
+    //                         this.heroes=this.heroes.filter(h=>h!==hero);                            
+    //                     })
+    // }
+
     delete(hero:Hero):void{
-        this.heroService.delete(hero.Id)
+        this.heroDelete=hero;
+        this.commonDeleteModal.show();        
+        // this.heroService.delete(hero.Id)
+        //                 .then(()=>{
+        //                     this.heroes=this.heroes.filter(h=>h!==hero);                            
+        //                 })
+    }
+
+    deleteHero(){
+        this.heroService.delete(this.heroDelete.Id)
                         .then(()=>{
-                            this.heroes=this.heroes.filter(h=>h!==hero);                            
-                        })
+                            this.getHeroes();
+                            this.commonDeleteModal.hide();
+                        });
     }
 
     initHeros(heros):void{

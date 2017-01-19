@@ -20,7 +20,7 @@ export class HeroService {
   // }
 
   getHeroesByHttp(): Promise<Hero[]> {
-     const getApi=this.webApiUrl+"api/heros";  
+     const getApi=this.webApiUrl+"/api/heros";
       return this.http.get(getApi)
       .toPromise()
       .then(response=>this.returnHeros(response))
@@ -50,7 +50,7 @@ export class HeroService {
 
     return this.http.put(this.updateHeroWebApiUrl,JSON.stringify(hero),{headers:this.headers})
              .toPromise()
-             .then(()=>hero)
+             .then(()=>null)
              .catch(this.handleError);
   }
 
@@ -77,7 +77,7 @@ export class HeroService {
   }
   
   delete(id:number):Promise<Hero>{
-    const url = `${this.deleteHeroWebApiUrl}/${id}`;
+    const url = `${this.deleteHeroWebApiUrl}${id}`;
     return this.http.delete(url,{headers:this.headers})
                     .toPromise()
                     .then(()=>null)
@@ -89,10 +89,10 @@ export class HeroService {
     return body || { };
   }
   private headers = new Headers({'Content-Type':'application/json'});
-  private webApiUrl='http://localhost:36385/';
-  private addHeroWebApiUrl=this.webApiUrl+"api/heros/";
-  private updateHeroWebApiUrl=this.webApiUrl+"api/heros/";
-  private deleteHeroWebApiUrl=this.webApiUrl+"api/heros/";
+  private webApiUrl='http://localhost:36385';
+  private addHeroWebApiUrl=this.webApiUrl+"/api/heros/";
+  private updateHeroWebApiUrl=this.webApiUrl+"/api/heros/";
+  private deleteHeroWebApiUrl=this.webApiUrl+"/api/heros/";
   private handleError(error:any):Promise<any>{
     console.error("system error:", error);
     return Promise.reject(error.message || error);
