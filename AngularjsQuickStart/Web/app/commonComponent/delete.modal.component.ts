@@ -1,4 +1,4 @@
-import {Component, ViewChild, Output, EventEmitter, Input} from '@angular/core';
+import {Component, ViewChild, Output, EventEmitter, Input,ElementRef} from '@angular/core';
 import { ModalDirective } from 'ng2-bootstrap';
 
 @Component(
@@ -9,9 +9,14 @@ import { ModalDirective } from 'ng2-bootstrap';
     }
 )
 export class DeleteModalComponent {
-    // @Input() Id:number;
+    @Input() contentInput:string;
     @Output() onDelete = new EventEmitter<any>()
     @ViewChild('deleteModal') private deleteModal: ModalDirective
+    content:string;
+
+    constructor(elementRef: ElementRef) {
+       this.content= elementRef.nativeElement.getAttribute("bodyContent")
+    }
 
     public show() {
         this.deleteModal.show();

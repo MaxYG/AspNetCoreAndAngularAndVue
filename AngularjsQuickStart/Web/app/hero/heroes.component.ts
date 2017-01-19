@@ -91,6 +91,7 @@ export class HeroesComponent implements OnInit{
 
     delete(hero:Hero):void{
         this.heroDelete=hero;
+
         this.commonDeleteModal.show();        
         // this.heroService.delete(hero.Id)
         //                 .then(()=>{

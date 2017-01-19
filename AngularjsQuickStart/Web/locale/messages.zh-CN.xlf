@@ -8,6 +8,10 @@
         <note priority="1" from="description">An introduction header for this sample</note>
         <note priority="1" from="meaning">User welcome</note>
       </trans-unit>
+      <trans-unit id="e38c35d5027736ab7779e602df33c76e511f8699" datatype="html">
+         <source>method 2: Are you sure delete this hero?</source>
+         <target>确定删除？</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

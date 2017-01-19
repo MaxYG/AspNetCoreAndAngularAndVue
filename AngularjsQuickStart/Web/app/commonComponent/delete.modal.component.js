@@ -11,9 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var ng2_bootstrap_1 = require("ng2-bootstrap");
 var DeleteModalComponent = (function () {
-    function DeleteModalComponent() {
-        // @Input() Id:number;
+    function DeleteModalComponent(elementRef) {
         this.onDelete = new core_1.EventEmitter();
+        this.content = elementRef.nativeElement.getAttribute("bodyContent");
     }
     DeleteModalComponent.prototype.show = function () {
         this.deleteModal.show();
@@ -26,6 +26,10 @@ var DeleteModalComponent = (function () {
     };
     return DeleteModalComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DeleteModalComponent.prototype, "contentInput", void 0);
 __decorate([
     core_1.Output(),
     __metadata("design:type", Object)
@@ -40,7 +44,7 @@ DeleteModalComponent = __decorate([
         selector: 'delete-modal',
         templateUrl: 'delete.modal.component.html'
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [core_1.ElementRef])
 ], DeleteModalComponent);
 exports.DeleteModalComponent = DeleteModalComponent;
 //# sourceMappingURL=delete.modal.component.js.map
