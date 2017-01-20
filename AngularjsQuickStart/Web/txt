@@ -31,3 +31,7 @@ angularjs2 写法
 1.在国际化时遇到问题 升级部分包
 TypeError: Cannot read property 'create' of undefined
     at Function.Extractor.create (F:\study\Angularjs2
+
+
+    注意：
+    1.永远不要在特性路由模块中调用RouterModule.forRoot！
