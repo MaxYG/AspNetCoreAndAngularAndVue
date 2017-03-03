@@ -35,8 +35,18 @@ TypeError: Cannot read property 'create' of undefined
 
     注意：
     1.永远不要在特性路由模块中调用RouterModule.forRoot！
-    2.一个向服务器发起HTTP请求的管道。 这通常是一个可怕的主意。
+    2.管道：一个向服务器发起HTTP请求的管道。 这通常是一个可怕的主意。
     不管我们怎么做，估计它都会是一个可怕的主意。
      但即便如此，为了讲解这个技术点，我们还是写一个吧。 时刻记住，
     非纯管道可能每隔几微秒就会被调用一次。 如果我们不小心点，
     这个管道就会发起一大堆请求“攻击”服务器。
+    3.管道：但是一个纯管道必须总是用纯函数实现。忽略这个警告将导致失败并带来一大堆这样的控制台错误：
+    表达式在被检查后被变更
+
+    安全：注入DomSanitizer服务，然后调用下面的方法之一，你就可以把一个值标记为可信任的。
+
+       bypassSecurityTrustHtml
+       bypassSecurityTrustScript
+       bypassSecurityTrustStyle
+       bypassSecurityTrustUrl
+       bypassSecurityTrustResourceUrl
