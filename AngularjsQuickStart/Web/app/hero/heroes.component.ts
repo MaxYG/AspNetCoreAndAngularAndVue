@@ -3,6 +3,8 @@ import {OnInit} from '@angular/core';
 import {RouterModule,ActivatedRoute,Router} from '@angular/router';
 import { ModalDirective } from 'ng2-bootstrap';
 
+import {Observable} from 'rxjs/Observable';
+import {Subject} from 'rxjs/Subject';
 
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
@@ -43,7 +45,7 @@ export class HeroesComponent implements OnInit{
     }
 
     ngOnInit():void{        
-       this.getHeroes();
+        this.getHeroes();
     }
 
     // gotoDetail():void{
@@ -111,6 +113,14 @@ export class HeroesComponent implements OnInit{
         this.heroes=heros;
     }
 
+    search(term: string): void {
+        if(term===""){
+            this.getHeroes();
+        }else{
+            this.heroService.searchHero(term)
+                .then(h=>this.initHeros(h));
+        }
+    }
 }
 
 

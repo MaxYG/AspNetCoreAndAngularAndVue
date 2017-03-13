@@ -16,15 +16,33 @@ var HeroService = (function () {
     //todo:工厂方法注入可以研究下
     function HeroService(http) {
         this.http = http;
+        // getHeroes(): Promise<Hero[]> {
+        //   return Promise.resolve(HEROES);
+        // }
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.webApiUrl = 'http://localhost:36385';
         this.addHeroWebApiUrl = this.webApiUrl + "/api/heros/";
         this.updateHeroWebApiUrl = this.webApiUrl + "/api/heros/";
         this.deleteHeroWebApiUrl = this.webApiUrl + "/api/heros/";
     }
-    // getHeroes(): Promise<Hero[]> {
-    //   return Promise.resolve(HEROES);
-    // }
+    HeroService.prototype.searchHero = function (keywords) {
+        var _this = this;
+        var searchHeroApi = this.webApiUrl + "/api/heros/search-heros";
+        var params = new http_1.URLSearchParams();
+        params.set('SearchKeywords', keywords);
+        var searchResult = this.http.get(searchHeroApi, { search: params })
+            .toPromise()
+            .then(function (response) { return _this.returnHeros(response); })
+            .catch(this.handleError);
+        return searchResult;
+    };
+    /*create(hero:Hero):Promise<Hero>{
+        return this.http.post(this.addHeroWebApiUrl,JSON.stringify(hero),{headers:this.headers})
+            .toPromise()
+            .then(response=>null)
+            .catch(this.handleError)
+
+    }*/
     HeroService.prototype.getHeroesByHttp = function () {
         var _this = this;
         var getApi = this.webApiUrl + "/api/heros";

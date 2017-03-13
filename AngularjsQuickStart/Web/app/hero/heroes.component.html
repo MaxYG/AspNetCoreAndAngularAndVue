@@ -5,7 +5,8 @@
             <span class="input-group-addon search-group">
                 <i class="glyphicon glyphicon-search" style="color: #B2B2B0;"></i>
             </span>
-            <input type="text"  class="form-control search-input">
+            <!--<input type="text" class="form-control search-input">-->
+            <input #searchBox id="search-box" (keyup)="search(searchBox.value)" type="text" class="form-control search-input"/>
         </div>
     </div>
     

@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import {Http,Headers,Response} from '@angular/http';
+import {Http,Headers,Response,URLSearchParams} from '@angular/http';
 
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
 import {Observable} from 'rxjs/observable'
 
 import 'rxjs/add/operator/toPromise';
+import {jsonpFactory} from "@angular/http/src/http_module";
 
 
 //Injectable 
@@ -18,9 +19,35 @@ export class HeroService {
   // getHeroes(): Promise<Hero[]> {
   //   return Promise.resolve(HEROES);
   // }
+    private headers = new Headers({'Content-Type':'application/json'});
+    private webApiUrl='http://localhost:36385';
+    private addHeroWebApiUrl=this.webApiUrl+"/api/heros/";
+    private updateHeroWebApiUrl=this.webApiUrl+"/api/heros/";
+    private deleteHeroWebApiUrl=this.webApiUrl+"/api/heros/";
 
+    searchHero(keywords:string):Promise<Hero[]>{
+        const searchHeroApi=this.webApiUrl+"/api/heros/search-heros";
+
+        let params: URLSearchParams = new URLSearchParams();
+        params.set('SearchKeywords', keywords);
+
+        let searchResult=this.http.get(searchHeroApi,{search:params})
+            .toPromise()
+            .then(response=>this.returnHeros(response))
+            .catch(this.handleError);
+
+        return searchResult;
+    }
+
+    /*create(hero:Hero):Promise<Hero>{
+        return this.http.post(this.addHeroWebApiUrl,JSON.stringify(hero),{headers:this.headers})
+            .toPromise()
+            .then(response=>null)
+            .catch(this.handleError)
+
+    }*/
   getHeroesByHttp(): Promise<Hero[]> {
-     const getApi=this.webApiUrl+"/api/heros";
+      const getApi=this.webApiUrl+"/api/heros";
       return this.http.get(getApi)
       .toPromise()
       .then(response=>this.returnHeros(response))
@@ -40,6 +67,8 @@ export class HeroService {
     return this.getHeroesByHttp()
                .then(heroes => this.findHero(heroes,Id));
   }
+
+
 
   findHero(heroes,Id):Promise<Hero>{
       return heroes.find(hero => hero.Id === Id);
@@ -88,11 +117,7 @@ export class HeroService {
     let body = res.json();
     return body || { };
   }
-  private headers = new Headers({'Content-Type':'application/json'});
-  private webApiUrl='http://localhost:36385';
-  private addHeroWebApiUrl=this.webApiUrl+"/api/heros/";
-  private updateHeroWebApiUrl=this.webApiUrl+"/api/heros/";
-  private deleteHeroWebApiUrl=this.webApiUrl+"/api/heros/";
+
   private handleError(error:any):Promise<any>{
     console.error("system error:", error);
     return Promise.reject(error.message || error);

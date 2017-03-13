@@ -9,5 +9,6 @@ namespace Service
         void AddHero(string name);
         void EditHero(int id, string name);
         void DeleteHero(int id);
+        List<Hero> GetHerosByKeywords(string keywords);
     }
 }

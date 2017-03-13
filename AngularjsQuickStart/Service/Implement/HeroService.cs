@@ -39,5 +39,11 @@ namespace Service.Implement
         {
             _heroRepository.Delete(id);
         }
+
+        public List<Hero> GetHerosByKeywords(string keywords)
+        {
+            var result = _heroRepository.GetHerosByKeywords(keywords).ToList();
+            return result;
+        }
     }
 }

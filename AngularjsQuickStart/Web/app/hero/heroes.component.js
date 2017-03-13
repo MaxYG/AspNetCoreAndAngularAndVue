@@ -92,6 +92,16 @@ var HeroesComponent = (function () {
     HeroesComponent.prototype.initHeros = function (heros) {
         this.heroes = heros;
     };
+    HeroesComponent.prototype.search = function (term) {
+        var _this = this;
+        if (term === "") {
+            this.getHeroes();
+        }
+        else {
+            this.heroService.searchHero(term)
+                .then(function (h) { return _this.initHeros(h); });
+        }
+    };
     return HeroesComponent;
 }());
 __decorate([
