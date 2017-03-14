@@ -1,0 +1,13 @@
+
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+       
+        <a *ngFor="let hero of heroes"  [routerLink]="['/detail',hero.Id]" class="col-l-4">
+            <div class="module hero">
+                <h4>{{hero.Name}}</h4>
+            </div>
+        </a>
+</div>
+
+<div style="margin-bottom:100px;"></div>
+<hero-search></hero-search>

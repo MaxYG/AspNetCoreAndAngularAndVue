@@ -1,0 +1,81 @@
+<div class="row form-inline row-non-margin page-head">
+
+    <div class="col-md-3" style="padding-left: 0;margin-left: 10px">
+        <div class="input-group">
+            <span class="input-group-addon search-group">
+                <i class="glyphicon glyphicon-search" style="color: #B2B2B0;"></i>
+            </span>
+            <!--<input type="text" class="form-control search-input">-->
+            <input #searchBox id="search-box" (keyup)="search(searchBox.value)" type="text" class="form-control search-input"/>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary pull-right" (click)="lgModal.show()">Add hero</button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let hero of heroes">
+        <tr>
+            <td>{{hero.Name}}</td>
+            <td>Email</td>
+            <td>
+                <span class="glyphicon glyphicon-edit hand" (click)="onSelect(hero)"></span>
+                <!--                <span class="glyphicon glyphicon-trash hand" (click)="deleteModal.show()" title="remove"></span>-->
+                <span class="glyphicon glyphicon-trash hand" (click)="delete(hero);$event.stopPropagation()" title="remove"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="addHeroModel" bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Hero</h4>
+                <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form #heroForm="ngForm">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" [(ngModel)]="hero.Name" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" (click)="lgModal.hide()" aria-label="Close">Close</button>
+                <button type="button" class="btn btn-primary" [disabled]="!heroForm.form.valid" (click)="save(hero);">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<delete-modal #deleteModal (onDelete)="deleteHero($event)" i18n-bodyContent [contentInput]="'method 1: Are you sure delete this hero?'" bodyContent="method 2: Are you sure delete this hero?"></delete-modal>
+
+
+<!--<h2>my heroes</h2>
+<div *ngIf="selectedHero">
+    <h2>
+        {{selectedHero.Name | uppercase }} is my hero
+    </h2>
+    <button (click)="gotoDetail()">view detail</button>
+</div>
+
+<div>
+    <label>hero name:</label>
+    <input #heroName/>
+    <button (click)="add(heroName.value);heroName.value=''">New</button>
+</div>-->

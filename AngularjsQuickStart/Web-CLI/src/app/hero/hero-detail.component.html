@@ -1,0 +1,18 @@
+{{debug}}
+<div *ngIf="hero">    
+        <h2>{{hero.Name}} details</h2>    
+
+        <div><label>Id:</label>{{hero.Id}}</div>
+        <div>
+            <label>Name:</label>
+            <input [(ngModel)]="hero.Name" placeholder="name" required #spy>
+        </div>
+    <div [hidden]="hero.Name.valid || hero.Name.pristine" class="alert alert-danger">
+        
+    </div>
+    <div>
+        <br>TODO: remove this: {{spy.className}}
+    </div>
+        <button (click)="goBack()">Back</button>
+        <button (click)="save()">save</button>
+</div>

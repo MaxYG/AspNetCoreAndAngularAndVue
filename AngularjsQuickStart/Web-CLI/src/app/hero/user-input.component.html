@@ -1,0 +1,136 @@
+
+<br>
+<form (ngSubmit)="onSubmit(theForm)" #theForm="ngForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input class="form-control" name="name" required [(ngModel)]="hero.Name">
+  </div>
+  <button type="submit" [disabled]="!theForm.form.valid">Submit</button>
+</form>
+
+
+<br>
+引用模板引用变量
+<div>
+   <input #phone placeholder="phone number">
+    <button (click)="callPhone(phone.value)">Call</button>
+
+    <input ref-fax placeholder="fax number">
+<button (click)="callFax(fax.value)">Fax</button>
+</div>
+
+<br>
+ngswitch
+<div>
+    <span [ngSwitch]="toeChoice">
+        <span *ngSwitchCase="'Eenie'">Eenie</span> 
+        <span *ngSwitchDefault>other</span>   
+    </span>
+</div>
+
+<br>
+ngstyle
+<div>
+    <div [ngStyle]="setStyles()">  This div is italic, normal weight, and extra large (24px).</div>
+</div>
+
+<br>
+ngclass
+<div>
+    <div [ngClass]="setClasses()">This div is saveable and special</div>
+</div>
+
+<br>
+双向数据绑定
+<div>
+    <button (click)="dec()" title="smaller">-</button>
+    <button (click)="inc()" title="bigger">+</button>
+    <label [style.font-size.px]="size">fontsize:{{size}}px</label>
+
+    <input  [ngModel]="hero.Name"
+        (ngModelChange)="setUpperCaseName($event)">
+</div>
+
+<br>
+使用 EventEmitter 实现自定义事��?
+<div>
+
+    <ul class="heroes">
+        <li *ngFor="let hero of heroes;let i=index;trackBy:trackByHeroes"
+             [class.selected]="hero==selectedHero"
+             >
+            <span class="badge">{{hero.Id}}</span> {{hero.Name}}{{i+1}}
+            <button class="delete-button" (click)="deleteHero(hero)">delete</button>           
+        </li>
+
+    </ul>
+</div>
+
+
+<br>
+$event
+<div>
+<input [value]="hero.Name"
+       (input)="hero.Name=$event.target.value" />
+       <label>hero name is {{hero.Name}}</label>
+</div>
+
+<br>
+event bind
+<div>
+<button on-click="onClickTest()">Save</button>
+
+<div (myClick)="clickMessage=$event">click with myClick</div>
+
+</div>
+<br>
+style
+<div>
+    
+    <button [style.color]="isSpecial?'red':'green'">save</button>
+    <button [style.background-color]="canSave?'cyan':'green'">save</button>
+
+    <button [style.font-size.em]="isSpecial?3:1">save</button>
+    <button [style.font-size.%]="!isSpecial?50:150">save</button>
+</div>
+css
+<div>
+  
+    <div class="color-red" [class]="colorSet">Bad curly</div>
+
+    <div class="color-red font-style-test" [class.color-green]="isShowClass">1111111</div>
+</div>
+
+<div>
+    <input (keyup)="onkey($event)" />
+
+    <p>{{values}}</p>
+</div>
+<div>
+    <input #box (keyup)="0"/>
+    <p>{{box.value}}</p>
+
+</div>
+
+<div>
+    <input #boxx (keyup)="onkeyxx(boxx.value)"/>
+    <p>{{valuesxx}}</p>
+</div>
+
+<div>
+    enter
+    <input #boxEnter (keyup.enter)="onEnter(boxEnter.value)">
+    <p>{{Entervalue}}</p>
+</div>
+
+<div>
+    blur
+    <input #boxblur
+           (keyup.enter)="update(boxblur.value)"
+           (blur)="update(boxblur.value)">
+
+    <p class="color-green">{{blurvalue}}</p>
+</div>
+
+
+
