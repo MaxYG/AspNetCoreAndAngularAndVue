@@ -10,6 +10,7 @@ import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
 import {DeleteModalComponent} from './commonComponent/delete.modal.component';
 import {LoginComponent} from './login/login.component';
+import {HomeComponent} from './home/home.component';
 
 const routes:Routes=[
    { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes:Routes=[
   { path: 'detail/:Id', component: HeroDetailComponent },
   { path: 'user-input', component: UserInputComponent },
   { path: 'internationalization', component: InternationalizationComponent },
-  { path: 'heroes',     component: HeroesComponent }
+  { path: 'heroes',     component: HeroesComponent },
+  { path: 'home',     component: HomeComponent }
 
 ];
 

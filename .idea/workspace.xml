@@ -2,32 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9a51f98-fa2a-4282-8924-ba49fb2ed0ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Repository/Implement/TagRepository.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.module.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/i18n-providers.metadata.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/AngularjsQuickStart.sln" afterPath="$PROJECT_DIR$/AngularjsQuickStart/AngularjsQuickStart.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Data/Data.csproj" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Data/Data.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Data/Hero.cs" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Data/Hero.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Data/Migrations/Configuration.cs" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Data/Migrations/Configuration.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Repository/Repository.csproj" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Repository/Repository.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Service/IHeroService.cs" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Service/IHeroService.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Service/Implement/HeroService.cs" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Service/Implement/HeroService.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/ViewModel/Command/HeroCommand.cs" afterPath="$PROJECT_DIR$/AngularjsQuickStart/ViewModel/Command/HeroCommand.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/ViewModel/ViewModel/HeroViewModel.cs" afterPath="$PROJECT_DIR$/AngularjsQuickStart/ViewModel/ViewModel/HeroViewModel.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/home/home.component.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/home/home.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/.vs/config/applicationhost.config" afterPath="$PROJECT_DIR$/AngularjsQuickStart/.vs/config/applicationhost.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.html" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.module.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/hero.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/hero.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.html" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/mock-heroes.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/mock-heroes.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/user-input.component.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/user-input.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/index.html" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/txt" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/WebApi/Controllers/HeroController.cs" afterPath="$PROJECT_DIR$/AngularjsQuickStart/WebApi/Controllers/HeroController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/hero.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/hero.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/user-input.component.ts" afterPath="$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/user-input.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,47 +30,36 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Angularjs2TypeScript" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="324">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="555">
+              <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <marker date="1489482207467" expanded="true" signature="21:360" ph="..." />
-                <marker date="1489482207467" expanded="true" signature="262:323" ph="..." />
-                <marker date="1489482207467" expanded="true" signature="324:352" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="heroes.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="468">
+              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -92,11 +68,31 @@
       <file leaf-file-name="heroes.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="-144">
+              <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/home/home.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/home/home.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,10 +100,10 @@
       <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="266">
+              <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#440#485#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,8 +112,8 @@
       <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="612">
+              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -125,23 +121,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts">
+      <file leaf-file-name="login.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.html">
+      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            <state relative-caret-position="540">
+              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding>
-                <element signature="n#style#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,6 +156,8 @@
     <findStrings>
       <find>HeroesComponent</find>
       <find>IsLogin</find>
+      <find>hero</find>
+      <find>router</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,13 +170,19 @@
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/hero.ts" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.ts" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.html" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/index.html" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.html" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/user-input.component.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/hero.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/mock-heroes.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/user-input.component.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/index.html" />
       </list>
     </option>
   </component>
@@ -188,10 +192,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules" />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1924" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
@@ -332,6 +339,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angularjs2TypeScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angularjs2TypeScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularjsQuickStart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web-CLI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -345,9 +382,12 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\setupfile\nodejsversion\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="SearchEverywhereHistoryKey" value="user-input.component.ts&#9;FILE&#9;file://D:/study/Angularjs2TypeScript/AngularjsQuickStart/Web/app/hero/user-input.component.ts" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\Angularjs2TypeScript\AngularjsQuickStart\Web-CLI\src\app\home" />
       <recent name="F:\study\Angularjs2TypeScript\AngularjsQuickStart\Web-CLI\src\app\Login" />
     </key>
   </component>
@@ -383,6 +423,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -409,6 +455,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c9a51f98-fa2a-4282-8924-ba49fb2ed0ee" name="Default" comment="" />
@@ -417,32 +466,42 @@
       <option name="presentableId" value="Default" />
       <updated>1489476584228</updated>
       <workItem from="1489476585513" duration="8670000" />
+      <workItem from="1489499267980" duration="3667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8670000" />
+    <option name="totallyTimeSpent" value="12337000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -488,8 +547,6 @@
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/hero-search.service.js.map" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web/app/commonComponent/delete.modal.component.js" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web/app/commonComponent/delete.modal.component.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web/node_modules/reflect-metadata/Reflect.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web/node_modules/reflect-metadata/Reflect.js.map" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.js" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.js.map" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/main.js" />
@@ -528,49 +585,6 @@
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/hero-search.service.js.map" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/commonComponent/delete.modal.component.js" />
         <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/commonComponent/delete.modal.component.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/karma/config.tpl.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/ng/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/ng/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/enum/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/enum/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/pipe/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/pipe/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/class/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/class/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/guard/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/guard/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/module/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/module/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/service/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/service/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/component/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/component/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/directive/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/directive/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/interface/index.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/cli/blueprints/interface/index.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/Reflect.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/Reflect.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-definemetadata.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-definemetadata.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-getmetadatakeys.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-getmetadatakeys.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-metadata.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-metadata.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-getmetadata.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-getmetadata.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-getownmetadata.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-getownmetadata.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-getownmetadatakeys.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-getownmetadatakeys.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-hasownmetadata.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-hasownmetadata.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-decorate.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-decorate.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-deletemetadata.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-deletemetadata.js.map" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-hasmetadata.js" />
-        <option value="$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/reflect-metadata/test/reflect-hasmetadata.js.map" />
       </list>
     </option>
   </component>
@@ -582,57 +596,41 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/txt">
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="152">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/hero.ts">
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding>
-            <marker date="1489481944133" expanded="true" signature="17:70" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="285">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1489482207467" expanded="true" signature="21:360" ph="..." />
-            <marker date="1489482207467" expanded="true" signature="262:323" ph="..." />
-            <marker date="1489482207467" expanded="true" signature="324:352" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/main.ts">
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#75#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="950">
+          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
+        <state relative-caret-position="456">
           <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
@@ -642,17 +640,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="266">
           <caret line="24" column="33" lean-forward="false" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="190">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -662,45 +660,219 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="152">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/hero.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.metadata.json" />
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/hero.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding>
+            <marker date="1489501380407" expanded="true" signature="17:70" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/mock-heroes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web/app/hero/user-input.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#66#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/user-input.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/hero-detail.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/node_modules/@angular/router/src/router_state.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="845">
+          <caret line="68" column="21" lean-forward="false" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web/txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <folding>
+            <element signature="e#440#485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/hero/heroes.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="108">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.metadata.json">
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/home/home.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="577">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/Login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="324">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="555">
+          <caret line="41" column="8" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AngularjsQuickStart/Web-CLI/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

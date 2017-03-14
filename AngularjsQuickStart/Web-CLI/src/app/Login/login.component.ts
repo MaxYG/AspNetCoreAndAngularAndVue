@@ -1,4 +1,5 @@
 import {Component } from '@angular/core';
+import {RouterModule,ActivatedRoute,Router} from '@angular/router';
 
 @Component({
     selector:'login',
@@ -7,6 +8,12 @@ import {Component } from '@angular/core';
 
 export class LoginComponent {
 
+  constructor(
+    private router:Router,
+  ){}
+  login():void{
+    this.router.navigate(['/home']);
+  }
 }
 
 

@@ -23,6 +23,7 @@ import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
 import {DeleteModalComponent} from './commonComponent/delete.modal.component';
 import {LoginComponent} from './login/login.component';
+import {HomeComponent} from './home/home.component';
 
 import { ModalModule } from 'ng2-bootstrap';
 
@@ -43,7 +44,8 @@ import { ModalModule } from 'ng2-bootstrap';
         UserInputComponent,
         InternationalizationComponent,
         DeleteModalComponent,
-        LoginComponent
+        LoginComponent,
+      HomeComponent
     ],
     providers:[
         HeroService
