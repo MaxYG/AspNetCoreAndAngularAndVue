@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using Data;
 using Repository;
 
@@ -20,11 +23,14 @@ namespace Service.Implement
             return result;
         }
 
-        public void AddHero(string name)
+        public void AddHero(string name,string email)
         {
+            var passwordEncrypt = EncryptPassword("Password1");
             _heroRepository.Add(new Hero()
             {
-                Name = name
+                Name = name,
+                Email = email,
+                Password = passwordEncrypt,
             });
         }
 
@@ -44,6 +50,20 @@ namespace Service.Implement
         {
             var result = _heroRepository.GetHerosByKeywords(keywords).ToList();
             return result;
+        }
+
+        private static string EncryptPassword(string password)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(password));
+            byte[] result = md5.Hash;
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                strBuilder.Append(i.ToString("x2"));
+            }
+
+            return strBuilder.ToString();
         }
     }
 }

@@ -22,7 +22,7 @@ import {HeroSearchComponent} from './hero/hero-search.component';
 import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
 import {DeleteModalComponent} from './commonComponent/delete.modal.component';
-
+import {LoginComponent} from './login/login.component';
 
 import { ModalModule } from 'ng2-bootstrap';
 
@@ -32,9 +32,9 @@ import { ModalModule } from 'ng2-bootstrap';
         FormsModule,
         AppRoutingModule,
         HttpModule,
-        ModalModule.forRoot()            
+        ModalModule.forRoot()
     ],
-    declarations: [ 
+    declarations: [
         AppComponent ,
         HeroesComponent,
         HeroDetailComponent,
@@ -42,13 +42,14 @@ import { ModalModule } from 'ng2-bootstrap';
         HeroSearchComponent,
         UserInputComponent,
         InternationalizationComponent,
-        DeleteModalComponent
+        DeleteModalComponent,
+        LoginComponent
     ],
     providers:[
         HeroService
     ],
     bootstrap:    [ AppComponent ],
-    
+
 })
 
 export class AppModule{}

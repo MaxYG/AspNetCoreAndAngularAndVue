@@ -10,41 +10,41 @@ import {Hero} from './hero';
 import {HeroService} from './hero.service';
 
 @Component({
-  
+
     selector:'my-heroes',
     templateUrl:'heroes.component.html',
     styleUrls: ['heroes.component.css']
-       
+
 })
 
-export class HeroesComponent implements OnInit{   
+export class HeroesComponent implements OnInit{
     @ViewChild('lgModal') public addOrEditHeroModal:ModalDirective;
     @ViewChild('deleteModal') public commonDeleteModal:ModalDirective;
-    heroes = [];   
-    
-    hero : Hero={Id:0,Name:""};
-    heroDelete:Hero={Id:0,Name:""}
-   
+    heroes = [];
+
+    hero : Hero={Id:0,Name:"",Email:""};
+    heroDelete:Hero={Id:0,Name:"",Email:""}
+
     onSelect(hero:Hero):void{
         this.hero=Object.assign({},hero);
         this.addOrEditHeroModal.show();
     }
 
     cleanHeroValue(){
-        this.hero={Id:0,Name:""};
+        this.hero={Id:0,Name:"",Email:""};
     }
 
     constructor(
         private heroService:HeroService,
         private route: ActivatedRoute,
-        private router:Router,        
+        private router:Router,
      ){}
 
     getHeroes():void{
         this.heroService.getHeroesByHttp().then(h=>this.initHeros(h));
     }
 
-    ngOnInit():void{        
+    ngOnInit():void{
         this.getHeroes();
     }
 
@@ -63,41 +63,41 @@ export class HeroesComponent implements OnInit{
     // }
 
 
-    save():void{    
+    save():void{
         if(this.hero.Id===0){
             this.heroService.create(this.hero)
-                            .then(hero=>{                           
+                            .then(hero=>{
                                 this.getHeroes();
                                 this.cleanHeroValue();
                                 this.addOrEditHeroModal.hide();
-                            });   
+                            });
         }else{
-            
+
             this.heroService.update(this.hero)
-                        .then(hero=>{                           
+                        .then(hero=>{
                             this.getHeroes();
                             this.cleanHeroValue();
                             this.addOrEditHeroModal.hide();
-                        });   
-        }    
-                           
+                        });
+        }
+
     }
 
     // delete(hero:Hero):void{
-    //     this.deleteModal.show();        
+    //     this.deleteModal.show();
     //     this.heroService.delete(hero.Id)
     //                     .then(()=>{
-    //                         this.heroes=this.heroes.filter(h=>h!==hero);                            
+    //                         this.heroes=this.heroes.filter(h=>h!==hero);
     //                     })
     // }
 
     delete(hero:Hero):void{
         this.heroDelete=hero;
 
-        this.commonDeleteModal.show();        
+        this.commonDeleteModal.show();
         // this.heroService.delete(hero.Id)
         //                 .then(()=>{
-        //                     this.heroes=this.heroes.filter(h=>h!==hero);                            
+        //                     this.heroes=this.heroes.filter(h=>h!==hero);
         //                 })
     }
 

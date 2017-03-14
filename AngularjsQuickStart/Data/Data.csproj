@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201701160903215_AddHeroTable.Designer.cs">
       <DependentUpon>201701160903215_AddHeroTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703140908150_AddSomeFieldsForHeroTable.cs" />
+    <Compile Include="Migrations\201703140908150_AddSomeFieldsForHeroTable.Designer.cs">
+      <DependentUpon>201703140908150_AddSomeFieldsForHeroTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701160903215_AddHeroTable.resx">
       <DependentUpon>201701160903215_AddHeroTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703140908150_AddSomeFieldsForHeroTable.resx">
+      <DependentUpon>201703140908150_AddSomeFieldsForHeroTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
