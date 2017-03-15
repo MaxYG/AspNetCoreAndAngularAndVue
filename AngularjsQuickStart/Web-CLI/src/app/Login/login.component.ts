@@ -12,7 +12,7 @@ export class LoginComponent {
     private router:Router,
   ){}
   login():void{
-    this.router.navigate(['/home']);
+    this.router.navigate(['/heroes']);
   }
 }
 
