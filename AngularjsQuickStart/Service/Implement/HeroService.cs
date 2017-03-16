@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using Common;
 using Data;
 using Repository;
 
@@ -25,7 +26,7 @@ namespace Service.Implement
 
         public void AddHero(string name,string email)
         {
-            var passwordEncrypt = EncryptPassword("Password1");
+            var passwordEncrypt = EncryptPasswordProvider.EncryptPassword("Password1");
             _heroRepository.Add(new Hero()
             {
                 Name = name,
@@ -52,18 +53,6 @@ namespace Service.Implement
             return result;
         }
 
-        private static string EncryptPassword(string password)
-        {
-            MD5 md5 = new MD5CryptoServiceProvider();
-            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(password));
-            byte[] result = md5.Hash;
-            StringBuilder strBuilder = new StringBuilder();
-            for (int i = 0; i < result.Length; i++)
-            {
-                strBuilder.Append(i.ToString("x2"));
-            }
-
-            return strBuilder.ToString();
-        }
+        
     }
 }

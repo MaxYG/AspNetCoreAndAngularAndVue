@@ -1,4 +1,4 @@
-<div [hidden]="IsLogin">
+<div [hidden]="!loginUser.IsLogin">
   <nav class="navbar navbar-default navbar-static-top" >
     <div class="container">
       <div class="navbar-header">
@@ -27,6 +27,7 @@
   </nav>
 
 </div>
+
 
 <div class="container">
   <router-outlet></router-outlet>

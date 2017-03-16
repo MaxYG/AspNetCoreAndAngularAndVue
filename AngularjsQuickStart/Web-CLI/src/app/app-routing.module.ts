@@ -1,8 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule,Routes} from '@angular/router';
 
-
-
 import {HeroesComponent} from './hero/heroes.component';
 import {HeroDetailComponent} from './hero/hero-detail.component';
 import {DashboardComponent} from './hero/dashboard.component';

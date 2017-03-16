@@ -3,16 +3,15 @@ import {Http,Headers,Response,URLSearchParams} from '@angular/http';
 
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
-import {Observable} from 'rxjs/observable'
-
+import {Observable} from 'rxjs/observable';
+import {ApiBaseUrl} from '../appglobal/apiBaseUrl';
 import 'rxjs/add/operator/toPromise';
 import {jsonpFactory} from "@angular/http/src/http_module";
 
-
-//Injectable 
+//Injectable
 @Injectable()
 export class HeroService {
-  
+
 //todo:工厂方法注入可以研究下
   constructor(private http:Http){}
 
@@ -20,7 +19,7 @@ export class HeroService {
   //   return Promise.resolve(HEROES);
   // }
     private headers = new Headers({'Content-Type':'application/json'});
-    private webApiUrl='http://localhost:36385';
+    private webApiUrl=ApiBaseUrl.apiUrl;
     private addHeroWebApiUrl=this.webApiUrl+"/api/heros/";
     private updateHeroWebApiUrl=this.webApiUrl+"/api/heros/";
     private deleteHeroWebApiUrl=this.webApiUrl+"/api/heros/";
@@ -51,7 +50,7 @@ export class HeroService {
       return this.http.get(getApi)
       .toPromise()
       .then(response=>this.returnHeros(response))
-      .catch(this.handleError);     
+      .catch(this.handleError);
   }
 
   returnHeros(response):Promise<Hero[]>{
@@ -90,13 +89,13 @@ export class HeroService {
   //                   .catch(this.handleError)
 
   // }
-  
-  create(hero:Hero):Promise<Hero>{   
+
+  create(hero:Hero):Promise<Hero>{
     return this.http.post(this.addHeroWebApiUrl,JSON.stringify(hero),{headers:this.headers})
                     .toPromise()
                     .then(response=>null)
                     .catch(this.handleError)
-                    
+
   }
 
 
@@ -104,14 +103,14 @@ export class HeroService {
       console.log(response.json());
       return response.json();
   }
-  
+
   delete(id:number):Promise<Hero>{
     const url = `${this.deleteHeroWebApiUrl}${id}`;
     return this.http.delete(url,{headers:this.headers})
                     .toPromise()
                     .then(()=>null)
                     .catch(this.handleError);
-  
+
   }
  private extractData(res: Response) {
     let body = res.json();

@@ -13,6 +13,7 @@ namespace Service
         {
             container.Install(FromAssembly.Containing<RepositoryInstaller>());
             container.Register(Component.For<IHeroService>().ImplementedBy<HeroService>().LifeStyle.Singleton);
+            container.Register(Component.For<IAuthService>().ImplementedBy<AuthService>().LifeStyle.Singleton);
             
         }
     }

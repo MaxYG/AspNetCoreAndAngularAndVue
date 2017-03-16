@@ -6,10 +6,8 @@ import {HttpModule} from '@angular/http';
 
 import './rxjs-extensions';
 
-
-
 import {AppRoutingModule} from './app-routing.module';
-
+import { ModalModule } from 'ng2-bootstrap';
 //imports for loading & configuring the in memory web api
 //import {InMemoryDataService} from './in-memory-data.service';
 
@@ -24,8 +22,7 @@ import {InternationalizationComponent} from './hero/internationalization.compone
 import {DeleteModalComponent} from './commonComponent/delete.modal.component';
 import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './home/home.component';
-
-import { ModalModule } from 'ng2-bootstrap';
+import {AuthenticateService} from "./appglobal/authenticate.service";
 
 @NgModule({
     imports: [
@@ -36,19 +33,13 @@ import { ModalModule } from 'ng2-bootstrap';
         ModalModule.forRoot()
     ],
     declarations: [
-        AppComponent ,
-        HeroesComponent,
-        HeroDetailComponent,
-        DashboardComponent,
-        HeroSearchComponent,
-        UserInputComponent,
-        InternationalizationComponent,
-        DeleteModalComponent,
-        LoginComponent,
-      HomeComponent
+        AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
+        UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,
+        HomeComponent,
     ],
     providers:[
-        HeroService
+        HeroService,
+        AuthenticateService
     ],
     bootstrap:    [ AppComponent ],
 
