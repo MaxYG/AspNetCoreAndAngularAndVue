@@ -21,7 +21,6 @@ import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
 import {DeleteModalComponent} from './commonComponent/delete.modal.component';
 import {LoginComponent} from './login/login.component';
-import {HomeComponent} from './home/home.component';
 import {AuthenticateService} from "./appglobal/authenticate.service";
 import {LocalStorageModule} from "angular-2-local-storage";
 
@@ -39,8 +38,8 @@ import {LocalStorageModule} from "angular-2-local-storage";
     ],
     declarations: [
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
-        UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,
-        HomeComponent,
+        UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent
+
     ],
     providers:[
         HeroService,

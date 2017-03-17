@@ -8,22 +8,24 @@ import {UserInputComponent} from './hero/user-input.component';
 import {InternationalizationComponent} from './hero/internationalization.component';
 import {DeleteModalComponent} from './commonComponent/delete.modal.component';
 import {LoginComponent} from './login/login.component';
-import {HomeComponent} from './home/home.component';
+import {CanActivateTeam} from "./appCanActivate/appCanActivateTeam";
+import {LoginUser} from "./appglobal/loginUser";
+import {Permissions} from "./appCanActivate/appPermissions";
+
 
 const routes:Routes=[
-   { path: '', redirectTo: '/login', pathMatch: 'full' },
+   { path: '', redirectTo: '/heroes', pathMatch: 'full' },
   { path: 'login',  component: LoginComponent },
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'detail/:Id', component: HeroDetailComponent },
   { path: 'user-input', component: UserInputComponent },
   { path: 'internationalization', component: InternationalizationComponent },
-  { path: 'heroes',     component: HeroesComponent },
-  { path: 'home',     component: HomeComponent }
-
+  { path: 'heroes',     component: HeroesComponent,canActivate:[CanActivateTeam] }
 ];
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  exports: [ RouterModule ],
+  providers: [CanActivateTeam, LoginUser, Permissions]
 })
 export class AppRoutingModule {}

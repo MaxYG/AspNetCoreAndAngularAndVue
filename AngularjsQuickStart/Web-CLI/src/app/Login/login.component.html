@@ -1,5 +1,5 @@
 <!--[hidden]="!IsLogin"-->
-<div class="container" >
+<div class="container" [hidden]="loginUser.IsLogin">
 
   <form #loginForm="ngForm" class="form-signin" style="max-width: 330px;padding: 15px;margin: 0 auto;">
     <h2 class="form-signin-heading">Please sign in</h2>

@@ -22,9 +22,9 @@ namespace WebAPI.Controllers
         [HttpPost]
         public LoginUserViewModel Post(LoginCommand command)
         {
-            var hero=_authService.Login(command.Username, command.Password);
+            var hero=_authService.Login(command.Email, command.Password);
             var encoding = Encoding.GetEncoding("iso-8859-1");
-            var hashToken = encoding.GetBytes($"{command.Username}:{command.Password}");
+            var hashToken = encoding.GetBytes($"{command.Email}:{command.Password}");
             var loginUserViewModel= new LoginUserViewModel
             {
                 Id =hero.Id,
