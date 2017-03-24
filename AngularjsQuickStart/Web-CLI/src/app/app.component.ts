@@ -4,12 +4,12 @@ import {LocalStorageService} from "angular-2-local-storage";
 import {RouterModule,ActivatedRoute,Router} from '@angular/router';
 import {AuthenticateService} from "./appglobal/authenticate.service";
 import {LoginForm} from "./Login/loginForm";
-
+import {AlertModule } from "ng2-bootstrap/alert";
 
 @Injectable()
 @Component({
     selector:'my-app',
-    templateUrl:'app.component.html'
+    templateUrl:'app.component.html',
 })
 
 export class AppComponent implements OnInit{
@@ -47,6 +47,7 @@ export class AppComponent implements OnInit{
   login():void{
 
     this.authService.login(this.loginForm).then(response=>this.loginSuccess(response));
+
   }
 
   loginSuccess(response){

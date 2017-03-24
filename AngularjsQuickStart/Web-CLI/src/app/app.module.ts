@@ -23,6 +23,8 @@ import {DeleteModalComponent} from './commonComponent/delete.modal.component';
 import {LoginComponent} from './login/login.component';
 import {AuthenticateService} from "./appglobal/authenticate.service";
 import {LocalStorageModule} from "angular-2-local-storage";
+import { AlertModule } from 'ng2-bootstrap';
+import {AlertComponent} from "./appglobal/alert.component";
 
 @NgModule({
     imports: [
@@ -31,6 +33,7 @@ import {LocalStorageModule} from "angular-2-local-storage";
         AppRoutingModule,
         HttpModule,
         ModalModule.forRoot(),
+        AlertModule.forRoot(),
       LocalStorageModule.withConfig({
         prefix:"my-app",
         storageType:"localStorage"
@@ -38,7 +41,7 @@ import {LocalStorageModule} from "angular-2-local-storage";
     ],
     declarations: [
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
-        UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent
+        UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent
 
     ],
     providers:[

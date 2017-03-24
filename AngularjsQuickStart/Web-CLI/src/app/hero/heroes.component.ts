@@ -25,6 +25,10 @@ export class HeroesComponent implements OnInit{
     hero : Hero={Id:0,Name:"",Email:""};
     heroDelete:Hero={Id:0,Name:"",Email:""}
 
+  showSuccessMessage():void{
+      alert("aaa");
+  }
+
     onSelect(hero:Hero):void{
         this.hero=Object.assign({},hero);
         this.addOrEditHeroModal.show();
