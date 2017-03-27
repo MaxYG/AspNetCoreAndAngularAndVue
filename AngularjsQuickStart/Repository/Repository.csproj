@@ -62,7 +62,7 @@
     <Compile Include="IContactBaseRepository.cs" />
     <Compile Include="IDbContextProvider.cs" />
     <Compile Include="IHeroRepository.cs" />
-    <Compile Include="Implement\TagRepository.cs" />
+    <Compile Include="Implement\HeroRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryInstaller.cs" />
   </ItemGroup>

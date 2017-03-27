@@ -44,3 +44,10 @@
 
 /AngularjsQuickStart/Service/*.ncrunchproject
 /AngularjsQuickStart/WebApi/*.ncrunchproject
+/AngularjsQuickStart/.vs
+/AngularjsQuickStart/Common/bin
+/AngularjsQuickStart/Common/obj
+/AngularjsQuickStart/DomainModel/bin
+
+/AngularjsQuickStart/DomainModel/obj
+/AngularjsQuickStart/ViewModel/bin

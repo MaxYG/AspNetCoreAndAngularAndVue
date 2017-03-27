@@ -24,7 +24,8 @@ namespace WebAPI.Controllers
             var result=_heroService.GetHeros().Select(x=>new HeroViewModel()
             {
                 Id = x.Id,
-                Name = x.Name
+                Name = x.Name,
+                Email = x.Email
             }).ToList();
             return result;
         }
@@ -36,7 +37,8 @@ namespace WebAPI.Controllers
             var result = _heroService.GetHerosByKeywords(searchHero.SearchKeywords).Select(x => new HeroViewModel()
             {
                 Id = x.Id,
-                Name = x.Name
+                Name = x.Name,
+                Email = x.Email
             }).ToList();
             return result;
         }
@@ -45,7 +47,7 @@ namespace WebAPI.Controllers
         [HttpPost]
         public void Post(HeroCommand command)
         {
-            _heroService.AddHero(command.Name);
+            _heroService.AddHero(command.Name,command.Email);
         }
 
         [Route("api/heros")]

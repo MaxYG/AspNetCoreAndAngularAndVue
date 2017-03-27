@@ -10,6 +10,7 @@ namespace Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(Data.Angularjs2DbContext context)
@@ -28,7 +29,7 @@ namespace Data.Migrations
             //
 
             context.Heros.AddOrUpdate(h=>h.Name,
-                new Hero() {Name = "Hello Hero"});
+                new Hero() {Name = "Hello Hero",Email = "test@test.com"});
         }
     }
 }

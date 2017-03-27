@@ -3,14 +3,14 @@ import {Hero} from './Hero';
 import {HEROES} from './mock-heroes';
 
 @Component({
-   
+
     selector:'user-input',
     styleUrls:['user-input.component.css'],
-    templateUrl:'user-input.component.html'  
+    templateUrl:'user-input.component.html'
 })
 
 export class UserInputComponent{
-    
+
     values='';
     onkey(event:any){
         //this.values+=event.target.value+'  |  ';
@@ -50,7 +50,8 @@ export class UserInputComponent{
 
     hero:Hero={
         Id:2,
-        Name:""
+        Name:"",
+      Email:""
     }
 
     heroes:Hero[]=HEROES;
@@ -64,7 +65,7 @@ export class UserInputComponent{
 
     @Input() size:number=1;
     @Output() sizeChange=new EventEmitter<number>();
-    
+
     resize(delta:number){
         this.size=Math.min(40,Math.max(8,+this.size+delta));
         this.sizeChange.emit(this.size);
@@ -78,7 +79,7 @@ export class UserInputComponent{
         this.resize(+1);
     }
 
-      setUpperCaseName(Name: string) {          
+      setUpperCaseName(Name: string) {
             this.hero.Name = Name.toUpperCase();
         }
 
@@ -93,7 +94,7 @@ export class UserInputComponent{
         }
 
         setStyles() {
-            let styles = {            
+            let styles = {
                 'font-style':  this.canSave      ? 'italic' : 'normal',  // italic
                 'font-weight': !this.isUnchanged ? 'bold'   : 'normal',  // normal
                 'font-size':   this.isSpecial    ? '24px'   : '8px',     // 24px
@@ -114,5 +115,5 @@ export class UserInputComponent{
         callFax(fax:string){
             alert(fax);
         }
-        
+
 }

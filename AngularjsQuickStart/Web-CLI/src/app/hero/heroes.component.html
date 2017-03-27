@@ -9,8 +9,9 @@
             <input #searchBox id="search-box" (keyup)="search(searchBox.value)" type="text" class="form-control search-input"/>
         </div>
     </div>
-    
+
     <button class="btn btn-primary pull-right" (click)="lgModal.show()">Add hero</button>
+  <button class="btn btn-primary pull-right" (click)="showSuccessMessage()">Show success message</button>
 </div>
 
 <table class="table table-hover">
@@ -24,7 +25,7 @@
     <tbody *ngFor="let hero of heroes">
         <tr>
             <td>{{hero.Name}}</td>
-            <td>Email</td>
+            <td>{{hero.Email}}</td>
             <td>
                 <span class="glyphicon glyphicon-edit hand" (click)="onSelect(hero)"></span>
                 <!--                <span class="glyphicon glyphicon-trash hand" (click)="deleteModal.show()" title="remove"></span>-->
@@ -47,7 +48,7 @@
                 <form #heroForm="ngForm">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" required>
+                        <input type="email" class="form-control" name="email"  [(ngModel)]="hero.Email" required>
                     </div>
                     <div class="form-group">
                         <label for="name">Name</label>
