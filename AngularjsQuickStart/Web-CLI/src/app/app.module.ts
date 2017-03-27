@@ -8,6 +8,7 @@ import './rxjs-extensions';
 
 import {AppRoutingModule} from './app-routing.module';
 import { ModalModule } from 'ng2-bootstrap';
+
 //imports for loading & configuring the in memory web api
 //import {InMemoryDataService} from './in-memory-data.service';
 
@@ -25,6 +26,7 @@ import {AuthenticateService} from "./appglobal/authenticate.service";
 import {LocalStorageModule} from "angular-2-local-storage";
 import { AlertModule } from 'ng2-bootstrap';
 import {AlertComponent} from "./appglobal/alert.component";
+import {AlertService} from "./appglobal/alert.service";
 
 @NgModule({
     imports: [
@@ -46,7 +48,8 @@ import {AlertComponent} from "./appglobal/alert.component";
     ],
     providers:[
         HeroService,
-        AuthenticateService
+        AuthenticateService,
+      AlertService
     ],
     bootstrap:    [ AppComponent ],
 

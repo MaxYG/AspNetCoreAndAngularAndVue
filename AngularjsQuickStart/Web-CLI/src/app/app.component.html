@@ -50,10 +50,15 @@
 
 </div>
 
-<my-alert></my-alert>
-<!--<div  *ngIf="alertMessage" style="width: 240px;margin: auto;text-align: center;z-index: 5000;position: fixed;left:43%">
-  <alert [type]="alertMessage.type" dismissible="true">{{ alertMessage.msg }}</alert>
-</div>-->
+<!--<my-alert></my-alert>-->
+
+  <div   style="width: 240px;margin: auto;text-align: center;z-index: 5000;position: fixed;left:43%">
+    <alert [type]="alertMessage.type" [dismissOnTimeout]="alertMessage.timeout" dismissible="true">
+      {{ alertMessage.msg }}
+    </alert>
+  </div>
+
+
 
 <div class="container" [hidden]="!loginUser.IsLogin">
   <router-outlet></router-outlet>

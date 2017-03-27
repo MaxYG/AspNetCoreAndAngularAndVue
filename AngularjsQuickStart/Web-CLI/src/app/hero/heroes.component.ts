@@ -8,13 +8,13 @@ import {Subject} from 'rxjs/Subject';
 
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
+import {AlertService} from "../appglobal/alert.service";
+import {AlertMessage} from "../appglobal/AlertMessage";
 
 @Component({
-
     selector:'my-heroes',
     templateUrl:'heroes.component.html',
     styleUrls: ['heroes.component.css']
-
 })
 
 export class HeroesComponent implements OnInit{
@@ -24,9 +24,28 @@ export class HeroesComponent implements OnInit{
 
     hero : Hero={Id:0,Name:"",Email:""};
     heroDelete:Hero={Id:0,Name:"",Email:""}
+  alertMessage:AlertMessage;
+
+  constructor(
+    private heroService:HeroService,
+    private route: ActivatedRoute,
+    private router:Router,
+    private alertService:AlertService
+  ){}
+
+  ngOnInit():void{
+    this.getHeroes();
+  }
 
   showSuccessMessage():void{
-      alert("aaa");
+    let message=this.alertService.successMessage()
+    // this.alertMessage={
+    //   isShow:message.isShow,
+    //   msg:message.msg,
+    //   type:message.type,
+    //   timeout:message.timeout
+    // };
+    console.log(this.alertMessage)
   }
 
     onSelect(hero:Hero):void{
@@ -38,19 +57,11 @@ export class HeroesComponent implements OnInit{
         this.hero={Id:0,Name:"",Email:""};
     }
 
-    constructor(
-        private heroService:HeroService,
-        private route: ActivatedRoute,
-        private router:Router,
-     ){}
-
     getHeroes():void{
         this.heroService.getHeroesByHttp().then(h=>this.initHeros(h));
     }
 
-    ngOnInit():void{
-        this.getHeroes();
-    }
+
 
     // gotoDetail():void{
     //     this.router.navigate(['/detail',this.selectedHero.Id]);
