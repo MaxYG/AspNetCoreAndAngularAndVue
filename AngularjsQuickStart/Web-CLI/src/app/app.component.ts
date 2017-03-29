@@ -8,7 +8,7 @@ import {LoginForm} from "./Login/loginForm";
 import {AlertModule } from "ng2-bootstrap/alert";
 import {AlertService} from "./appglobal/alert.service"
 import {AlertMessage} from "./appglobal/AlertMessage";
-
+import * as spinner from 'ng2-spin-kit/app/spinners'
 
 @Injectable()
 @Component({
@@ -17,7 +17,7 @@ import {AlertMessage} from "./appglobal/AlertMessage";
 })
 
 export class AppComponent implements OnInit{
-
+  isLoadding=false;
   loginUser:LoginUser={    Id:0,    Name:"",    Email:"",    AuthToken:"",    IsLogin:false  };
   alertMessage={    timeout:0,    type:"",    msg:""  } as AlertMessage;
   loginForm:LoginForm={Email:"test@test.com",Password:"Password1"} as LoginForm;
@@ -43,6 +43,7 @@ export class AppComponent implements OnInit{
   }
 
   login():void{
+    this.isLoadding=true;
     this.authService.login(this.loginForm).then(response=>this.loginSuccess(response));
   }
 
@@ -52,7 +53,8 @@ export class AppComponent implements OnInit{
     this.loginUser.IsLogin=true;
     let message=this.alertService.successMessage()
     this.alertMessage=message as AlertMessage;
-    this.router.navigateByUrl("/heroes");
+    //this.isLoadding=false;
+    //this.router.navigateByUrl("/heroes");
   }
 
   logout(){

@@ -11,6 +11,7 @@ import {LoginComponent} from './login/login.component';
 import {CanActivateTeam} from "./appCanActivate/appCanActivateTeam";
 import {LoginUser} from "./appglobal/loginUser";
 import {Permissions} from "./appCanActivate/appPermissions";
+import {MyAnimationComponent} from "./animationComponent/my.animation.component";
 
 
 const routes:Routes=[
@@ -20,6 +21,7 @@ const routes:Routes=[
   { path: 'detail/:Id', component: HeroDetailComponent },
   { path: 'user-input', component: UserInputComponent },
   { path: 'internationalization', component: InternationalizationComponent },
+  { path: 'my-animations', component: MyAnimationComponent },
   { path: 'heroes',     component: HeroesComponent,canActivate:[CanActivateTeam] }
 ];
 

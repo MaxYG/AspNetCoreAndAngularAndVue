@@ -4,15 +4,18 @@ Go to file: ctrl shift n
 recent files: ctrl e
 navigation bar: alt home
 
-如何共享登录用户到各个组件上去
-如何共享alert信息，
+1.如何共享登录用户到各个组件上去
+2.如何共享alert信息，
+3.spinner https://www.npmjs.com/package/ng2-spin-kit
+4.动画，如何让div从右边滑出
+5.缓动函数 如何使用缓动函数
+
 
 
 angularjs2
 
 `
 //todo:
-
 几个概念
 zone.js
 rxjs
@@ -22,8 +25,7 @@ es6
 调试
 多语言
 错误信息提示
-
-
+如何打包
 
 3.路由中带参跳转不能展现详细页面 这个是数组出了问题
 1.如何让组件自动编译到其它文件夹里
@@ -31,8 +33,6 @@ es6
 6.数组引用怎么整 差看demo dashboard例子
 7.<input #heroName /> 这个语法...
 8.内存模拟 id会自增
-
-
 
 angularjs2 写法
 样式最好不要用- eg: color-red 用 colorRed  ngstyle 和ngclass都可以用

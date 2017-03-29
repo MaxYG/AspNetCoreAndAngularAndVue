@@ -8,6 +8,7 @@ import './rxjs-extensions';
 
 import {AppRoutingModule} from './app-routing.module';
 import { ModalModule } from 'ng2-bootstrap';
+import * as spinner from 'ng2-spin-kit/app/spinners';
 
 //imports for loading & configuring the in memory web api
 //import {InMemoryDataService} from './in-memory-data.service';
@@ -27,7 +28,7 @@ import {LocalStorageModule} from "angular-2-local-storage";
 import { AlertModule } from 'ng2-bootstrap';
 import {AlertComponent} from "./appglobal/alert.component";
 import {AlertService} from "./appglobal/alert.service";
-
+import {MyAnimationComponent} from "./animationComponent/my.animation.component";
 @NgModule({
     imports: [
         BrowserModule,
@@ -43,8 +44,12 @@ import {AlertService} from "./appglobal/alert.service";
     ],
     declarations: [
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
-        UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent
-
+        UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
+      MyAnimationComponent,
+      spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
+      spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
+      spinner.CircleComponent,      spinner.ThreeBounceComponent,      spinner.CubeGridComponent,
+      spinner.WordPressComponent,      spinner.FadingCircleComponent,      spinner.FoldingCubeComponent
     ],
     providers:[
         HeroService,

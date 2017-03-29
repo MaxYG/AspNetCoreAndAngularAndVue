@@ -1,0 +1,53 @@
+
+<!--<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@heroState]="hero.state"
+        [@flyInOut]="'in'"
+        (click)="toggleState(hero)">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>-->
+
+<!--<div>例子：进场与离场</div>
+
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@flyInOut]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>-->
+
+
+<!--<div>从不同的状态下进场和离场</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        (click)="toggleState(hero)"
+        [@heroState]="hero.state">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>-->
+
+
+<!--<div>自动属性值计算,* => void 不起作用</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@shrinkOut]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>-->
+
+<div>缓动函数</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@flyInOut]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>

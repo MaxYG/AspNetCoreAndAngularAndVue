@@ -15,7 +15,9 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login(loginForm)">Sign in</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login(loginForm)">
+        Sign in
+      </button>
     </form>
   </div>
 </div>
@@ -39,6 +41,7 @@
           <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
           <li><a routerLink="/user-input" routerLinkActive="active">Some example</a></li>
           <li><a routerLink="/internationalization" routerLinkActive="active">internationalization</a></li>
+          <li><a routerLink="/my-animations" routerLinkActive="active">animations</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -52,14 +55,68 @@
 
 <!--<my-alert></my-alert>-->
 
-  <div   style="width: 240px;margin: auto;text-align: center;z-index: 5000;position: fixed;left:43%">
+<!--  <div   style="width: 240px;margin: auto;text-align: center;z-index: 5000;position: fixed;left:43%">
     <alert [type]="alertMessage.type" [dismissOnTimeout]="alertMessage.timeout" dismissible="true">
       {{ alertMessage.msg }}
     </alert>
-  </div>
+  </div>-->
 
 
 
 <div class="container" [hidden]="!loginUser.IsLogin">
   <router-outlet></router-outlet>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<h3>rotating-plane</h3>
+<sk-rotating-plane></sk-rotating-plane>
+
+<h3>double-bounce</h3>
+<sk-double-bounce></sk-double-bounce>
+
+<h3>wave</h3>
+<sk-wave></sk-wave>
+
+<h3>wandering-cubes</h3>
+<sk-wandering-cubes></sk-wandering-cubes>
+
+<h3>pulse</h3>
+<sk-pulse></sk-pulse>
+
+<h3>chasing-dots</h3>
+<sk-chasing-dots></sk-chasing-dots>
+
+<h3>circle</h3>
+<sk-circle></sk-circle>
+
+<h3>three-bounce</h3>
+<sk-three-bounce></sk-three-bounce>
+
+<h3>cube-grid</h3>
+<sk-cube-grid></sk-cube-grid>
+
+<h3>word-press</h3>
+<sk-word-press></sk-word-press>
+
+<h3>fading-circle</h3>
+<sk-fading-circle></sk-fading-circle>
+
+<h3>folding-cube</h3>
+<sk-folding-cube></sk-folding-cube>
+-->
