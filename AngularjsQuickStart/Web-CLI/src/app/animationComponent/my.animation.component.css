@@ -26,6 +26,17 @@ li {
   transform: scale(1);
 }
 
+.toggle-container {
+  background-color:white;
+  border:1px solid black;
+  width:100%;
+  text-align:center;
+  line-height:100px;
+  font-size:50px;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
 
 /*
 Copyright 2016 Google Inc. All Rights Reserved.

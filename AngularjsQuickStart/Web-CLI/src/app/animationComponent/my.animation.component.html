@@ -1,4 +1,52 @@
 
+
+
+<div>动画回调</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        (@flyInOutCallBack.start)="animationStarted($event)"
+        (@flyInOutCallBack.done)="animationDone($event)"
+        [@flyInOutCallBack]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>
+
+<div>并行动画组(Group)</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        (click)="inOutGroupClick()"
+        [@flyInOutGroup]="inOutGroupExpression">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>
+
+<hr>
+<div>基于关键帧(Keyframes)的多阶段动画2</div>
+<div>
+  <button (click)="expand()" >Open</button>
+  <button (click)="collapse()" >Closed</button>
+  <hr>
+
+  <div class="toggle-container" [@openClose]="stateExpression">
+    Look at this box
+  </div>
+</div>
+
+<hr>
+<div>基于关键帧(Keyframes)的多阶段动画</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@flyInOutKeyframes]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>
+
 <!--<div>
   <ul>
     <li *ngFor="let hero of heroes"
@@ -46,8 +94,12 @@
 <div>
   <ul>
     <li *ngFor="let hero of heroes"
-        [@flyInOut]="'in'">
+        [@flyInOut]="'inaaa'">
       {{hero.Name}}
     </li>
   </ul>
 </div>
+
+
+
+

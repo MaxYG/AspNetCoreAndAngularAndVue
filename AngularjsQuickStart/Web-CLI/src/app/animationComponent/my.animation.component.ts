@@ -2,11 +2,12 @@
  * Created by shinetech-yg on 3/27/2017.
  */
 
-
-import { Component,Input,trigger,state,style,transition,animate,Injectable,OnInit} from '@angular/core';
+import {
+  Component, Input, trigger, state, style, transition, animate, Injectable, OnInit,
+  keyframes, group,AnimationTransitionEvent
+} from '@angular/core';
 
 import {HeroService} from "../hero/hero.service";
-
 
 @Injectable()
 @Component({
@@ -14,15 +15,79 @@ import {HeroService} from "../hero/hero.service";
   styleUrls: ['my.animation.component.css'],
 
   templateUrl: 'my.animation.component.html',
-//   template:`
-// <ul>
-//     <li *ngFor="let hero of heroes"
-//         [@flyInOut]="'in'">
-//       {{hero.Name}}
-//     </li>
-//   </ul>
-// `,
   animations: [
+    //动画回调
+    trigger('flyInOutCallBack', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition('void => *', [
+        animate(3000, keyframes([
+          style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
+          style({opacity: 1, transform: 'translateX(200px)',  offset: 0.3}),
+          style({opacity: 1, transform: 'translateX(0)',     offset: 1.0})
+        ]))
+      ]),
+      /*transition('* => void', [
+        animate(3000, keyframes([
+          style({opacity: 1, transform: 'translateX(0)',     offset: 0}),
+          style({opacity: 1, transform: 'translateX(-15px)', offset: 0.7}),
+          style({opacity: 0, transform: 'translateX(100%)',  offset: 1.0})
+        ]))
+      ])*/
+    ]),
+
+    //并行动画组(Group)
+    trigger("flyInOutGroup",[
+        state("in",style({width:120,transform:"translateX(0)",opacity:1})),
+        state("out",style({width:120,transform:"translateX(100%)",opacity:0.5})),
+        transition("out=>*",[
+            style({width:10,transform:"translateX(50px)",opacity:0}),
+          group([
+            animate("3s 1s ease",style({
+              transform:"translateX(0)",
+              width:120
+            })),
+            animate("3s ease",keyframes([
+              style({opacity:1}),
+            ]))
+          ]),
+        ]),
+      transition("*=>void",[
+        group([
+          animate("0.3s ease",style({
+            transform:"translateX(0px)",
+            width:120
+          })),
+          animate("0.3s 0.2s ease",style({
+            opacity:0.5
+          })),
+        ]),
+      ]),
+    ]),
+    //基于关键帧(Keyframes)的多阶段动画2
+    trigger("openClose",[
+      state("collapsed,void",style({height:"0px",color:"maroon",boderColor:"maroon"})),
+      state("expanded",style({height:"*",borderColor:"green",color:"green"})),
+      transition("collapsed<=>expanded",[
+
+        animate("3000ms",style({height:"300px"})),
+        animate("3000ms",style({height:"100px"})),
+        animate("3000ms",style({height:"300px"})),
+        animate("3000ms",style({height:"100px"})),
+        animate("3000ms",style({height:"300px"})),
+
+      ]),
+    ]),
+    //基于关键帧(Keyframes)的多阶段动画
+    trigger("flyInOutKeyframes",[
+      state("in",style({transform:"translateX(0)"})),
+      transition("void=>*",[
+        animate("1000ms",keyframes([
+          style({opacity:0,transform:"translateX(-100%)",offset:0}),
+          style({opacity:1,transform:"translateX(20px)",offset:0.5}),
+          style({opacity:1,transform:"translateX(0)",offset:1}),
+        ]))
+      ])
+    ]),
     /*trigger('heroState', [
       state('inactive', style({
         backgroundColor: '#eee',
@@ -109,36 +174,67 @@ import {HeroService} from "../hero/hero.service";
 
 //缓动函数
     trigger("flyInOut",[
-      state("in",style({opacity:1,transform:"translateX(0)"})),
+      state("inaaa",style({opacity:1,transform:"translateX(0)"})),
 
       transition("void=>*",[
         style({opacity:0,transform:"translateX(-100%)"}),
-        animate("5s 2s ease-in"),
+        animate("3s 2s ease-in"),
       ]),
       transition("*=>void",[
         animate("2s 10 ease-out",style({
           opacity:0,transform:"translateX(500%)"
         }))
       ]),
-
-
-    ])
-
-
+    ]),
   ]
 })
 export class  MyAnimationComponent implements OnInit{
 
-  constructor(
-    private heroService:HeroService
-  ){}
   heroStateChange:string;
   heroes = [];
-  ngOnInit():void{
+  stateExpression:string;
+  inOutGroupExpression:string;
 
-    this.getHeroes();
-
+  constructor(
+    private heroService:HeroService,
+  ){
+    this.collapse();
+    this.inGroupFunction();
   }
+
+  animationStarted(event: AnimationTransitionEvent) {
+    console.warn('Animation started: ', event);
+    console.log("do some logic");
+  }
+
+  animationDone(event: AnimationTransitionEvent) {
+    console.warn('Animation done: ', event);
+    console.log("do some logic");
+  }
+
+  inGroupFunction(){
+      this.inOutGroupExpression="in";
+  }
+  outGroupFunction(){
+    this.inOutGroupExpression="out";
+  }
+  inOutGroupClick(){
+    this.inOutGroupExpression=this.inOutGroupExpression==="in"?"out":"in";
+  }
+
+  expand(){
+      this.stateExpression="expanded";
+  }
+
+  collapse(){
+    this.stateExpression="collapsed";
+  }
+
+  ngOnInit():void{
+    this.getHeroes();
+  }
+
+
   toggleState(hero) {
 
     this.heroStateChange = (this.heroStateChange === 'active' ? 'inactive' : 'active');

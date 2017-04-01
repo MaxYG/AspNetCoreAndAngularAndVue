@@ -7,8 +7,11 @@ import {HttpModule} from '@angular/http';
 import './rxjs-extensions';
 
 import {AppRoutingModule} from './app-routing.module';
-import { ModalModule } from 'ng2-bootstrap';
+import { ModalModule,DropdownModule  } from 'ng2-bootstrap';
+//import { DropdownModule } from 'ng2-bootstrap/dropdown';
 import * as spinner from 'ng2-spin-kit/app/spinners';
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
+
 
 //imports for loading & configuring the in memory web api
 //import {InMemoryDataService} from './in-memory-data.service';
@@ -29,6 +32,9 @@ import { AlertModule } from 'ng2-bootstrap';
 import {AlertComponent} from "./appglobal/alert.component";
 import {AlertService} from "./appglobal/alert.service";
 import {MyAnimationComponent} from "./animationComponent/my.animation.component";
+import {MyNgmoduleComponent} from "./ngmoduleComponent/my.ngmodule.component";
+import {MyHighlightDirective} from "./ngmoduleComponent/highlight.directive";
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -36,7 +42,10 @@ import {MyAnimationComponent} from "./animationComponent/my.animation.component"
         AppRoutingModule,
         HttpModule,
         ModalModule.forRoot(),
+        DropdownModule.forRoot(),
         AlertModule.forRoot(),
+      Angular2FontawesomeModule,
+
       LocalStorageModule.withConfig({
         prefix:"my-app",
         storageType:"localStorage"
@@ -45,7 +54,7 @@ import {MyAnimationComponent} from "./animationComponent/my.animation.component"
     declarations: [
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
         UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
-      MyAnimationComponent,
+      MyAnimationComponent,MyNgmoduleComponent,MyHighlightDirective,
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
       spinner.CircleComponent,      spinner.ThreeBounceComponent,      spinner.CubeGridComponent,

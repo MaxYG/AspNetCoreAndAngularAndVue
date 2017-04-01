@@ -4,11 +4,11 @@ Go to file: ctrl shift n
 recent files: ctrl e
 navigation bar: alt home
 
-1.如何共享登录用户到各个组件上去
+1.如何共享登录用户到各个组件上去 (done,需要更好的办法处理)
 2.如何共享alert信息，
 3.spinner https://www.npmjs.com/package/ng2-spin-kit
 4.动画，如何让div从右边滑出
-5.缓动函数 如何使用缓动函数
+5.ng2-bootstrap dropdown not work
 
 
 

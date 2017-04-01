@@ -18,6 +18,7 @@ import * as spinner from 'ng2-spin-kit/app/spinners'
 
 export class AppComponent implements OnInit{
   isLoadding=false;
+  saveSuccess=false;
   loginUser:LoginUser={    Id:0,    Name:"",    Email:"",    AuthToken:"",    IsLogin:false  };
   alertMessage={    timeout:0,    type:"",    msg:""  } as AlertMessage;
   loginForm:LoginForm={Email:"test@test.com",Password:"Password1"} as LoginForm;
@@ -29,7 +30,13 @@ export class AppComponent implements OnInit{
   ){}
 
   ngOnInit(): void {
-    this.initLoginUser()
+    this.initLoginUser();
+    //let message=this.alertService.successMessage()
+    //this.alertMessage=message as AlertMessage;
+  }
+
+  showSuccess():void{
+      this.saveSuccess= this.saveSuccess===false?true:false;
   }
 
   initLoginUser():void{
@@ -44,7 +51,10 @@ export class AppComponent implements OnInit{
 
   login():void{
     this.isLoadding=true;
-    this.authService.login(this.loginForm).then(response=>this.loginSuccess(response));
+    setTimeout(()=>{
+      this.isLoadding=false;
+      this.authService.login(this.loginForm).then(response=>this.loginSuccess(response));
+    }, 5000);
   }
 
   loginSuccess(response){
@@ -53,8 +63,8 @@ export class AppComponent implements OnInit{
     this.loginUser.IsLogin=true;
     let message=this.alertService.successMessage()
     this.alertMessage=message as AlertMessage;
-    //this.isLoadding=false;
-    //this.router.navigateByUrl("/heroes");
+    this.isLoadding=false;
+    this.router.navigateByUrl("/heroes");
   }
 
   logout(){

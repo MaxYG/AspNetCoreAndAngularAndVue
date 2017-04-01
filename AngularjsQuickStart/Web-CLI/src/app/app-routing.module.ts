@@ -12,6 +12,7 @@ import {CanActivateTeam} from "./appCanActivate/appCanActivateTeam";
 import {LoginUser} from "./appglobal/loginUser";
 import {Permissions} from "./appCanActivate/appPermissions";
 import {MyAnimationComponent} from "./animationComponent/my.animation.component";
+import {MyNgmoduleComponent} from "./ngmoduleComponent/my.ngmodule.component";
 
 
 const routes:Routes=[
@@ -22,6 +23,7 @@ const routes:Routes=[
   { path: 'user-input', component: UserInputComponent },
   { path: 'internationalization', component: InternationalizationComponent },
   { path: 'my-animations', component: MyAnimationComponent },
+  { path: 'my-ngmodule', component: MyNgmoduleComponent },
   { path: 'heroes',     component: HeroesComponent,canActivate:[CanActivateTeam] }
 ];
 
