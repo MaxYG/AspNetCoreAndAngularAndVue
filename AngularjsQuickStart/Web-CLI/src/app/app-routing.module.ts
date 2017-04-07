@@ -13,6 +13,7 @@ import {LoginUser} from "./appglobal/loginUser";
 import {Permissions} from "./appCanActivate/appPermissions";
 import {MyAnimationComponent} from "./animationComponent/my.animation.component";
 import {MyNgmoduleComponent} from "./ngmoduleComponent/my.ngmodule.component";
+// import {MyContactComponent} from "./ngmoduleComponent/my.contact.component";
 
 
 const routes:Routes=[
@@ -24,7 +25,12 @@ const routes:Routes=[
   { path: 'internationalization', component: InternationalizationComponent },
   { path: 'my-animations', component: MyAnimationComponent },
   { path: 'my-ngmodule', component: MyNgmoduleComponent },
-  { path: 'heroes',     component: HeroesComponent,canActivate:[CanActivateTeam] }
+  // { path: 'my-contact', component: MyContactComponent },
+  { path: 'heroes',     component: HeroesComponent,canActivate:[CanActivateTeam] },
+
+
+  { path: 'my-ngmodule/crisis',loadChildren:"app/ngmoduleComponent/crisis/crisis.module#CrisisModule" },
+
 ];
 
 @NgModule({

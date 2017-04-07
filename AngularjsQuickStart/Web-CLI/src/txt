@@ -12,6 +12,8 @@ navigation bar: alt home
 
 
 
+
+
 angularjs2
 
 `
@@ -43,7 +45,7 @@ TypeError: Cannot read property 'create' of undefined
     at Function.Extractor.create (F:\study\Angularjs2
 
 
-    注意：
+    注意与总结：
     1.永远不要在特性路由模块中调用RouterModule.forRoot！
     2.管道：一个向服务器发起HTTP请求的管道。 这通常是一个可怕的主意。
     不管我们怎么做，估计它都会是一个可怕的主意。
@@ -52,7 +54,9 @@ TypeError: Cannot read property 'create' of undefined
     这个管道就会发起一大堆请求“攻击”服务器。
     3.管道：但是一个纯管道必须总是用纯函数实现。忽略这个警告将导致失败并带来一大堆这样的控制台错误：
     表达式在被检查后被变更
-
+    4：ElementRef  Carefully review any use of ElementRef in your code. For more detail, see the Security Guide. http://g.co/ng/security
+    5：ANGULAR 表单的风格
+      我们写 Angular 表单组件时，可以使用模板驱动式表单， 也可以使用响应式表单。
     安全：注入DomSanitizer服务，然后调用下面的方法之一，你就可以把一个值标记为可信任的。
 
        bypassSecurityTrustHtml

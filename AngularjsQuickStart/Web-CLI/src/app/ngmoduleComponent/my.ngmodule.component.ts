@@ -12,6 +12,5 @@ import {Component, Injectable, Input, Output} from "@angular/core";
 })
 
 export class MyNgmoduleComponent{
-  @Output() subtitle="";
-  title="angular modules";
+  subtitle_bind = "(v1) highlight directive backgroup color is gold";
 }

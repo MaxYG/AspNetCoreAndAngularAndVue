@@ -34,10 +34,16 @@ import {AlertService} from "./appglobal/alert.service";
 import {MyAnimationComponent} from "./animationComponent/my.animation.component";
 import {MyNgmoduleComponent} from "./ngmoduleComponent/my.ngmodule.component";
 import {MyHighlightDirective} from "./ngmoduleComponent/highlight.directive";
+import {MyTitleComponent} from "./ngmoduleComponent/my.title.component";
+import {UserService} from "./ngmoduleComponent/user.service";
+
+import { ContactModule }      from './ngmoduleComponent/contact/my.contact.module';
+
 
 @NgModule({
     imports: [
         BrowserModule,
+        ContactModule,
         FormsModule,
         AppRoutingModule,
         HttpModule,
@@ -54,7 +60,9 @@ import {MyHighlightDirective} from "./ngmoduleComponent/highlight.directive";
     declarations: [
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
         UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
-      MyAnimationComponent,MyNgmoduleComponent,MyHighlightDirective,
+      MyAnimationComponent,MyNgmoduleComponent,MyTitleComponent,
+      MyHighlightDirective,
+
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
       spinner.CircleComponent,      spinner.ThreeBounceComponent,      spinner.CubeGridComponent,
@@ -63,10 +71,10 @@ import {MyHighlightDirective} from "./ngmoduleComponent/highlight.directive";
     providers:[
         HeroService,
         AuthenticateService,
-      AlertService
+        UserService,
+        AlertService
     ],
     bootstrap:    [ AppComponent ],
-
 })
 
 export class AppModule{}
