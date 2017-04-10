@@ -1,7 +1,7 @@
 
 import {Component, OnInit, Injectable} from "@angular/core";
 import {Contact,ContactService} from "./my.contact.service";
-import {UserService} from "../user.service";
+import {UserService} from "../core/user.service";
 
 @Injectable()
 @Component({

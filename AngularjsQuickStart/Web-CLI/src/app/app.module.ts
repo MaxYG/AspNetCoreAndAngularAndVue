@@ -30,16 +30,15 @@ import {AlertService} from "./appglobal/alert.service";
 import {MyAnimationComponent} from "./animationComponent/my.animation.component";
 import {MyNgmoduleComponent} from "./ngmoduleComponent/my.ngmodule.component";
 
-import {MyTitleComponent} from "./ngmoduleComponent/my.title.component";
-import {UserService} from "./ngmoduleComponent/user.service";
-
 import { ContactModule }      from './ngmoduleComponent/contact/my.contact.module';
 import {SharedModule} from "./ngmoduleComponent/shared/shared.module";
+import {CoreModule} from "./ngmoduleComponent/core/core.module";
 
 @NgModule({
     imports: [
         BrowserModule,
         ContactModule,
+      CoreModule,
       SharedModule,
         FormsModule,
         AppRoutingModule,
@@ -57,7 +56,7 @@ import {SharedModule} from "./ngmoduleComponent/shared/shared.module";
     declarations: [
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
         UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
-        MyAnimationComponent,MyNgmoduleComponent,MyTitleComponent,
+        MyAnimationComponent,MyNgmoduleComponent,
 
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
@@ -67,7 +66,6 @@ import {SharedModule} from "./ngmoduleComponent/shared/shared.module";
     providers:[
         HeroService,
         AuthenticateService,
-        UserService,
         AlertService
     ],
     bootstrap:    [ AppComponent ],
