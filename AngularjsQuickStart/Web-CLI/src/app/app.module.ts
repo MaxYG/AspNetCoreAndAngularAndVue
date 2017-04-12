@@ -38,7 +38,7 @@ import {CoreModule} from "./ngmoduleComponent/core/core.module";
     imports: [
         BrowserModule,
         ContactModule,
-      CoreModule,
+      CoreModule.forRoot({userName:"Miss Marple"}),
       SharedModule,
         FormsModule,
         AppRoutingModule,
