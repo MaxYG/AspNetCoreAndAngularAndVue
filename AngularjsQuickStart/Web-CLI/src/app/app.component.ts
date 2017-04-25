@@ -10,10 +10,12 @@ import {AlertService} from "./appglobal/alert.service"
 import {AlertMessage} from "./appglobal/AlertMessage";
 import * as spinner from 'ng2-spin-kit/app/spinners'
 
+
 @Injectable()
 @Component({
     selector:'my-app',
     templateUrl:'app.component.html',
+    styleUrls:['app.component.css']
 })
 
 export class AppComponent implements OnInit{

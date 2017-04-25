@@ -18,6 +18,6 @@ export class MyTitleComponent{
 
   user="";
   constructor(userService:UserService){
-      this.user=userService.userName;
+      this.user=userService._userName;
   };
 }

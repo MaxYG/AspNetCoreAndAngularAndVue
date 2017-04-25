@@ -16,7 +16,7 @@ export class MyContactComponent implements OnInit{
   msg="loading contacts ...";
   userName="";
   constructor(private contactService:ContactService, userService:UserService){
-    this.userName=userService.userName;
+    this.userName=userService._userName;
   };
   ngOnInit(): void {
     this.contactService.getContacts().then(contacts=>{

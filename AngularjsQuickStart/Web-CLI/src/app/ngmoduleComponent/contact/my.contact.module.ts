@@ -5,8 +5,9 @@ import { MyHighlightDirective as ContactHighlightDirective} from '../my.highligh
 
 import {SharedModule} from "../shared/shared.module";
 
+
 @NgModule({
-  imports:      [ SharedModule ],
+  imports:      [ SharedModule],
   declarations: [ MyContactComponent, ContactHighlightDirective ],
   exports:      [ MyContactComponent ],
   providers:    [ ContactService ]

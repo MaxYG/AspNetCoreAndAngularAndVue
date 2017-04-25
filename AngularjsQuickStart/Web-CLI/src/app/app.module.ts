@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+﻿import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
@@ -8,6 +8,8 @@ import './rxjs-extensions';
 
 import {AppRoutingModule} from './app-routing.module';
 import { ModalModule,DropdownModule  } from 'ng2-bootstrap';
+import { BsDropdownModule } from 'ngx-bootstrap';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import * as spinner from 'ng2-spin-kit/app/spinners';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
 
@@ -29,10 +31,13 @@ import {AlertComponent} from "./appglobal/alert.component";
 import {AlertService} from "./appglobal/alert.service";
 import {MyAnimationComponent} from "./animationComponent/my.animation.component";
 import {MyNgmoduleComponent} from "./ngmoduleComponent/my.ngmodule.component";
+import {MyAttributeDirectiveComponent} from "./attributeDirectiveComponent/my-attribute-directive.componet";
 
 import { ContactModule }      from './ngmoduleComponent/contact/my.contact.module';
 import {SharedModule} from "./ngmoduleComponent/shared/shared.module";
-import {CoreModule} from "./ngmoduleComponent/core/core.module";
+import { CoreModule } from "./ngmoduleComponent/core/core.module";
+
+import { MyHighlightDirective } from "./attributeDirectiveComponent/highlight.directive";
 
 @NgModule({
     imports: [
@@ -46,6 +51,8 @@ import {CoreModule} from "./ngmoduleComponent/core/core.module";
         ModalModule.forRoot(),
         DropdownModule.forRoot(),
         AlertModule.forRoot(),
+      BsDropdownModule.forRoot(),
+      NgbModule.forRoot(),
       Angular2FontawesomeModule,
 
       LocalStorageModule.withConfig({
@@ -56,7 +63,7 @@ import {CoreModule} from "./ngmoduleComponent/core/core.module";
     declarations: [
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
         UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
-        MyAnimationComponent,MyNgmoduleComponent,
+        MyAnimationComponent, MyNgmoduleComponent, MyAttributeDirectiveComponent, MyHighlightDirective,
 
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
