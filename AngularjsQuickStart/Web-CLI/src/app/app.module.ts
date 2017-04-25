@@ -38,6 +38,7 @@ import {SharedModule} from "./ngmoduleComponent/shared/shared.module";
 import { CoreModule } from "./ngmoduleComponent/core/core.module";
 
 import { MyHighlightDirective } from "./attributeDirectiveComponent/highlight.directive";
+import {MyComponentStyleComponent} from "./componentStyleComponent/my-component-style.component";
 
 @NgModule({
     imports: [
@@ -64,7 +65,7 @@ import { MyHighlightDirective } from "./attributeDirectiveComponent/highlight.di
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
         UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
         MyAnimationComponent, MyNgmoduleComponent, MyAttributeDirectiveComponent, MyHighlightDirective,
-
+      MyComponentStyleComponent,
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
       spinner.CircleComponent,      spinner.ThreeBounceComponent,      spinner.CubeGridComponent,

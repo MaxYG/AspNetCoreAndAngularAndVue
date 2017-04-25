@@ -14,7 +14,7 @@ import {Permissions} from "./appCanActivate/appPermissions";
 import {MyAnimationComponent} from "./animationComponent/my.animation.component";
 import {MyNgmoduleComponent} from "./ngmoduleComponent/my.ngmodule.component";
 import {MyAttributeDirectiveComponent} from "./attributeDirectiveComponent/my-attribute-directive.componet";
-// import {MyContactComponent} from "./ngmoduleComponent/my.contact.component";
+import {MyComponentStyleComponent} from "./componentStyleComponent/my-component-style.component";
 
 
 const routes:Routes=[
@@ -27,6 +27,7 @@ const routes:Routes=[
   { path: 'my-animations', component: MyAnimationComponent },
   { path: 'my-ngmodule', component: MyNgmoduleComponent },
   { path: 'my-attribute-directive', component: MyAttributeDirectiveComponent },
+  { path: 'my-component-style', component: MyComponentStyleComponent },
   // { path: 'my-contact', component: MyContactComponent },
   { path: 'heroes',     component: HeroesComponent,canActivate:[CanActivateTeam] },
 
