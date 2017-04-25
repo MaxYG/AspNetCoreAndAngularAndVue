@@ -51,7 +51,8 @@ export class UserInputComponent{
     hero:Hero={
         Id:2,
         Name:"",
-      Email:""
+      Email:"",
+      state:""
     }
 
     heroes:Hero[]=HEROES;

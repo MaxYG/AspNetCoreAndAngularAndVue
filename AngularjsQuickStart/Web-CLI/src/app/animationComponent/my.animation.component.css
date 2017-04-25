@@ -1,0 +1,45 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: block;
+  width: 120px;
+  line-height: 50px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.active {
+  background-color: #cfd8dc;
+  transform: scale(1.1);
+}
+.inactive {
+  background-color: #eee;
+  transform: scale(1);
+}
+
+.toggle-container {
+  background-color:white;
+  border:1px solid black;
+  width:100%;
+  text-align:center;
+  line-height:100px;
+  font-size:50px;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

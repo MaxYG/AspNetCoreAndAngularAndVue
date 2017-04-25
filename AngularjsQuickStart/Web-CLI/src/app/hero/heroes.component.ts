@@ -22,8 +22,8 @@ export class HeroesComponent implements OnInit{
     @ViewChild('deleteModal') public commonDeleteModal:ModalDirective;
     heroes = [];
 
-    hero : Hero={Id:0,Name:"",Email:""};
-    heroDelete:Hero={Id:0,Name:"",Email:""}
+    hero : Hero={Id:0} as Hero;
+    heroDelete:Hero={Id:0} as Hero;
   alertMessage:AlertMessage;
 
   constructor(
@@ -37,24 +37,13 @@ export class HeroesComponent implements OnInit{
     this.getHeroes();
   }
 
-  showSuccessMessage():void{
-    let message=this.alertService.successMessage()
-    // this.alertMessage={
-    //   isShow:message.isShow,
-    //   msg:message.msg,
-    //   type:message.type,
-    //   timeout:message.timeout
-    // };
-    console.log(this.alertMessage)
-  }
-
     onSelect(hero:Hero):void{
         this.hero=Object.assign({},hero);
         this.addOrEditHeroModal.show();
     }
 
     cleanHeroValue(){
-        this.hero={Id:0,Name:"",Email:""};
+        this.hero={Id:0} as Hero;
     }
 
     getHeroes():void{

@@ -1,0 +1,105 @@
+
+
+
+<div>动画回调</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        (@flyInOutCallBack.start)="animationStarted($event)"
+        (@flyInOutCallBack.done)="animationDone($event)"
+        [@flyInOutCallBack]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>
+
+<div>并行动画组(Group)</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        (click)="inOutGroupClick()"
+        [@flyInOutGroup]="inOutGroupExpression">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>
+
+<hr>
+<div>基于关键帧(Keyframes)的多阶段动画2</div>
+<div>
+  <button (click)="expand()" >Open</button>
+  <button (click)="collapse()" >Closed</button>
+  <hr>
+
+  <div class="toggle-container" [@openClose]="stateExpression">
+    Look at this box
+  </div>
+</div>
+
+<hr>
+<div>基于关键帧(Keyframes)的多阶段动画</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@flyInOutKeyframes]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>
+
+<!--<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@heroState]="hero.state"
+        [@flyInOut]="'in'"
+        (click)="toggleState(hero)">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>-->
+
+<!--<div>例子：进场与离场</div>
+
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@flyInOut]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>-->
+
+
+<!--<div>从不同的状态下进场和离场</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        (click)="toggleState(hero)"
+        [@heroState]="hero.state">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>-->
+
+
+<!--<div>自动属性值计算,* => void 不起作用</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@shrinkOut]="'in'">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>-->
+
+<div>缓动函数</div>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes"
+        [@flyInOut]="'inaaa'">
+      {{hero.Name}}
+    </li>
+  </ul>
+</div>
+
+
+
+

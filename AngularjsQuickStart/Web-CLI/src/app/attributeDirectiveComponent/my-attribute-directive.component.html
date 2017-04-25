@@ -1,0 +1,23 @@
+﻿
+<h1>my first attribute directive</h1>
+<p myHighlight>Highlight me!</p>
+
+<p myHighlight="yellow">Highlighted in yellow</p>
+<p myHighlight="orange">Highlighted in orange</p>
+
+<p myHighlight="{{textColor}}">Highlighted with parent component's color {{textColor}}</p>
+<p myHighlight defaultColor="violet">Highlighted in default color</p>
+<p>但我们以前也曾经把模板HTML绑定到组件的属性，而且从来没有用过@Input。 差异何在？
+
+  差异在于信任度不同。 Angular把组件的模板看做从属于该组件的。 组件和它的模板默认会相互信任。 这也就是意味着，组件自己的模板可以绑定到组件的任意属性，无论是否使用了@Input装饰器。
+
+  但组件或指令不应该盲目的信任其它组件或指令。 因此组件或指令的属性默认是不能被绑定的。 从Angular绑定机制的角度来看，它们是私有的，而当添加了@Input时，它们变成了公共的 只有这样，它们才能被其它组件或属性绑定。
+</p>
+
+<div>
+  你可以根据属性名在绑定中出现的位置来判定是否要加@Input。
+
+  当它出现在等号右侧的模板表达式中时，它属于模板所在的组件，不需要@Input装饰器。
+  当它出现在等号左边的方括号（[ ]）中时，该属性属于其它组件或指令，它必须带有@Input 装饰器。
+  <p myHighlight [highlightColorMustInput]="textColor">Must input</p>
+</div>

@@ -1,0 +1,28 @@
+
+example6
+核心 (Core) 模块
+<a routerLink="crisis"  routerLinkActive="active">Click Crisis Center then throw exception in browser </a>
+<br>
+
+example5
+共享模块:存放这些公共组件、指令和管道，并且共享给那些需要它们的模块
+<br>
+example4
+用路由器实现惰性 (lazy) 加载,app/hero/hero.module#HeroModule 该字符串同时标记出了模块文件和模块类，两者用#分隔开,
+<a routerLink="crisis"  routerLinkActive="active">Crisis Center 需要更改coremodule</a>
+<br>
+总是在特性路由模块中调用RouterModule.forChild。
+<br>
+<br>
+example3
+特性模块
+我们引导根模块来启动应用，但导入特性模块来扩展应用。
+特性模块可以对其它模块暴露或隐藏自己的实现
+<br>
+<br>
+example1
+<my-title [subtitleObj]="subtitle_bind"></my-title>
+<br>
+<br>
+example2 同一个angular directive
+<my-contact></my-contact>
