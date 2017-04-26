@@ -39,6 +39,8 @@ import { CoreModule } from "./ngmoduleComponent/core/core.module";
 
 import { MyHighlightDirective } from "./attributeDirectiveComponent/highlight.directive";
 import {MyComponentStyleComponent} from "./componentStyleComponent/my-component-style.component";
+import {MyDeployComponent} from "./deploy/deploy.component";
+import {MyHierarchicalDependencyInjectionComponent} from "./hierarchicalDependencyInjection/my-herarchical-dependency-injection.component";
 
 @NgModule({
     imports: [
@@ -65,7 +67,8 @@ import {MyComponentStyleComponent} from "./componentStyleComponent/my-component-
         AppComponent , HeroesComponent, HeroDetailComponent, DashboardComponent, HeroSearchComponent,
         UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
         MyAnimationComponent, MyNgmoduleComponent, MyAttributeDirectiveComponent, MyHighlightDirective,
-      MyComponentStyleComponent,
+      MyComponentStyleComponent,MyDeployComponent,MyHierarchicalDependencyInjectionComponent,
+
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
       spinner.CircleComponent,      spinner.ThreeBounceComponent,      spinner.CubeGridComponent,
