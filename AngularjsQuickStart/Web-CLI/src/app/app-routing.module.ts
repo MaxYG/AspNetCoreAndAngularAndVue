@@ -17,6 +17,7 @@ import {MyAttributeDirectiveComponent} from "./attributeDirectiveComponent/my-at
 import {MyComponentStyleComponent} from "./componentStyleComponent/my-component-style.component";
 import {MyDeployComponent} from "./deploy/deploy.component";
 import {MyHierarchicalDependencyInjectionComponent} from "./hierarchicalDependencyInjection/my-herarchical-dependency-injection.component";
+import {HeroTaxReturnComponnent} from "./hierarchicalDependencyInjection/hero-tax-return.component";
 
 
 const routes:Routes=[

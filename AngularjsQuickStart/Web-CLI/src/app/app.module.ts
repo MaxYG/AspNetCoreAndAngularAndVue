@@ -41,6 +41,8 @@ import { MyHighlightDirective } from "./attributeDirectiveComponent/highlight.di
 import {MyComponentStyleComponent} from "./componentStyleComponent/my-component-style.component";
 import {MyDeployComponent} from "./deploy/deploy.component";
 import {MyHierarchicalDependencyInjectionComponent} from "./hierarchicalDependencyInjection/my-herarchical-dependency-injection.component";
+import {HeroTaxReturnComponnent} from "./hierarchicalDependencyInjection/hero-tax-return.component";
+import {HeroTaxService} from "./hierarchicalDependencyInjection/HeroTaxService";
 
 @NgModule({
     imports: [
@@ -68,6 +70,7 @@ import {MyHierarchicalDependencyInjectionComponent} from "./hierarchicalDependen
         UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
         MyAnimationComponent, MyNgmoduleComponent, MyAttributeDirectiveComponent, MyHighlightDirective,
       MyComponentStyleComponent,MyDeployComponent,MyHierarchicalDependencyInjectionComponent,
+      HeroTaxReturnComponnent,
 
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
@@ -77,7 +80,8 @@ import {MyHierarchicalDependencyInjectionComponent} from "./hierarchicalDependen
     providers:[
         HeroService,
         AuthenticateService,
-        AlertService
+        AlertService,
+      HeroTaxService
     ],
     bootstrap:    [ AppComponent ],
 })

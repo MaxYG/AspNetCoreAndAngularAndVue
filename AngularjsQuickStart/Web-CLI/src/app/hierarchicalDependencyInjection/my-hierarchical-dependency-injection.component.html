@@ -1,2 +1,20 @@
-aa
-组件注入器
+<div>多级注入器</div>
+<div>
+  盖住”这次冒泡。一个中层的组件可以声称自己是“宿主”组件。 向上查找提供商的过程会截止于这个“宿主”组件
+</div>
+
+
+
+<div>
+  <h3>Hero Tax Returns</h3>
+  <ul>
+    <li *ngFor="let hero of heroTaxs | async"
+        (click)="showTaxReturn(hero)">{{hero.name}}
+    </li>
+  </ul>
+  <hero-tax-return
+    *ngFor="let selected of selectedTaxReturns; let i = index"
+    [taxReturn]="selected"
+    (close)="closeTaxReturn(i)">
+  </hero-tax-return>
+</div>
