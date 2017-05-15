@@ -14,7 +14,7 @@ import { HeroTaxReturnService } from './hero-tax-return.service';
 export class HeroTaxReturnComponnent{
   message="";
   constructor(private heroTaxReturnService:HeroTaxReturnService){};
-  @Output() close=new EventEmitter<void>();
+  @Output() close111=new EventEmitter<void>();
 
   get taxReturn():HeroTaxReturn{
     return this.heroTaxReturnService.taxReturn;
@@ -25,15 +25,18 @@ export class HeroTaxReturnComponnent{
     this.heroTaxReturnService.taxReturn=htr;
   }
 
-  onCanceled(){
+   onCanceled(){
     this.flashMessage("Canceled");
     this.heroTaxReturnService.restoreTaxReturn();
   }
 
-  onClose(){this.close.emit();}
+  onClose(){
+     //调用父组件的closeTaxReturn， 因为要操作父组件的数组 selectedTaxReturns
+     this.close111.emit();
+   }
 
-  onSaved(){
-    this.flashMessage("saved");
+  onSaved() {
+    this.flashMessage('Saved');
     this.heroTaxReturnService.saveTaxReturn();
   }
 

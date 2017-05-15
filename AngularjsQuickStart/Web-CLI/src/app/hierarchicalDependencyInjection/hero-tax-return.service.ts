@@ -26,8 +26,8 @@ export class HeroTaxReturnService {
     this.taxReturn=this.originalTaxReturn;
   }
 
-  saveTaxReturn(){
-    this.taxReturn=this.currentTaxReturn;
+  saveTaxReturn() {
+    this.taxReturn = this.currentTaxReturn;
     this.heroService.saveTaxReturn(this.currentTaxReturn).subscribe();
   }
 }

@@ -35,12 +35,12 @@ export class HeroTaxService {
     });
   }
 
-  saveTaxReturn(heroTaxReturn:HeroTaxReturn):Observable<HeroTaxReturn>{
-    return new Observable<HeroTaxReturn>((observer:Observer<HeroTaxReturn>)=>{
-      const htr=this.heroTaxReturns.find(t=>t.heroTax.id==heroTaxReturn.id);
-      if(htr){
-        heroTaxReturn=Object.assign(htr,heroTaxReturn);
-      }else{
+  saveTaxReturn(heroTaxReturn: HeroTaxReturn): Observable<HeroTaxReturn> {
+    return new Observable<HeroTaxReturn>((observer: Observer<HeroTaxReturn>) => {
+      const htr = this.heroTaxReturns.find(t => t.id === heroTaxReturn.id);
+      if (htr) {
+        heroTaxReturn = Object.assign(htr, heroTaxReturn); // demo: mutate
+      } else {
         this.heroTaxReturns.push(heroTaxReturn);
       }
       observer.next(heroTaxReturn);

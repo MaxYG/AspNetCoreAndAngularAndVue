@@ -18,7 +18,8 @@ import {MyComponentStyleComponent} from "./componentStyleComponent/my-component-
 import {MyDeployComponent} from "./deploy/deploy.component";
 import {MyHierarchicalDependencyInjectionComponent} from "./hierarchicalDependencyInjection/my-herarchical-dependency-injection.component";
 import {HeroTaxReturnComponnent} from "./hierarchicalDependencyInjection/hero-tax-return.component";
-
+import {NoLearningComponnent} from "./noLearning/no-learing.component";
+import {NpmPackageManagementComponnent} from "./npmPackageManagement/npm-package-management.component";
 
 const routes:Routes=[
    { path: '', redirectTo: '/heroes', pathMatch: 'full' },
@@ -33,6 +34,8 @@ const routes:Routes=[
   { path: 'my-component-style', component: MyComponentStyleComponent },
   { path: 'my-deploy', component: MyDeployComponent },
   { path: 'my-hierarchical-dependency-injection', component: MyHierarchicalDependencyInjectionComponent },
+  { path: 'no-learning', component: NoLearningComponnent },
+  { path: 'npm-package-management', component: NpmPackageManagementComponnent },
   // { path: 'my-contact', component: MyContactComponent },
   { path: 'heroes',     component: HeroesComponent,canActivate:[CanActivateTeam] },
 

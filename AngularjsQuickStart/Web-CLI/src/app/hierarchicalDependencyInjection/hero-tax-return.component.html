@@ -1,5 +1,6 @@
 <div class="tax-return">
   <div class="msg" [class.canceled]="message==='Canceled'">{{message}}</div>
+
   <fieldset>
     <span  id=name>{{taxReturn.name}}</span>
     <label id=tid>TID: {{taxReturn.tid}}</label>
@@ -7,6 +8,7 @@
   <fieldset>
     <label>
       Income: <input [(ngModel)]="taxReturn.income" class="num">
+
     </label>
   </fieldset>
   <fieldset>

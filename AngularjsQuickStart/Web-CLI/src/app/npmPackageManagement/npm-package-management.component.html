@@ -1,0 +1,20 @@
+<div>
+  建议使用nvm来管理node和npm的多个版本。如果你机器上已经有某些项目运行了node和npm的其它版本，你就会需要nvm了
+  https://github.com/creationix/nvm
+</div>
+<br><br>
+<div>
+  dependencies下的这些包是运行本应用的基础，而devDependencies下的只在开发此应用时才用得到。 通过为install命令添加--production参数，你在产品环境下安装时排除devDependencies下的包，就像这样：
+
+  Copy Code
+  npm install my-application --production
+</div>
+<br><br>
+
+<div>
+  dependencies  应用程序的package.json文件中，dependencies区下有三类包：<br>
+
+  特性* - 特性包为应用程序提供了框架和工具方面的能力。<br>
+  填充(Polyfills) - 填充包弥合了不同浏览器上的JavaScript实现方面的差异。<br>
+  其它 - 其它库对本应用提供支持，比如bootstrap包提供了HTML中的小部件和样式<br>
+</div>
