@@ -7,7 +7,7 @@ import {HttpModule} from '@angular/http';
 import './rxjs-extensions';
 
 import {AppRoutingModule} from './app-routing.module';
-import { ModalModule,DropdownModule  } from 'ng2-bootstrap';
+import { ModalModule  } from 'ng2-bootstrap';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import * as spinner from 'ng2-spin-kit/app/spinners';
@@ -56,7 +56,7 @@ import {HeroBirthdayComponent} from "./pipe/hero-birthday.component";
         AppRoutingModule,
         HttpModule,
         ModalModule.forRoot(),
-        DropdownModule.forRoot(),
+       
         AlertModule.forRoot(),
       BsDropdownModule.forRoot(),
       NgbModule.forRoot(),
