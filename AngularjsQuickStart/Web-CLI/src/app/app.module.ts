@@ -45,6 +45,7 @@ import {HeroTaxReturnComponnent} from "./hierarchicalDependencyInjection/hero-ta
 import {HeroTaxService} from "./hierarchicalDependencyInjection/HeroTaxService";
 import {NoLearningComponnent} from "./noLearning/no-learing.component";
 import {NpmPackageManagementComponnent} from "./npmPackageManagement/npm-package-management.component";
+import {HeroBirthdayComponent} from "./pipe/hero-birthday.component";
 @NgModule({
     imports: [
         BrowserModule,
@@ -71,7 +72,7 @@ import {NpmPackageManagementComponnent} from "./npmPackageManagement/npm-package
         UserInputComponent, InternationalizationComponent, DeleteModalComponent, LoginComponent,AlertComponent,
         MyAnimationComponent, MyNgmoduleComponent, MyAttributeDirectiveComponent, MyHighlightDirective,
       MyComponentStyleComponent,MyDeployComponent,MyHierarchicalDependencyInjectionComponent,
-      HeroTaxReturnComponnent,NoLearningComponnent,NpmPackageManagementComponnent,
+      HeroTaxReturnComponnent,NoLearningComponnent,NpmPackageManagementComponnent,HeroBirthdayComponent,
 
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
