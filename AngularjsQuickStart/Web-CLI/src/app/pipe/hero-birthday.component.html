@@ -1,0 +1,16 @@
+
+<div><p>The hero's birthday is {{ birthday | date }}</p></div>
+<div><p>The hero's birthday is {{ birthday | date:"MM/dd/yy" }} </p></div>
+<div><p>The hero's birthday is {{ birthday | date:"yyyy-MM-dd" }} </p></div>
+
+<div>
+  <p> the hero's birthday is {{birthday | date:format111}}</p>
+  <button (click)="toggleFormat()" >Toggle Format</button>
+
+</div>
+
+<div>管道进行参数化</div>
+<div>管道可能接受任何数量的可选参数来对它的输出进行微调。
+  我们可以在管道名后面添加一个冒号( : )再跟一个参数值，来为管道添加参数(比如currency:'EUR')。
+  如果我们的管道可以接受多个参数，那么就用冒号来分隔这些参数值(比如slice:1:5)。
+</div>
