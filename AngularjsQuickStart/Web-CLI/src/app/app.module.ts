@@ -46,6 +46,7 @@ import {HeroTaxService} from "./hierarchicalDependencyInjection/HeroTaxService";
 import {NoLearningComponnent} from "./noLearning/no-learing.component";
 import {NpmPackageManagementComponnent} from "./npmPackageManagement/npm-package-management.component";
 import {HeroBirthdayComponent} from "./pipe/hero-birthday.component";
+import {ExponentialStrength} from "./pipe/exponential-strength.pipe";
 @NgModule({
     imports: [
         BrowserModule,
@@ -73,6 +74,7 @@ import {HeroBirthdayComponent} from "./pipe/hero-birthday.component";
         MyAnimationComponent, MyNgmoduleComponent, MyAttributeDirectiveComponent, MyHighlightDirective,
       MyComponentStyleComponent,MyDeployComponent,MyHierarchicalDependencyInjectionComponent,
       HeroTaxReturnComponnent,NoLearningComponnent,NpmPackageManagementComponnent,HeroBirthdayComponent,
+      ExponentialStrength,
 
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,
