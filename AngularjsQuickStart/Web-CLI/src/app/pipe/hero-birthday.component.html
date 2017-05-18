@@ -25,5 +25,18 @@
 <div>
   自定义管道<br/>
   <h2>Power Booster</h2>
-    <p>Super power boost: {{2 | exponentialStrength: 2}}</p>
+    <p>Super power boost: <span style="color:chocolate"> {{2 | exponentialStrength: 2}}</span></p>
+</div>
+<br/><br/>
+<div>
+  能力倍增计算器<br/>
+  normal power: <input [(ngModel)]="power">
+  boost factor:<input [(ngModel)]="factor">
+  <p>Super power boost: <span style="color:chocolate"> {{power | exponentialStrength: factor}}</span></p>
+</div>
+
+<br/><br/>
+<div>
+  管道与变更检测<br/>
+ 
 </div>

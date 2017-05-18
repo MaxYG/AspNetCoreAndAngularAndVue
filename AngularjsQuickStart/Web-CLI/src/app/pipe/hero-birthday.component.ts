@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HeroBirthdayComponent {
   birthday = new Date(1988, 3, 15); // April 15, 1988
-
+  power=5;
+  factor=1;
   toggle=true;
   get format111(){
     return this.toggle?"shortDate":"fullDate";
