@@ -40,3 +40,18 @@
   管道与变更检测<br/>
  
 </div>
+<div>
+  无管道<br/>
+ New study:
+  <input type="text" #box
+       
+          (keyup.enter)="addstudy(box.value); box.value=''"
+          placeholder="study name">
+  <button (click)="reset()">Reset</button>
+  <div *ngFor="let study of studies">
+    {{study.name}}
+  </div>
+</div>
+<div>
+  接下来，“会飞的英雄”管道<br/> 
+</div>
