@@ -47,6 +47,7 @@ import {NoLearningComponnent} from "./noLearning/no-learing.component";
 import {NpmPackageManagementComponnent} from "./npmPackageManagement/npm-package-management.component";
 import {HeroBirthdayComponent} from "./pipe/hero-birthday.component";
 import {ExponentialStrength} from "./pipe/exponential-strength.pipe";
+import {FlyingStudies,FlyingStudyImpurePipe} from "./pipe/exponential-strength.pipe";
 @NgModule({
     imports: [
         BrowserModule,
@@ -57,7 +58,7 @@ import {ExponentialStrength} from "./pipe/exponential-strength.pipe";
         AppRoutingModule,
         HttpModule,
         ModalModule.forRoot(),
-       
+
         AlertModule.forRoot(),
       BsDropdownModule.forRoot(),
       NgbModule.forRoot(),
@@ -74,7 +75,7 @@ import {ExponentialStrength} from "./pipe/exponential-strength.pipe";
         MyAnimationComponent, MyNgmoduleComponent, MyAttributeDirectiveComponent, MyHighlightDirective,
       MyComponentStyleComponent,MyDeployComponent,MyHierarchicalDependencyInjectionComponent,
       HeroTaxReturnComponnent,NoLearningComponnent,NpmPackageManagementComponnent,HeroBirthdayComponent,
-      ExponentialStrength,
+      ExponentialStrength,FlyingStudies,FlyingStudyImpurePipe,
 
       spinner.RotatingPlaneComponent,      spinner.DoubleBounceComponent,      spinner.WaveComponent,
       spinner.WanderingCubesComponent,      spinner.PulseComponent,      spinner.ChasingDotsComponent,

@@ -38,20 +38,46 @@
 <br/><br/>
 <div>
   管道与变更检测<br/>
- 
+
 </div>
 <div>
   无管道<br/>
  New study:
   <input type="text" #box
-       
+
           (keyup.enter)="addstudy(box.value); box.value=''"
           placeholder="study name">
+  <input id="can-fly" type="checkbox" [(ngModel)]="IsLogin"> IsLogin
   <button (click)="reset()">Reset</button>
   <div *ngFor="let study of studies">
     {{study.name}}
   </div>
 </div>
 <div>
-  接下来，“会飞的英雄”管道<br/> 
+  接下来，“会飞的英雄”管道, 纯的过滤不出来，从Angular的角度来看，这是同一个数组，没有变化，也就不需要更新显示。<br/>
+  <div *ngFor="let study of (studies| flyingStudies)">
+    {{study.name}}
+  </div>
+  接下来，“会飞的英雄”管道, 非纯的过滤出来了<br/>
+  <div *ngFor="let study of (studies| flyingStudyImpure)">
+    {{study.name}}
+  </div>
+
+  接下来，“会飞的英雄”管道----end<br/><br/>
+
+  纯(pure)管道与非纯(impure)管道<br/><br/>
+
+  非纯AsyncPipe<br/><br/>
+  <h2>Async Hero Message and AsyncPipe</h2>
+  <p>Message: {{ message$ | async }}</p>
+  <button (click)="resend()">Resend</button><br/><br/>
+
+  jsonPipe<br/><br/>
+  {{studies |  json}}
+
+  <br/><br/>
+
+
 </div>
+
+
