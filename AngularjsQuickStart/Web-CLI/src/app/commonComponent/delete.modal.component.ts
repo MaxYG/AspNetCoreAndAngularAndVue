@@ -2,7 +2,7 @@ import {Component, ViewChild, Output, EventEmitter, Input,ElementRef} from '@ang
 import { ModalDirective } from 'ng2-bootstrap';
 
 @Component(
-    {       
+    {
         selector: 'delete-modal',
         templateUrl: 'delete.modal.component.html'
     }
@@ -29,3 +29,24 @@ export class DeleteModalComponent {
         this.onDelete.emit();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

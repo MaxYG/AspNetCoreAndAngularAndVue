@@ -52,3 +52,21 @@ const routes:Routes=[
   providers: [CanActivateTeam, LoginUser, Permissions]
 })
 export class AppRoutingModule {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

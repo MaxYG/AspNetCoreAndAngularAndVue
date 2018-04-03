@@ -22,3 +22,35 @@ export class AlertComponent implements OnInit{
     //this.alertMessage=this.alertService.successMessage();
   }
 }
+
+//
+//
+// import {Component,OnInit } from '@angular/core';
+// import {AlertComponent} from 'ngx-bootstrap';
+// import {AlertMessage} from './alert-message';
+// import{AlertService} from './alert.service';
+//
+// @Component({
+//   selector:'app-alert',
+//   templateUrl:'alert.component.html'
+// })
+//
+// export class CommonAlertComponent implements OnInit{
+//
+//   constructor(private alertService:AlertService){};
+//   message: AlertMessage;
+//   alerts: AlertMessage[]=[];
+//   ngOnInit() {
+//     this.alertService.getMessage().subscribe(message => {
+//       this.message = message as AlertMessage;
+//       this.message.timeout=3000;
+//       this.alerts.push(this.message);
+//     });
+//   }
+//
+//   // alerts: any[] = [{
+//   //     type: 'success',
+//   //     msg: `success`,
+//   //     timeout: 3000
+//   //   }];
+// }
