@@ -56,3 +56,5 @@
 /AngularjsQuickStart/WebApiTest/*.ncrunchproject
 /AngularjsQuickStart/AngularQS.WebApi/obj
 /AngularjsQuickStart/AngularQS.WebApi/bin
+
+/node_modules
