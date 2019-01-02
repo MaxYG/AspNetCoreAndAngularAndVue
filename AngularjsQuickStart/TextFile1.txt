@@ -1,0 +1,9 @@
+1. node_modules\selenium-webdriver\lib\test\data\Web.Config
+https://stackoverflow.com/questions/43982956/node-modules-breaks-build-in-visual-studio
+
+install the rimraf package
+npm install rimraf
+then in package.json use rimraf command
+'script': {
+    'postinstall': 'rimraf node_modules/**/web.config'
+ }
