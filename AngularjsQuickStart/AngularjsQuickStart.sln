@@ -25,6 +25,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularQS.Web(1)", "Angular
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "64310"
+		SlnRelativePath = "AngularQS.Web\"
 	EndProjectSection
 EndProject
 Global
