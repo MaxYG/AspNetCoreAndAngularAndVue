@@ -1,4 +1,7 @@
 
+2.create project structure and save data to database.
+1.create data project and init database
+=================================================================
 4.Cannot instantiate implementation type 
 'AngularQS.Repository.IRepository.IUserRepository' for service type 
 'AngularQS.Repository.IRepository.IUserRepository'.
