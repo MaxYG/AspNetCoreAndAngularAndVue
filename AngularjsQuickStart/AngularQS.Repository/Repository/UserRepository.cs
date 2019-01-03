@@ -22,6 +22,7 @@ namespace AngularQS.Repository.Repository
         public User Add(User user)
         {
             var result=_context.Users.Add(user).Entity;
+            _context.SaveChanges();
             return result;
         }
 
