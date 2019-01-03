@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using AngularQS.Data;
 using AngularQS.Repository;
 using AngularQS.Repository.IRepository;
+using AngularQS.Repository.Repository;
 using AngularQS.Services.IService;
+using AngularQS.Services.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -35,8 +37,8 @@ namespace AngularQS.WebApi
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IUnitOfWork, AngularQSContext>();
-            services.AddTransient(typeof(IUserRepository));
-            services.AddTransient(typeof(IUserService));
+            services.AddTransient<IUserRepository,UserRepository>();
+            services.AddTransient<IUserService,UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,4 +1,9 @@
 
+4.Cannot instantiate implementation type 
+'AngularQS.Repository.IRepository.IUserRepository' for service type 
+'AngularQS.Repository.IRepository.IUserRepository'.
+
+
 3.Severity	Code	Description	Project	File	Line	Suppression State
 Error		
 The current .NET SDK does not support targeting .NET Core 2.2.  
@@ -13,6 +18,7 @@ restore nuget package and close vs then open, clean, build, I don't why.
 
 2.HTTP Error 500.30 - ANCM In-Process Start Failure
 https://stackoverflow.com/questions/53783260/dotnet-core-multiple-startup-classes-with-in-process-hosting
+https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-known-issues.md
 
 1. node_modules\selenium-webdriver\lib\test\data\Web.Config
 https://stackoverflow.com/questions/43982956/node-modules-breaks-build-in-visual-studio
