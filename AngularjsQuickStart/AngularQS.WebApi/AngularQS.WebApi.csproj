@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AngularQS.CommandModel\AngularQS.CommandModel.csproj" />
     <ProjectReference Include="..\AngularQS.Data\AngularQS.Data.csproj" />
+    <ProjectReference Include="..\AngularQS.Services\AngularQS.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HaveProblem", "HaveProblem"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularQS.Data", "AngularQS.Data\AngularQS.Data.csproj", "{3B63D868-D638-4E42-8A8F-EAF387E8CAB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularQS.Repository", "AngularQS.Repository\AngularQS.Repository.csproj", "{876BB19E-484B-47C5-9889-43808FE43955}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularQS.Repository", "AngularQS.Repository\AngularQS.Repository.csproj", "{876BB19E-484B-47C5-9889-43808FE43955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularQS.Services", "AngularQS.Services\AngularQS.Services.csproj", "{4D967DFB-DF18-4A46-ACB3-24FC0B616F73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularQS.DomainModel", "AngularQS.DomainModel\AngularQS.DomainModel.csproj", "{E6A6744E-FAA5-40CD-A7D7-5650675D378B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularQS.CommandModel", "AngularQS.CommandModel\AngularQS.CommandModel.csproj", "{B21E08B9-796C-4D2D-8F71-FC8503B54C00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +40,18 @@ Global
 		{876BB19E-484B-47C5-9889-43808FE43955}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{876BB19E-484B-47C5-9889-43808FE43955}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{876BB19E-484B-47C5-9889-43808FE43955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D967DFB-DF18-4A46-ACB3-24FC0B616F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D967DFB-DF18-4A46-ACB3-24FC0B616F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D967DFB-DF18-4A46-ACB3-24FC0B616F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D967DFB-DF18-4A46-ACB3-24FC0B616F73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6A6744E-FAA5-40CD-A7D7-5650675D378B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6A6744E-FAA5-40CD-A7D7-5650675D378B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6A6744E-FAA5-40CD-A7D7-5650675D378B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6A6744E-FAA5-40CD-A7D7-5650675D378B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21E08B9-796C-4D2D-8F71-FC8503B54C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21E08B9-796C-4D2D-8F71-FC8503B54C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21E08B9-796C-4D2D-8F71-FC8503B54C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21E08B9-796C-4D2D-8F71-FC8503B54C00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +15,7 @@ namespace AngularQS.WebApi
     {
         public static void Main(string[] args)
         {
+//            Directory.SetCurrentDirectory(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
             CreateWebHostBuilder(args).Build().Run();
         }
 

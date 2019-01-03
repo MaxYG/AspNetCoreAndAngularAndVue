@@ -1,3 +1,19 @@
+
+3.Severity	Code	Description	Project	File	Line	Suppression State
+Error		
+The current .NET SDK does not support targeting .NET Core 2.2.  
+Either target .NET Core 1.1 or lower,
+or use a version of the .NET SDK that supports .NET Core 2.2.	
+AngularQS.Data	
+D:\setupfile\vs2017\MSBuild\Sdks\Microsoft.NET.Sdk\build\Microsoft.NET.TargetFrameworkInference.targets	112	
+
+install 32bit .net core sdk,
+restore nuget package and close vs then open, clean, build, I don't why.
+
+
+2.HTTP Error 500.30 - ANCM In-Process Start Failure
+https://stackoverflow.com/questions/53783260/dotnet-core-multiple-startup-classes-with-in-process-hosting
+
 1. node_modules\selenium-webdriver\lib\test\data\Web.Config
 https://stackoverflow.com/questions/43982956/node-modules-breaks-build-in-visual-studio
 
@@ -7,3 +23,4 @@ then in package.json use rimraf command
 'script': {
     'postinstall': 'rimraf node_modules/**/web.config'
  }
+
