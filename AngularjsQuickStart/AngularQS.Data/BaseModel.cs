@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AngularQS.Data
+﻿namespace AngularQS.Repository
 {
-    public class BaseModel
+    public class BaseModel : Entity
     {
         public int Id { get; set; }
     }

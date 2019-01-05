@@ -4,7 +4,8 @@ using System.Text;
 
 namespace AngularQS.Repository
 {
-    public interface IAggregateRoot
+    public interface IAggregateRoot 
     {
+
     }
 }
