@@ -15,10 +15,11 @@ import {  UserService } from './services';
 import { HomeComponent } from './home';
 import {LoginComponent} from './login'
 import { LoginLayoutComponent } from './layouts/login-layout.component';
+import {HeaderComponent} from './header'
 
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,
+    AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +31,7 @@ import { LoginLayoutComponent } from './layouts/login-layout.component';
   ],
   providers: [
     AuthGuard,
-    UserService
+    //UserService
   ],
   bootstrap: [AppComponent]
 })
