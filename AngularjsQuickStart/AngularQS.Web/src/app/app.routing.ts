@@ -3,14 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home';
 import{LoginComponent} from './login'
 import { AuthGuard } from './guards';
+import { LoginLayoutComponent } from './layouts/login-layout.component';
 
-const appRoutes: Routes = [
-    { path: '', component: HomeComponent},
-    // { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-    // { path: 'login', component: LoginComponent },
-    // { path: 'register', component: RegisterComponent },
-   
-    // { path: '**', redirectTo: '' }
+const appRoutes: Routes = [   
+    {
+        path: '',component: LoginLayoutComponent,
+        children: [
+          {
+            path: 'login',
+            component: LoginComponent
+          }
+        ]
+      },
+    { path: '**', redirectTo: '' }
 ];
 
 
