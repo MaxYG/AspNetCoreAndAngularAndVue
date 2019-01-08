@@ -1,6 +1,6 @@
 export class AlertMessage{
     type:string;
-    msg:string;
+    message:string;
     timeout:number;
 
 }

@@ -1,7 +1,11 @@
 
-<div *ngFor="let alert of alerts">
+<!-- <div *ngFor="let alert of alerts">
     <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" >
         {{alert.msg}}
     </alert>
-</div>
+</div> -->
 
+
+  <p *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" (close)="close(alert)">{{ alert.message }}</ngb-alert>
+  </p>

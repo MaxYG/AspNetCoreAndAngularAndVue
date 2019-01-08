@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import{AppMaterialModule} from './app-material'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -23,12 +24,13 @@ import {AlertComponent} from './commonComponent/alert.component'
     AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent
   ],
   imports: [
+    NgbModule,
     BrowserModule,
-    routing,
+    routing,    
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,
-    AppMaterialModule
+    AppMaterialModule    
   ],
   providers: [
     AuthGuard,
