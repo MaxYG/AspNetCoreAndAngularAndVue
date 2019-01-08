@@ -9,14 +9,28 @@ import{AlertService} from '../services/alert.service';
 
 export class AlertComponent implements OnInit{
 
-    constructor(private alertService:AlertService){};
+    constructor(private alertService:AlertService){
+
+    };
     message: AlertMessage;
     alerts: AlertMessage[]=[];
+    isHideAlertMessage:boolean;
     ngOnInit() {
-        this.alertService.getMessage().subscribe(message => { 
-            this.message = message as AlertMessage; 
-            this.message.timeout=3000;
+        this.isHideAlertMessage=false;
+        var alertSubscribe=this.alertService.getMessage().subscribe(message => { 
+            this.message = message as AlertMessage;             
             this.alerts.push(this.message);
         });
+
+        setTimeout(() => {  
+            var xxx=this.alerts;          
+            this.isHideAlertMessage=true;
+          }, 3000);
      }
+
+     
+
+     close(alert: AlertMessage) {
+        this.alerts.splice(this.alerts.indexOf(alert), 1);
+      }
 }

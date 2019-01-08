@@ -6,7 +6,8 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class AlertService {
     private subject = new Subject<any>();
-
+     
+    
    success(message: string) {
        this.subject.next({ type: 'success', message: message});
    }
