@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 import { AuthGuard } from './guards';
 
-import {  UserService } from './services';
+import {  UserService,AuthService } from './services';
 import { HomeComponent } from './home';
 import {LoginComponent} from './login'
 import { LoginLayoutComponent } from './layouts/login-layout.component';
@@ -31,6 +31,7 @@ import {HeaderComponent} from './header'
   ],
   providers: [
     AuthGuard,
+    AuthService
     //UserService
   ],
   bootstrap: [AppComponent]
