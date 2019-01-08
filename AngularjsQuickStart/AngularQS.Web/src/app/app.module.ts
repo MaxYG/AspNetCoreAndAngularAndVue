@@ -11,15 +11,16 @@ import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 import { AuthGuard } from './guards';
 
-import {  UserService,AuthService } from './services';
+import {  UserService,AuthService,AlertService } from './services';
 import { HomeComponent } from './home';
 import {LoginComponent} from './login'
 import { LoginLayoutComponent } from './layouts/login-layout.component';
 import {HeaderComponent} from './header'
+import {AlertComponent} from './commonComponent/alert.component'
 
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent
+    AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import {HeaderComponent} from './header'
   ],
   providers: [
     AuthGuard,
-    AuthService
+    AuthService,
+    AlertService
     //UserService
   ],
   bootstrap: [AppComponent]

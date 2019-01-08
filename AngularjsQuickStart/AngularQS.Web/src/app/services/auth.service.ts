@@ -1,12 +1,21 @@
 import { Injectable } from '@angular/core'
 import { User } from '../models';
+import {Router} from '@angular/router'
+
 
 @Injectable()
 export class AuthService{
 
-    login(user: User) :boolean{
+    constructor(private router :Router){
 
-        return true;
+    }
+    login(user: User){
+        if(user.username==="test" && user.password==="test"){
+            this.router.navigate(['/home']);
+        }else{
+            
+        }
+        
         //return this.http.post(`${config.apiUrl}/users/register`, user);
     }
 }
