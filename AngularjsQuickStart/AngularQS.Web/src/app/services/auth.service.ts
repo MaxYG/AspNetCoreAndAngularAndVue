@@ -13,6 +13,7 @@ export class AuthService{
     }
     login(user: User){
         if(user.username==="test" && user.password==="test"){
+            this.alertService.success("login success");
             this.router.navigate(['/home']);
         }else{
             this.alertService.error("login failed");

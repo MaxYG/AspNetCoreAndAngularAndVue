@@ -1,5 +1,5 @@
-<div class="signin-content" style="width:50%">
-    <mat-card style="left: 50%; margin-top: 150px;">
+<div class="signin-content" style="width:35%">
+    <mat-card style="left: 100%; margin-top: 150px;">
       <mat-card-content>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
           <p>Please login to continue</p>
@@ -10,7 +10,7 @@
             </mat-error>
           </mat-form-field>
           <mat-form-field class="full-width-input">
-            <input matInput type="password" placeholder="Password" formControlName="password" required>
+            <input matInput type="password" placeholder="Password" formControlName="password"  required>
             <mat-error *ngIf="isFieldInvalid('username')">
               Please inform your password
             </mat-error>

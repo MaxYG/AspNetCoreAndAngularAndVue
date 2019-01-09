@@ -25,13 +25,14 @@ export class AlertComponent implements OnInit{
     ngOnInit() {
         var observableMessage = this.alertService.getMessage();
         var alertSubscribe=observableMessage.subscribe(message => { 
+            this.alerts=[];
             this.message = message as AlertMessage;             
             this.alerts.push(this.message);
             this.isShow=true;
         });
         let self=this;
         observableMessage.pipe(
-            debounceTime(5000)
+            debounceTime(1000)
         ).subscribe(() => {
             self.alerts=[];
             self.isShow=false;           
