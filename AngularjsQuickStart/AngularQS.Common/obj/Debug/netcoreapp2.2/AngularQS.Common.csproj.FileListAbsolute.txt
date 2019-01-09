@@ -1,0 +1,8 @@
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\bin\Debug\netcoreapp2.2\AngularQS.Common.deps.json
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\bin\Debug\netcoreapp2.2\AngularQS.Common.dll
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\bin\Debug\netcoreapp2.2\AngularQS.Common.pdb
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.csproj.CoreCompileInputs.cache
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.AssemblyInfoInputs.cache
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.AssemblyInfo.cs
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.dll
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.pdb

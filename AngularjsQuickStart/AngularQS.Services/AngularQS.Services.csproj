@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AngularQS.Common\AngularQS.Common.csproj" />
     <ProjectReference Include="..\AngularQS.Data\AngularQS.Data.csproj" />
     <ProjectReference Include="..\AngularQS.DomainModel\AngularQS.DomainModel.csproj" />
     <ProjectReference Include="..\AngularQS.Repository\AngularQS.Repository.csproj" />

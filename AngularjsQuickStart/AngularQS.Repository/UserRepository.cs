@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using AngularQS.Data;
 using AngularQS.Data.Models;
 
@@ -16,6 +17,11 @@ namespace AngularQS.Repository.Repository
         public User GetUserByName(string name)
         {
             return _dbDbContext.Users.FirstOrDefault(x => x.UserName.Equals(name));
+        }
+
+        public User GetUsernameAndPassword(string username, string password)
+        {
+            return _dbDbContext.Users.FirstOrDefault(x => x.UserName == username && x.Password == password);
         }
     }
 }
