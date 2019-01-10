@@ -1,24 +1,34 @@
 import { Injectable } from '@angular/core'
 import { User } from '../models';
 import {Router} from '@angular/router'
-import{AlertService} from '../services/alert.service'
-
+import {AlertService} from '../services/alert.service'
+import {HttpClient} from '@angular/common/http'
+import {catchError} from 'rxjs/operators'
+import {WebApiUrlService} from '../services/web.api.service'
 
 @Injectable()
 export class AuthService{
 
     constructor(private router :Router,
+        private httpClient: HttpClient,
+        private webApiUrlService: WebApiUrlService,
         private alertService :AlertService){
 
     }
     login(user: User){
-        if(user.username==="test" && user.password==="test"){
-            this.alertService.success("login success");
-            this.router.navigate(['/home']);
-        }else{
-            this.alertService.error("login failed");
-        }
-        
-        //return this.http.post(`${config.apiUrl}/users/register`, user);
+        var loginOperate=this.httpClient.post(this.webApiUrlService.rootUrl+"api/user/authenticate/",user).pipe(
+            catchError(error=>this.handleError(error)),
+            
+        );
+        loginOperate.subscribe(x=>this.handleLoginSuccess(x));
     }
+    handleLoginSuccess(x: {} | Object): void {
+        this.alertService.success("login success");
+            this.router.navigate(['/home']);
+    }
+    handleError(error: any): any {
+        this.alertService.error("login failed");
+    }
+   
+    
 }

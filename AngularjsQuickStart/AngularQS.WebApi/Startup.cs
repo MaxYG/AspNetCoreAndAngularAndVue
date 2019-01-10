@@ -54,7 +54,10 @@ namespace AngularQS.WebApi
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(key),
                         ValidateIssuer = false,
-                        ValidateAudience = false
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        RequireExpirationTime = true,
+                        //ClockSkew = new TimeSpan(0,0,1,0)
                     };
                 });
 

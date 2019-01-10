@@ -6,3 +6,4 @@ F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\
 F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.AssemblyInfo.cs
 F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.dll
 F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.pdb
+F:\study\Angular2\Angularjs2TypeScript\AngularjsQuickStart\AngularQS.Common\obj\Debug\netcoreapp2.2\AngularQS.Common.csprojAssemblyReference.cache

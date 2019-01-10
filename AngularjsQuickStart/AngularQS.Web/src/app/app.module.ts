@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from '@angular/common/http'
 
 import{AppMaterialModule} from './app-material'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -12,7 +13,7 @@ import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 import { AuthGuard } from './guards';
 
-import {  UserService,AuthService,AlertService } from './services';
+import {  UserService,AuthService,AlertService,WebApiUrlService } from './services';
 import { HomeComponent } from './home';
 import {LoginComponent} from './login'
 import { LoginLayoutComponent } from './layouts/login-layout.component';
@@ -30,12 +31,14 @@ import {AlertComponent} from './commonComponent/alert.component'
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,
-    AppMaterialModule    
+    AppMaterialModule,
+    HttpClientModule    
   ],
   providers: [
     AuthGuard,
     AuthService,
-    AlertService
+    AlertService,
+    WebApiUrlService
     //UserService
   ],
   bootstrap: [AppComponent]
