@@ -2,13 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { User } from '../models';
+import { WebConstantService } from './web.constant.service';
+import { BaseHttpServoce } from './base.http.service';
+import { Observable, of } from 'rxjs';
+
 
 @Injectable()
 export class UserService {
-    constructor(private http: HttpClient) { }
+    
+    constructor(private http: BaseHttpServoce,private webConstantService:WebConstantService) { }
 
-    getAll() {
-       // return this.http.get<User[]>(`${config.apiUrl}/users`);
+    getAll() :Observable<User[]>{
+       return this.http.getAll(this.webConstantService.rootUrl+this.webConstantService.userUrl) as Observable<User[]>;
     }
 
     getById(id: number) {

@@ -25,4 +25,8 @@ export class HeaderComponent {
     localStorage.removeItem(this.webConstantService.localStoreKey);
     this.router.navigate(['/login']);
   }
+
+  getUsers(){
+    
+  }
 }

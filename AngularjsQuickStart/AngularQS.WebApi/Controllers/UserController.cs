@@ -50,7 +50,6 @@ namespace AngularQS.WebApi.Controllers
             {
                 Id = x.Id,
                 UserName = x.UserName,
-                Password = x.Password
             });
 
             return new ActionResult<IEnumerable<UserViewModel>>(result);
