@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-// import { AuthService } from './../auth/auth.service';
 import {Router} from '@angular/router'
-
+import {WebConstantService} from '../services/web.constant.service'
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -19,10 +18,11 @@ import {Router} from '@angular/router'
 })
 export class HeaderComponent {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,
+    private webConstantService:WebConstantService) { }
 
   onLogout() {
+    localStorage.removeItem(this.webConstantService.localStoreKey);
     this.router.navigate(['/login']);
-    // this.authService.logout();
   }
 }

@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 import { AuthGuard } from './guards';
 
-import {  UserService,AuthService,AlertService,WebApiUrlService } from './services';
+import {  UserService,AuthService,AlertService,WebConstantService } from './services';
 import { HomeComponent } from './home';
 import {LoginComponent} from './login'
 import { LoginLayoutComponent } from './layouts/login-layout.component';
@@ -38,7 +38,7 @@ import {AlertComponent} from './commonComponent/alert.component'
     AuthGuard,
     AuthService,
     AlertService,
-    WebApiUrlService
+    WebConstantService
     //UserService
   ],
   bootstrap: [AppComponent]
