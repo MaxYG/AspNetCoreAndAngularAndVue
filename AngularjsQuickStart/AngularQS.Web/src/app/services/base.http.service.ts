@@ -28,12 +28,17 @@ export class BaseHttpServoce{
         );
     }
 
-    handleError(error: any): any {        
-        this.alertService.error(error.message);
-        if(error.status===401){
-            localStorage.removeItem(this.webConstantService.localStoreKey);
+    handleError(error: any): any {   
+        localStorage.removeItem(this.webConstantService.localStoreKey);
+        if(error.status===401){            
             this.router.navigate(["/login"]);
+        }else if(error.status===404){
+            this.alertService.error("404");
+            //this.router.navigate(["/not-found"]);
+        }else{
+            this.alertService.error(error.message);
         }
+
     }
 
     // Post (url:string, data?:Object,):  Observable<Object> {

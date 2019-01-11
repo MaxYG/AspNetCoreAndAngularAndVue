@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AngularQS.WebApi.Controllers
 {
-    [Authorize]
+   
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
