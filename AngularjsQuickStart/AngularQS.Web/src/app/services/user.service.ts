@@ -13,7 +13,7 @@ export class UserService {
     constructor(private http: BaseHttpServoce,private webConstantService:WebConstantService) { }
 
     getAll() :Observable<User[]>{
-       return this.http.getAll(this.webConstantService.rootUrl+this.webConstantService.userUrl) as Observable<User[]>;
+       return this.http.getAll(this.webConstantService.userUrl) as Observable<User[]>;
     }
 
     getById(id: number) {

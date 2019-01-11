@@ -43,13 +43,15 @@ namespace AngularQS.WebApi.Controllers
             return Ok(user);
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         public ActionResult<IEnumerable<UserViewModel>> Gets()
         {
             var result = _userService.GetList().Select(x => new UserViewModel()
             {
                 Id = x.Id,
                 UserName = x.UserName,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
             });
 
             return new ActionResult<IEnumerable<UserViewModel>>(result);

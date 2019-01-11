@@ -12,6 +12,7 @@ export class AuthGuard implements CanActivate{
         if(localStorage.getItem(this.webConstantService.localStoreKey)){
             return true;
         }
+        localStorage.removeItem(this.webConstantService.localStoreKey);
         this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
         return false;
     }

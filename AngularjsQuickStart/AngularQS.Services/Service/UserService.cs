@@ -44,7 +44,7 @@ namespace AngularQS.Services.Service
                 {
                     new Claim(ClaimTypes.Name, user.Id.ToString())
                 }),
-                Expires = DateTime.Now.AddMinutes(1),
+                Expires = DateTime.Now.AddMinutes(30),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
@@ -91,9 +91,8 @@ namespace AngularQS.Services.Service
 
         public IEnumerable<User> GetList()
         {
-            return new List<User>();
-            /*var result=_userRepository.
-            return result;*/
+            var result = _userRepository.GetAll();
+            return result;
         }
     }
 }

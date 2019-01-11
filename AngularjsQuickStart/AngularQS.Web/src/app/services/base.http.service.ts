@@ -5,18 +5,21 @@ import { WebConstantService } from './web.constant.service';
 import { AlertService } from './alert.service';
 import {catchError} from 'rxjs/operators'
 import { Observable } from 'rxjs';
+import { jsonpCallbackContext } from '@angular/common/http/src/module';
+import { Router } from '@angular/router';
 
 
 @Injectable()
 export class BaseHttpServoce{
     constructor(private httpClient: HttpClient,
         private alertService:AlertService,
+        private router:Router,
         private webConstantService:WebConstantService){       
     }
 
     private headerOptions = new HttpHeaders({
         'Content-Type':  'application/json',
-        'Authorization': 'Bearer '+localStorage.getItem(this.webConstantService.localStoreKey)
+        'Authorization': 'Bearer '+  JSON.parse(localStorage.getItem(this.webConstantService.localStoreKey)).token
     });
 
     getAll (url:string, data?:Object,):Observable<Object> {
@@ -25,8 +28,12 @@ export class BaseHttpServoce{
         );
     }
 
-    handleError(error: any): any {
-        this.alertService.error(error);
+    handleError(error: any): any {        
+        this.alertService.error(error.message);
+        if(error.status===401){
+            localStorage.removeItem(this.webConstantService.localStoreKey);
+            this.router.navigate(["/login"]);
+        }
     }
 
     // Post (url:string, data?:Object,):  Observable<Object> {

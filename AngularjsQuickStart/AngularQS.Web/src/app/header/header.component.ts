@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router'
 import {WebConstantService} from '../services/web.constant.service'
+import { UserService } from '../services';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -19,6 +20,7 @@ import {WebConstantService} from '../services/web.constant.service'
 export class HeaderComponent {
 
   constructor(private router:Router,
+    private userServcie:UserService,
     private webConstantService:WebConstantService) { }
 
   onLogout() {
@@ -27,6 +29,6 @@ export class HeaderComponent {
   }
 
   getUsers(){
-    
+    this.router.navigate(['/user']);
   }
 }

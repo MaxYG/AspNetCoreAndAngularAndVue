@@ -1,1 +1,9 @@
-<div>you will see all users</div>
+<div class="container">
+    <div *ngFor="let user of users" class="row">
+      <div class="col">{{user.userName}}</div>
+      <div class="col">{{user.firstName}}</div>
+      <div class="col">{{user.lastName}}</div>
+      <div class="col">Action</div>
+    </div>
+   
+  </div>

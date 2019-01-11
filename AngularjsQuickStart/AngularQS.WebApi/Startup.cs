@@ -56,7 +56,7 @@ namespace AngularQS.WebApi
                         ValidateIssuer = false,
                         ValidateAudience = false,
                         ValidateLifetime = true,
-                        RequireExpirationTime = true,
+//                        RequireExpirationTime = true,
                         //ClockSkew = new TimeSpan(0,0,1,0)
                     };
                 });

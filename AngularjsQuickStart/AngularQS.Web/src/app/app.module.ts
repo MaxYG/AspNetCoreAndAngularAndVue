@@ -13,16 +13,19 @@ import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 import { AuthGuard } from './guards';
 
-import {  UserService,AuthService,AlertService,WebConstantService } from './services';
+import {  UserService,AuthService,AlertService,WebConstantService,BaseHttpServoce } from './services';
 import { HomeComponent } from './home';
 import {LoginComponent} from './login'
 import { LoginLayoutComponent } from './layouts/login-layout.component';
 import {HeaderComponent} from './header'
 import {AlertComponent} from './commonComponent/alert.component'
+import {UserComponent} from './user/user.component'
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent
+    AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent,
+    UserComponent,FooterComponent
   ],
   imports: [
     NgbModule,
@@ -38,8 +41,9 @@ import {AlertComponent} from './commonComponent/alert.component'
     AuthGuard,
     AuthService,
     AlertService,
-    WebConstantService
-    //UserService
+    WebConstantService,
+    UserService,
+    BaseHttpServoce
   ],
   bootstrap: [AppComponent]
 })
