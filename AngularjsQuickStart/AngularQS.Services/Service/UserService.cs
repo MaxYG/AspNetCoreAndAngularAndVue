@@ -44,7 +44,7 @@ namespace AngularQS.Services.Service
                 {
                     new Claim(ClaimTypes.Name, user.Id.ToString())
                 }),
-                Expires = DateTime.Now.AddMinutes(30),
+                Expires = DateTime.Now.AddDays(30),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
@@ -61,7 +61,10 @@ namespace AngularQS.Services.Service
             var user = new User()
             {
                 UserName = userDomain.UserName,
-                Password = userDomain.Password
+                Password = userDomain.Password,
+                FirstName = userDomain.FirstName,
+                LastName = userDomain.LastName,
+                Description = userDomain.Description,
             };
             _userRepository.Add(user);
 
@@ -91,7 +94,7 @@ namespace AngularQS.Services.Service
 
         public IEnumerable<User> GetList()
         {
-            throw new Exception("thrwo error now");
+            //throw new Exception("thrwo error now");
             var result = _userRepository.GetAll();
             return result;
         }

@@ -1,23 +1,45 @@
-import {Component, OnInit} from '@angular/core'
+import {Component, OnInit,ViewEncapsulation, Input } from '@angular/core'
 import {User} from '../models/user'
 import { UserService } from '../services';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule } from '@angular/forms'
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialog} from '@angular/material';
+import {UserAddModalComponent} from './user-add.component'
 
-@Component( {selector: 'app-user',
-templateUrl: './user.component.html'
+
+@Component( {
+    selector: 'app-user',
+    templateUrl: './user.component.html',
 })
 export class UserComponent implements OnInit {
-    currentUser: User;
+    currentUser: User={} as User;
     users: User[];
 
     ngOnInit() {
        this.loadAllUsers();
     }
-    constructor(private userService:UserService) {        
+    constructor(private userService:UserService,
+        public dialog: MatDialog,
+        private modalService: NgbModal) {        
     }
 
     deleteUser(id: number) {
         
     }
+
+    openDialog() {
+        const dialogRef = this.dialog.open(UserAddModalComponent);
+    
+        dialogRef.afterClosed().subscribe(result => {
+            this.loadAllUsers();
+          console.log(`Dialog result: ${result}`);
+        });
+      }
+
+    openLg(content) {
+        this.modalService.open(content, { size: 'lg' });
+      }
 
     private loadAllUsers() {
         this.userService.getAll().subscribe(x=>this.users= x);

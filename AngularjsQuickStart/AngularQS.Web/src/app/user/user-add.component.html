@@ -1,0 +1,43 @@
+<html><head></head><body><h2 mat-dialog-title="">User</h2>
+<mat-dialog-content class="">
+        <form  #userForm="ngForm">
+                <div >
+                    <div class="form-group">
+                        <label for="Username">user name</label>
+                        <input type="email" class="form-control" [(ngModel)]="currentUser.username" id="Username" name="username" placeholder="please input email">
+                      </div>              
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="Firstname">Firs name</label>
+                        <input type="text" class="form-control" [(ngModel)]="currentUser.firstname" id="firstname" name="firstname" placeholder="">
+                      </div>
+                    <div class="form-group col">
+                        <label for="Lastname">Last name</label>
+                       <input type="text" class="form-control" [(ngModel)]="currentUser.lastname"  id="Lastname" name="lastname" placeholder="">
+                      </div>              
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label for="Password">Password</label>
+                     <input type="password" class="form-control" [(ngModel)]="currentUser.password"  id="Password" name="password" placeholder="">
+                      </div>
+                    <div class="form-group col">
+                        <label for="ConfirmPassword">Confirm password</label>
+                        <input type="password" class="form-control"  id="ConfirmPassword" placeholder="">
+                      </div>
+                </div>
+                    
+                     <div class="form-group">
+                       <label for="Description">Description</label>
+                       <textarea class="form-control" id="Description"  [(ngModel)]="currentUser.description" name="description"  rows="3"></textarea>
+                     </div>  
+                     
+                    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button="" mat-dialog-close="">Cancel</button>
+    <button mat-button="" [mat-dialog-close]="true" cdkfocusinitial="" (click)="add()">Add</button>
+</mat-dialog-actions>
+</body></html>
+    

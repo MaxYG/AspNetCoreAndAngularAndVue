@@ -52,9 +52,23 @@ namespace AngularQS.WebApi.Controllers
                 UserName = x.UserName,
                 FirstName = x.FirstName,
                 LastName = x.LastName,
+                Description = x.Description
             });
 
             return new ActionResult<IEnumerable<UserViewModel>>(result);
+        }
+
+        [HttpPost("add")]
+        public void Add([FromBody] UserAddCommand userAddCommand)
+        {
+            _userService.Add(new UserDomain()
+            {
+                UserName = userAddCommand.UserName,
+                FirstName = userAddCommand.FirstName,
+                LastName = userAddCommand.LastName,
+                Description = userAddCommand.Description,
+                Password = userAddCommand.Password
+            });
         }
     }
 }
