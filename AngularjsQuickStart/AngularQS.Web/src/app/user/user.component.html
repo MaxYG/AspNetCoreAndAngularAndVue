@@ -1,0 +1,35 @@
+
+<div>
+  <span>User</span>
+  <div class="float-right">   
+    <button mat-raised-button (click)="openDialog()" color="primary" style="margin-bottom: 5px;"  class="float-right">Add</button>
+  </div>
+</div>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">username</th>
+        <th scope="col">first name</th>
+        <th scope="col">last name</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users;index as i">       
+        <td>{{i+1}}</td>
+        <td>{{user.userName}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>            
+            <mat-icon (click)="updateUser(user)">edit</mat-icon> &nbsp;
+            <mat-icon (click)="deleteUser(user)">clear</mat-icon>
+        </td>
+      </tr>     
+    </tbody>
+  </table>
+
+
+
+ 

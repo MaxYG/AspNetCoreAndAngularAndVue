@@ -77,3 +77,9 @@
 /AngularjsQuickStart/AngularQS.CommandModel/bin
 /AngularjsQuickStart/AngularQS.CommandModel/obj
 /AngularjsQuickStart/AngularQS.Data/AngularQS.Data.v3.ncrunchproject
+/AngularjsQuickStart/AngularQS.Common/obj/AngularQS.Common.csproj.nuget.g.props
+/AngularjsQuickStart/AngularQS.Common/obj/AngularQS.Common.csproj.nuget.g.targets
+/AngularjsQuickStart/AngularQS.Common/bin/Debug/netcoreapp2.2/AngularQS.Common.deps.json
+/AngularjsQuickStart/AngularQS.v3.ncrunchsolution.user
+/AngularjsQuickStart/AngularQS.Common/obj
+/AngularjsQuickStart/AngularQS.Common/bin

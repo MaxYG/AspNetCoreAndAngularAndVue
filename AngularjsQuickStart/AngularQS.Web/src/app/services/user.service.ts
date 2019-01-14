@@ -2,28 +2,33 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { User } from '../models';
+import { WebConstantService } from './web.constant.service';
+import { BaseHttpServoce } from './base.http.service';
+import { Observable, of } from 'rxjs';
+
 
 @Injectable()
 export class UserService {
-    constructor(private http: HttpClient) { }
+    
+    constructor(private http: BaseHttpServoce,private webConstantService:WebConstantService) { }
 
-    getAll() {
-       // return this.http.get<User[]>(`${config.apiUrl}/users`);
+    getAll() :Observable<User[]>{
+       return this.http.getAll(this.webConstantService.userAllUrl) as Observable<User[]>;
     }
 
     getById(id: number) {
         //return this.http.get(`${config.apiUrl}/users/` + id);
     }
 
-    register(user: User) {
-        //return this.http.post(`${config.apiUrl}/users/register`, user);
+    add(user: User) :Observable<any>{
+        return this.http.post(this.webConstantService.userAddUrl, user) as Observable<any>;
     }
 
-    update(user: User) {
-        //return this.http.put(`${config.apiUrl}/users/` + user.id, user);
+    update(user: User) :Observable<any>{
+        return this.http.put(this.webConstantService.userUpdateUrl,user);
     }
 
     delete(id: number) {
-        //return this.http.delete(`${config.apiUrl}/users/` + id);
+        return this.http.deleteById(this.webConstantService.userUrl, id);
     }
 }

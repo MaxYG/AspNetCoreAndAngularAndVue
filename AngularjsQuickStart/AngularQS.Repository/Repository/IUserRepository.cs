@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AngularQS.Data.Models;
 using Microsoft.EntityFrameworkCore;
@@ -9,5 +10,6 @@ namespace AngularQS.Repository.Repository
     public interface IUserRepository : IRepository<User>
     {
         User GetUserByName(string name);
+        User GetUsernameAndPassword(string username, string password);
     }
 }

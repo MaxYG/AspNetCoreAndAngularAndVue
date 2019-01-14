@@ -9,9 +9,11 @@ namespace AngularQS.Services.IService
 {
     public interface IUserService
     {
+        User Authenticate(string username, string password, string secret);
         UserDomain Add(UserDomain userDomain);
-        void Update(User userDomain);
+        void Update(UserDomain userDomain);
         Task<User> GetAsync(int id);
         IEnumerable<User> GetList();
+        void Delete(int id);
     }
 }
