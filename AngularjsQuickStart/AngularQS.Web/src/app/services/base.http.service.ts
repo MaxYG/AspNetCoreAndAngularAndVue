@@ -39,6 +39,20 @@ export class BaseHttpServoce{
         );
     }
 
+    put (url:string, data?:any,) :Observable<any>{
+        return this.httpClient.put(this.webConstantService.rootUrl+url,data ,{headers:this.headerOptions})
+        .pipe(
+            catchError(error=>this.handleError(error))  
+        );
+    }
+
+    deleteById (url:string, id:number,) :Observable<any>{
+        return this.httpClient.delete(this.webConstantService.rootUrl+url+"/"+id ,{headers:this.headerOptions})
+        .pipe(
+            catchError(error=>this.handleError(error))  
+        );
+    }
+
     handleError(error: any): any {          
         if(error.status===401){            
             localStorage.removeItem(this.webConstantService.localStoreKey);

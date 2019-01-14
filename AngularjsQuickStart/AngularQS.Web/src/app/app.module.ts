@@ -5,7 +5,7 @@ import {HttpClientModule} from '@angular/common/http'
 
 import{AppMaterialModule} from './app-material'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatDialogModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatDialogModule,MatIconModule} from '@angular/material';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -22,19 +22,21 @@ import {AlertComponent} from './commonComponent/alert.component'
 import {UserComponent} from './user/user.component'
 import { FooterComponent } from './footer/footer.component';
 import {UserAddModalComponent} from './user/user-add.component'
-
+import {UserDeleteComponent} from './user/user-delete.component'
+import {UserUpdateModalComponent} from './user/user-update.component'
 
 @NgModule({
   declarations: [
     AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent,
-    UserComponent,FooterComponent,UserAddModalComponent
+    UserComponent,FooterComponent,UserAddModalComponent,UserDeleteComponent,
+    UserUpdateModalComponent
   ],
   imports: [
     NgbModule,    BrowserModule,    routing,        ReactiveFormsModule,    BrowserAnimationsModule,    MatButtonModule, MatCheckboxModule,
-    AppMaterialModule,    HttpClientModule  ,    FormsModule ,    MatDialogModule
+    AppMaterialModule,    HttpClientModule  ,    FormsModule ,    MatDialogModule,MatIconModule
   ],
   entryComponents: [
-    UserAddModalComponent
+    UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent
   ],
   providers: [
     AuthGuard,

@@ -70,5 +70,26 @@ namespace AngularQS.WebApi.Controllers
                 Password = userAddCommand.Password
             });
         }
+
+        [HttpPut("update")]
+        public void Update([FromBody] UserUpdateCommand userUpdateCommand)
+        {
+            _userService.Update(new UserDomain()
+            {
+                Id = userUpdateCommand.Id,
+                UserName = userUpdateCommand.UserName,
+                FirstName = userUpdateCommand.FirstName,
+                LastName = userUpdateCommand.LastName,
+                Description = userUpdateCommand.Description
+                
+            });
+        }
+
+
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            _userService.Delete(id);
+        }
     }
 }

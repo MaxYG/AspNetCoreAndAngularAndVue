@@ -22,7 +22,10 @@
         <td>{{user.userName}}</td>
         <td>{{user.firstName}}</td>
         <td>{{user.lastName}}</td>
-        <td></td>
+        <td>            
+            <mat-icon (click)="updateUser(user)">edit</mat-icon> &nbsp;
+            <mat-icon (click)="deleteUser(user)">clear</mat-icon>
+        </td>
       </tr>     
     </tbody>
   </table>

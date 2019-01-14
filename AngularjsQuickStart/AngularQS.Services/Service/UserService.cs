@@ -58,7 +58,6 @@ namespace AngularQS.Services.Service
 
         public UserDomain Add(UserDomain userDomain)
         {
-            //throw new Exception("asdfasdf");
             var user = new User()
             {
                 UserName = userDomain.UserName,
@@ -83,9 +82,16 @@ namespace AngularQS.Services.Service
             };
         }
 
-        public void Update(User user)
+        public void Update(UserDomain userDomain)
         {
-            throw new NotImplementedException();
+            var user = _userRepository.Get(userDomain.Id);
+            user.UserName = userDomain.UserName;
+            user.FirstName = userDomain.FirstName;
+            user.LastName = userDomain.LastName;
+            user.Description = userDomain.Description;
+
+            _userRepository.Edit(user);
+            _unitOfWork.SaveChanges();
         }
 
         public Task<User> GetAsync(int id)
@@ -98,6 +104,12 @@ namespace AngularQS.Services.Service
             //throw new Exception("thrwo error now");
             var result = _userRepository.GetAll();
             return result;
+        }
+
+        public void Delete(int id)
+        {
+           _userRepository.Delete(id);
+            _unitOfWork.SaveChanges();
         }
     }
 }

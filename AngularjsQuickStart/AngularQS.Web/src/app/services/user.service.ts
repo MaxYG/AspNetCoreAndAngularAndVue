@@ -13,7 +13,7 @@ export class UserService {
     constructor(private http: BaseHttpServoce,private webConstantService:WebConstantService) { }
 
     getAll() :Observable<User[]>{
-       return this.http.getAll(this.webConstantService.userUrl) as Observable<User[]>;
+       return this.http.getAll(this.webConstantService.userAllUrl) as Observable<User[]>;
     }
 
     getById(id: number) {
@@ -24,11 +24,11 @@ export class UserService {
         return this.http.post(this.webConstantService.userAddUrl, user) as Observable<any>;
     }
 
-    update(user: User) {
-        //return this.http.put(`${config.apiUrl}/users/` + user.id, user);
+    update(user: User) :Observable<any>{
+        return this.http.put(this.webConstantService.userUpdateUrl,user);
     }
 
     delete(id: number) {
-        //return this.http.delete(`${config.apiUrl}/users/` + id);
+        return this.http.deleteById(this.webConstantService.userUrl, id);
     }
 }

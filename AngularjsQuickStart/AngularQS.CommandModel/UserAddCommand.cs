@@ -14,4 +14,8 @@ namespace AngularQS.CommandModel
     {
         
     }
+    public class UserUpdateCommand : UserCommand
+    {
+        public int Id { get; set; }
+    }
 }

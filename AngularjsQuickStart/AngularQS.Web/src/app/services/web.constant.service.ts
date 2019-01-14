@@ -5,6 +5,8 @@ import { Injectable } from "@angular/core";
 export class WebConstantService{
    readonly rootUrl = "http://localhost:53856/";
    readonly localStoreKey="AngularQS";
-   readonly userUrl="api/user/all";
-   readonly userAddUrl="api/user/add"
+   readonly userAllUrl="api/user/all";
+   readonly userAddUrl="api/user/add";
+   readonly userUpdateUrl="api/user/update";
+   readonly userUrl="api/user"
 }

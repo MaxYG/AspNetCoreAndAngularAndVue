@@ -6,7 +6,8 @@ import {FormsModule } from '@angular/forms'
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog} from '@angular/material';
 import {UserAddModalComponent} from './user-add.component'
-
+import {UserDeleteComponent} from  './user-delete.component'
+import {UserUpdateModalComponent} from './user-update.component'
 
 @Component( {
     selector: 'app-user',
@@ -23,16 +24,29 @@ export class UserComponent implements OnInit {
         public dialog: MatDialog) {        
     }
 
-    deleteUser(id: number) {
-        
+    deleteUser(user: User) {
+        const dialogRef = this.dialog.open(UserDeleteComponent,{
+            data: user,
+        });
+    
+        dialogRef.afterClosed().subscribe(result => {
+            this.loadAllUsers();          
+        });
     }
-
+    updateUser(user: User) {
+        const dialogRef = this.dialog.open(UserUpdateModalComponent,{
+            data: user,
+        });
+    
+        dialogRef.afterClosed().subscribe(result => {
+            this.loadAllUsers();          
+        });
+    }
     openDialog() {
         const dialogRef = this.dialog.open(UserAddModalComponent);
     
         dialogRef.afterClosed().subscribe(result => {
-            this.loadAllUsers();
-          console.log(`Dialog result: ${result}`);
+            this.loadAllUsers();         
         });
     }
 
