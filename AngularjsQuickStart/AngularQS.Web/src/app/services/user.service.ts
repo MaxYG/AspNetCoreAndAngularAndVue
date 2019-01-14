@@ -20,7 +20,7 @@ export class UserService {
         //return this.http.get(`${config.apiUrl}/users/` + id);
     }
 
-    register(user: User) :Observable<any>{
+    add(user: User) :Observable<any>{
         return this.http.post(this.webConstantService.userAddUrl, user) as Observable<any>;
     }
 

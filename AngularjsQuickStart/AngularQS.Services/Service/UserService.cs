@@ -58,6 +58,7 @@ namespace AngularQS.Services.Service
 
         public UserDomain Add(UserDomain userDomain)
         {
+            //throw new Exception("asdfasdf");
             var user = new User()
             {
                 UserName = userDomain.UserName,

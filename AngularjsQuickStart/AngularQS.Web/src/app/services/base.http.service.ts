@@ -37,7 +37,6 @@ export class BaseHttpServoce{
         .pipe(
             catchError(error=>this.handleError(error))  
         );
-
     }
 
     handleError(error: any): any {          
@@ -47,7 +46,6 @@ export class BaseHttpServoce{
         }else if(error.status===404){
             this.alertService.error("404");           
         }else{
-
             this.alertService.error(error.message);
         }
 

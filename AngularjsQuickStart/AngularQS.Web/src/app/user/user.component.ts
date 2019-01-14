@@ -20,8 +20,7 @@ export class UserComponent implements OnInit {
        this.loadAllUsers();
     }
     constructor(private userService:UserService,
-        public dialog: MatDialog,
-        private modalService: NgbModal) {        
+        public dialog: MatDialog) {        
     }
 
     deleteUser(id: number) {
@@ -35,11 +34,7 @@ export class UserComponent implements OnInit {
             this.loadAllUsers();
           console.log(`Dialog result: ${result}`);
         });
-      }
-
-    openLg(content) {
-        this.modalService.open(content, { size: 'lg' });
-      }
+    }
 
     private loadAllUsers() {
         this.userService.getAll().subscribe(x=>this.users= x);

@@ -1,9 +1,8 @@
 
 <div>
   <span>User</span>
-  <div class="float-right">
-    <!-- <button class="btn btn-outline-primary mb-2 mr-2 float-right" (click)="openLg(AddUserModel)">Add</button> -->
-    <button mat-raised-button (click)="openDialog()" color="primary"  class="float-right">Open dialog</button>
+  <div class="float-right">   
+    <button mat-raised-button (click)="openDialog()" color="primary" style="margin-bottom: 5px;"  class="float-right">Add</button>
   </div>
 </div>
 
@@ -23,60 +22,11 @@
         <td>{{user.userName}}</td>
         <td>{{user.firstName}}</td>
         <td>{{user.lastName}}</td>
-        <td>{{user.lastName}}</td>
+        <td></td>
       </tr>     
     </tbody>
   </table>
-  
-  <ng-template #AddUserModel let-modal>
-      <div class="modal-header">
-        <h4 class="modal-title">Modal title</h4>
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form  #userForm="ngForm">
-        <div >
-            <div class="form-group">
-                <label for="Username">user name</label>
-                <input type="email" class="form-control" [(ngModel)]="currentUser.username" id="Username" name="username" placeholder="please input email">
-              </div>              
-        </div>
-        <div class="form-row">
-            <div class="form-group col">
-                <label for="Firstname">Firs name</label>
-                <input type="text" class="form-control" [(ngModel)]="currentUser.firstname" id="firstname" name="firstname" placeholder="">
-              </div>
-            <div class="form-group col">
-                <label for="Lastname">Last name</label>
-               <input type="text" class="form-control" [(ngModel)]="currentUser.lastname"  id="Lastname" name="lastname" placeholder="">
-              </div>              
-        </div>
-        <div class="form-row">
-            <div class="form-group col">
-                <label for="Password">Password</label>
-             <input type="password" class="form-control" [(ngModel)]="currentUser.password"  id="Password" name="password" placeholder="">
-              </div>
-            <div class="form-group col">
-                <label for="ConfirmPassword">Confirm password</label>
-                <input type="password" class="form-control"  id="ConfirmPassword" placeholder="">
-              </div>
-        </div>
-            
-             <div class="form-group">
-               <label for="Description">Description</label>
-               <textarea class="form-control" id="Description"  [(ngModel)]="currentUser.description" name="description"  rows="3"></textarea>
-             </div>  
-             
-            </form>
-      </div>
-      <div class="modal-footer">
-          <button type="button" class="btn btn-light float-left" (click)="modal.close('Close click')">Close</button>
-          <button type="button" class="btn btn-light float-right" (click)="modal.close('Close click')">Add</button>
-          
-      </div>
-    </ng-template>
+
 
 
  
