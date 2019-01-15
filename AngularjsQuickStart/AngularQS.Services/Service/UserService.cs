@@ -101,7 +101,7 @@ namespace AngularQS.Services.Service
 
         public IEnumerable<User> GetList()
         {
-            //throw new Exception("thrwo error now");
+//           throw new Exception("xxxx");
             var result = _userRepository.GetAll();
             return result;
         }

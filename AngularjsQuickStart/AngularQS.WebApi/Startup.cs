@@ -9,6 +9,7 @@ using AngularQS.Repository;
 using AngularQS.Repository.Repository;
 using AngularQS.Services.IService;
 using AngularQS.Services.Service;
+using AngularQS.WebApi.Help;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -88,6 +89,7 @@ namespace AngularQS.WebApi
                 .AllowAnyHeader());
 
             app.UseAuthentication();
+            app.UseErrorHandlingMiddleware();
 
             app.UseMvc();
         }
