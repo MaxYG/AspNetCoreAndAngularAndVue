@@ -59,6 +59,8 @@ export class BaseHttpServoce{
             this.router.navigate(["/login"]);
         }else if(error.status===404){
             this.alertService.error("404");           
+        }else if(error.status===500){            
+            this.alertService.error(error.error.error);           
         }else{
             this.alertService.error(error.message);
         }
