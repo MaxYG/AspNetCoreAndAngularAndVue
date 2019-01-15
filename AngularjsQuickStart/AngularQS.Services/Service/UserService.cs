@@ -12,6 +12,7 @@ using AngularQS.Services.IService;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using NLog;
 
 namespace AngularQS.Services.Service
 {
@@ -105,8 +106,8 @@ namespace AngularQS.Services.Service
         public IEnumerable<User> GetList()
         {
             //           throw new Exception("xxxx");
-            _logger.LogInformation("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
-            _logger.LogError("bbbbbbbbbbbbbbbbbbbbbbbbbb");
+            _logger.LogInformation("test log info to database for info");
+            _logger.LogError("test log info to database for error");
             var result = _userRepository.GetAll();
             return result;
         }
