@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http'
+import {TranslateModule} from '@ngx-translate/core';
 
 import{AppMaterialModule} from './app-material'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -33,7 +34,8 @@ import {UserUpdateModalComponent} from './user/user-update.component'
   ],
   imports: [
     NgbModule,    BrowserModule,    routing,        ReactiveFormsModule,    BrowserAnimationsModule,    MatButtonModule, MatCheckboxModule,
-    AppMaterialModule,    HttpClientModule  ,    FormsModule ,    MatDialogModule,MatIconModule
+    AppMaterialModule,    HttpClientModule  ,    FormsModule ,    MatDialogModule,MatIconModule,
+    TranslateModule.forRoot()
   ],
   entryComponents: [
     UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent
