@@ -4,14 +4,16 @@ using AngularQS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AngularQS.Data.Migrations
 {
     [DbContext(typeof(AngularQSContext))]
-    partial class AngularQSContextModelSnapshot : ModelSnapshot
+    [Migration("20190115084805_AddLogTable")]
+    partial class AddLogTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,7 +38,7 @@ namespace AngularQS.Data.Migrations
                     b.ToTable("Companies");
                 });
 
-            modelBuilder.Entity("AngularQS.Data.Models.Log", b =>
+            modelBuilder.Entity("AngularQS.Data.Models.QsnLog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,28 +52,11 @@ namespace AngularQS.Data.Migrations
 
                     b.Property<DateTime>("Logged");
 
-                    b.Property<string>("Logger");
-
-                    b.Property<string>("MachineName");
-
                     b.Property<string>("Message");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Logs");
-                });
-
-            modelBuilder.Entity("AngularQS.Data.Models.TestModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TestModels");
+                    b.ToTable("QsnLogs");
                 });
 
             modelBuilder.Entity("AngularQS.Data.Models.User", b =>

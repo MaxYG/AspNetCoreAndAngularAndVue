@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AngularQS.Common\AngularQS.Common.csproj" />
     <ProjectReference Include="..\AngularQS.Data\AngularQS.Data.csproj" />
     <ProjectReference Include="..\AngularQS.DomainModel\AngularQS.DomainModel.csproj" />

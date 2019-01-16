@@ -20,6 +20,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using NLog;
+using NLog.Extensions.Logging;
+using NLog.Web;
 
 namespace AngularQS.WebApi
 {
@@ -27,6 +30,7 @@ namespace AngularQS.WebApi
     {
         public Startup(IConfiguration configuration)
         {
+            
             Configuration = configuration;
         }
 
@@ -36,7 +40,7 @@ namespace AngularQS.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
             var appSettings = appSettingsSection.Get<AppSettings>();
@@ -72,7 +76,7 @@ namespace AngularQS.WebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
 
             if (env.IsDevelopment())
@@ -92,6 +96,9 @@ namespace AngularQS.WebApi
             app.UseErrorHandlingMiddleware();
 
             app.UseMvc();
+//            loggerFactory.AddNLog();//this will add log towice
+            app.AddNLogWeb();
+            LogManager.Configuration.Variables["connectionString"] = Configuration.GetConnectionString("DefaultConnection");
         }
     }
 }

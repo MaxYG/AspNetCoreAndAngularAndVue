@@ -4,14 +4,16 @@ using AngularQS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AngularQS.Data.Migrations
 {
     [DbContext(typeof(AngularQSContext))]
-    partial class AngularQSContextModelSnapshot : ModelSnapshot
+    [Migration("20190115100110_updateTable")]
+    partial class updateTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,19 +61,6 @@ namespace AngularQS.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Logs");
-                });
-
-            modelBuilder.Entity("AngularQS.Data.Models.TestModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TestModels");
                 });
 
             modelBuilder.Entity("AngularQS.Data.Models.User", b =>

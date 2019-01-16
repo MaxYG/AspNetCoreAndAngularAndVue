@@ -9,8 +9,10 @@ using AngularQS.DomainModel;
 using AngularQS.Repository;
 using AngularQS.Repository.Repository;
 using AngularQS.Services.IService;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using NLog;
 
 namespace AngularQS.Services.Service
 {
@@ -18,13 +20,15 @@ namespace AngularQS.Services.Service
     {
         private readonly IUserRepository _userRepository;
         private readonly ICompanyRepository _companyRepository;
+        private readonly ILogger<UserService> _logger;
         private readonly IUnitOfWork _unitOfWork;
 
         public UserService(IUserRepository userRepository, ICompanyRepository companyRepository,
-            IUnitOfWork unitOfWork)
+            ILogger<UserService> logger, IUnitOfWork unitOfWork)
         {
             _userRepository = userRepository;
             _companyRepository = companyRepository;
+            _logger = logger;
             _unitOfWork = unitOfWork;
         }
 
@@ -101,7 +105,9 @@ namespace AngularQS.Services.Service
 
         public IEnumerable<User> GetList()
         {
-//           throw new Exception("xxxx");
+            //           throw new Exception("xxxx");
+            _logger.LogInformation("test log info to database for info");
+            _logger.LogError("test log info to database for error");
             var result = _userRepository.GetAll();
             return result;
         }
