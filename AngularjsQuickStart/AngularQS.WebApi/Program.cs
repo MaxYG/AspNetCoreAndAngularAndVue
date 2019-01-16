@@ -17,9 +17,9 @@ namespace AngularQS.WebApi
         public static void Main(string[] args)
         {
             Directory.SetCurrentDirectory(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-            var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
-            logger.Info("init main");
-            logger.Error("error");
+            //var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            //logger.Info("init main");
+            //logger.Error("error");
             CreateWebHostBuilder(args).Build().Run();
         }
 
@@ -29,7 +29,8 @@ namespace AngularQS.WebApi
                 .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();
-                    logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+                   
+                    logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Information);
                 })
                 .UseNLog();
     }
