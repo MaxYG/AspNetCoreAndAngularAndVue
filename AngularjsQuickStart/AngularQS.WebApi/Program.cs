@@ -20,6 +20,7 @@ namespace AngularQS.WebApi
             //var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
             //logger.Info("init main");
             //logger.Error("error");
+           
             CreateWebHostBuilder(args).Build().Run();
         }
 
@@ -29,8 +30,9 @@ namespace AngularQS.WebApi
                 .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();
-                   
+                  
                     logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Information);
+                    
                 })
                 .UseNLog();
     }

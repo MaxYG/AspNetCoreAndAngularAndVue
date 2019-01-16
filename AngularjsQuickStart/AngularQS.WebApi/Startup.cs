@@ -30,6 +30,7 @@ namespace AngularQS.WebApi
     {
         public Startup(IConfiguration configuration)
         {
+            
             Configuration = configuration;
         }
 
@@ -39,7 +40,7 @@ namespace AngularQS.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
+            
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
             var appSettings = appSettingsSection.Get<AppSettings>();
@@ -95,7 +96,7 @@ namespace AngularQS.WebApi
             app.UseErrorHandlingMiddleware();
 
             app.UseMvc();
-            loggerFactory.AddNLog();
+//            loggerFactory.AddNLog();//this will add log towice
             app.AddNLogWeb();
             LogManager.Configuration.Variables["connectionString"] = Configuration.GetConnectionString("DefaultConnection");
         }
