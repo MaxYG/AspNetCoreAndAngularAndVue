@@ -18,7 +18,7 @@ export class AppComponent {
     let localStorageLanguage=localStorage.getItem("AngularQSLanguage");
     if(localStorageLanguage){
       translate.use(JSON.parse(localStorageLanguage).value);
-      translate.setDefaultLang(localStorageLanguage);
+      translate.setDefaultLang(JSON.parse(localStorageLanguage).value);
     }else{
       translate.setDefaultLang("en");
       translate.use('en');
