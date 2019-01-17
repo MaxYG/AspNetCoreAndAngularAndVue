@@ -30,6 +30,8 @@ export class HeaderComponent {
         this.currentLanguage=this.languages.find(function(lan){
           return lan.value==JSON.parse(localStorageLanguage).value;
         }).displayName;
+      }else{
+        this.currentLanguage=this.languages[0].displayName;
       }
   }
   
