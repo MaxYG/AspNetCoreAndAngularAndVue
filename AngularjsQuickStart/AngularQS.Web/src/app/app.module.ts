@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {HttpClientModule} from '@angular/common/http'
-import {TranslateModule} from '@ngx-translate/core';
+import {HttpClientModule, HttpClient} from '@angular/common/http'
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import{AppMaterialModule} from './app-material'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatDialogModule,MatIconModule} from '@angular/material';
 
+import {AppAllModule} from './app-material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,10 @@ import {UserAddModalComponent} from './user/user-add.component'
 import {UserDeleteComponent} from './user/user-delete.component'
 import {UserUpdateModalComponent} from './user/user-update.component'
 
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient,"./assets/i18n/", ".json");
+}
+
 @NgModule({
   declarations: [
     AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent,
@@ -33,9 +38,22 @@ import {UserUpdateModalComponent} from './user/user-update.component'
     UserUpdateModalComponent
   ],
   imports: [
-    NgbModule,    BrowserModule,    routing,        ReactiveFormsModule,    BrowserAnimationsModule,    MatButtonModule, MatCheckboxModule,
-    AppMaterialModule,    HttpClientModule  ,    FormsModule ,    MatDialogModule,MatIconModule,
-    TranslateModule.forRoot()
+    NgbModule,    
+    BrowserModule,    
+    routing,        
+    ReactiveFormsModule,    
+    BrowserAnimationsModule,   
+    AppMaterialModule,    
+    HttpClientModule  ,    
+    FormsModule ,        
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    AppAllModule
   ],
   entryComponents: [
     UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent

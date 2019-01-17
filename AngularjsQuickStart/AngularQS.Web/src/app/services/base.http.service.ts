@@ -61,6 +61,8 @@ export class BaseHttpServoce{
             this.alertService.error("404");           
         }else if(error.status===500){            
             this.alertService.error(error.error.error);           
+        }else if(error.status===0){            
+            this.alertService.error(error.statusText);           
         }else{
             this.alertService.error(error.message);
         }
