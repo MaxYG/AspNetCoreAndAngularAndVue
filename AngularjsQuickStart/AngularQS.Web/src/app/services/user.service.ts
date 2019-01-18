@@ -16,6 +16,10 @@ export class UserService {
        return this.http.getAll(this.webConstantService.userAllUrl) as Observable<User[]>;
     }
 
+    getTest() :Observable<any>{
+        return this.http.getAll("api/user/test") as Observable<any>;
+     }
+
     getById(id: number) {
         //return this.http.get(`${config.apiUrl}/users/` + id);
     }

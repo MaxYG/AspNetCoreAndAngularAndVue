@@ -105,7 +105,7 @@ namespace AngularQS.Services.Service
 
         public IEnumerable<User> GetList()
         {
-            //           throw new Exception("xxxx");
+                       throw new CustomerException("Hello xxx");
             _logger.LogInformation("test log info to database for info");
             _logger.LogError("test log info to database for error");
             var result = _userRepository.GetAll();

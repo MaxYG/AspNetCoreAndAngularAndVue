@@ -12,21 +12,26 @@ import { log } from 'util';
 
 @Injectable()
 export class BaseHttpServoce{
-    constructor(private httpClient: HttpClient,
-        private alertService:AlertService,
-        private router:Router,
-        private webConstantService:WebConstantService){       
-    }
-
+    
     private headerOptions = new HttpHeaders({
         'Content-Type':  'application/json',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'OPTIONS, GET, POST',
         'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept, Access-Control-Allow-Origin',
-        'Authorization': 'Bearer '+  JSON.parse(localStorage.getItem(this.webConstantService.localStoreKey)).token
+        'Authorization': 'Bearer '+  JSON.parse(localStorage.getItem(this.webConstantService.localStoreKey)).token,
+        'AQSLanguage':JSON.parse(localStorage.getItem("AngularQSLanguage")).value,
+        "Accept-Language":JSON.parse(localStorage.getItem("AngularQSLanguage")).allValue==undefined?"en-US":JSON.parse(localStorage.getItem("AngularQSLanguage")).allValue
     });
+
+    constructor(private httpClient: HttpClient,
+        private alertService:AlertService,
+        private router:Router,
+        private webConstantService:WebConstantService){      
+            //this.headerOptions.append("AQSLanguage",JSON.parse(localStorage.getItem("AngularQSLanguage")).value); 
+    }    
     
     getAll (url:string, data?:Object,):Observable<Object> {
+        
         return this.httpClient.get(this.webConstantService.rootUrl+url,{headers:this.headerOptions}).pipe(
             catchError(error=>this.handleError(error))  
         );

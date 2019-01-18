@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Threading.Tasks;
 using AngularQS.Services;
+using AngularQS.WebApi.Resources;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Newtonsoft.Json;
 
 namespace AngularQS.WebApi.Help
@@ -15,10 +18,12 @@ namespace AngularQS.WebApi.Help
     public class ErrorHandlingMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly IStringLocalizer<SharedResource> _sharedlocalizer;
 
-        public ErrorHandlingMiddleware(RequestDelegate next)
+        public ErrorHandlingMiddleware(RequestDelegate next, IStringLocalizer<SharedResource> sharedlocalizer)
         {
             _next = next;
+            _sharedlocalizer = sharedlocalizer;
         }
 
         public async Task Invoke(HttpContext httpContext)
@@ -29,18 +34,21 @@ namespace AngularQS.WebApi.Help
             }
             catch (Exception e)
             {
-                await HandleExceptionAsync(httpContext, e);
+                await HandleExceptionAsync(httpContext, e, _sharedlocalizer);
             }
 
             
         }
 
-        private Task HandleExceptionAsync(HttpContext context, Exception exception)
+        private Task HandleExceptionAsync(HttpContext context, Exception exception, IStringLocalizer<SharedResource> sharedLocalizer)
         {
             var code = HttpStatusCode.InternalServerError; 
            
             var errorMessage = string.Empty;
             if (exception is CustomerException)
+            {
+                errorMessage = sharedLocalizer[exception.Message];
+            }else if (exception is MyCustomerException)
             {
                 errorMessage = exception.Message;
             }

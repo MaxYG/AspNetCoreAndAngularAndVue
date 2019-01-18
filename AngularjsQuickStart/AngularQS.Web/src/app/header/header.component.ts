@@ -17,8 +17,8 @@ import {TranslateService} from '@ngx-translate/core';
 export class HeaderComponent {
   
   currentLanguage:string;
-  languages:Language[]=[{value:"en",displayName:"English"},
-  {value:"zh",displayName:"中文"}];
+  languages:Language[]=[{value:"en",displayName:"English",allValue:"en-US"},
+  {value:"zh",displayName:"中文",allValue:"zh-CN"}];
   constructor(private router:Router,
     private userServcie:UserService,
     public translate: TranslateService,

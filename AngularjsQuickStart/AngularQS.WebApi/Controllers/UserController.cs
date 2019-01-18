@@ -6,11 +6,14 @@ using AngularQS.CommandModel;
 using AngularQS.Common;
 using AngularQS.DomainModel;
 using AngularQS.Services.IService;
+using AngularQS.WebApi.Help;
+using AngularQS.WebApi.Resources;
 using AngularQS.WebApi.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
 namespace AngularQS.WebApi.Controllers
@@ -22,11 +25,17 @@ namespace AngularQS.WebApi.Controllers
     {
         private readonly IUserService _userService;
         private readonly IConfiguration _config;
+        private readonly IStringLocalizer<SharedResource> _sharedlocalizer;
+        private readonly IStringLocalizer<UserController> _localizer;
 
-        public UserController(IUserService userService, IConfiguration config)
+        public UserController(IUserService userService, IConfiguration config,
+            IStringLocalizer<SharedResource> sharedlocalizer,
+            IStringLocalizer<UserController> localizer)
         {
             _userService = userService;
             _config = config;
+            _sharedlocalizer = sharedlocalizer;
+            _localizer = localizer;
         }
 
         [AllowAnonymous]
@@ -41,6 +50,14 @@ namespace AngularQS.WebApi.Controllers
                 return BadRequest(new { message = "Username or password is incorrect" });
 
             return Ok(user);
+        }
+
+        [HttpGet("test")]
+        public JsonResult GetTest()
+        {
+            //throw new MyCustomerException(_sharedlocalizer["Hello xxx"]);
+            var result= _sharedlocalizer["Hello xxx"];
+            return new JsonResult(result);
         }
 
         [HttpGet("all")]

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {AlertService} from './services/alert.service'
 import {TranslateService} from '@ngx-translate/core';
+import { UserService } from './services';
 
 
 @Component({
@@ -9,8 +10,10 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  constructor(public translate: TranslateService) {
+  displayText:string;
+  constructor(public translate: TranslateService,
+    private userService:UserService
+    ) {
     
     translate.addLangs(['en', 'zh']);
     //translate.setDefaultLang('en');
@@ -22,6 +25,10 @@ export class AppComponent {
     }else{
       translate.setDefaultLang("en");
       translate.use('en');
-    }    
+    }   
+    
+    this.userService.getTest().subscribe(x=>{
+      this.displayText=JSON.stringify(x);
+    });
   }
 }

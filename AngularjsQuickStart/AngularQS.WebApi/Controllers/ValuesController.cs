@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace AngularQS.WebApi.Controllers
 {
@@ -12,6 +13,20 @@ namespace AngularQS.WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IStringLocalizer<ValuesController> _localizer;
+
+        public ValuesController(IStringLocalizer<ValuesController> localizer)
+        {
+            _localizer = localizer;
+        }
+
+        
+        [HttpGet("all")]
+        public string GetList()
+        {
+            return _localizer["Hello"];
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
