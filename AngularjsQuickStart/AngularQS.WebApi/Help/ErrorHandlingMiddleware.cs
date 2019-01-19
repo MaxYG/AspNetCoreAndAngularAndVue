@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Resources;
 using System.Threading.Tasks;
 using AngularQS.Services;
 using AngularQS.WebApi.Resources;
@@ -18,12 +19,10 @@ namespace AngularQS.WebApi.Help
     public class ErrorHandlingMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly IStringLocalizer<SharedResource> _sharedlocalizer;
 
-        public ErrorHandlingMiddleware(RequestDelegate next, IStringLocalizer<SharedResource> sharedlocalizer)
+        public ErrorHandlingMiddleware(RequestDelegate next)
         {
             _next = next;
-            _sharedlocalizer = sharedlocalizer;
         }
 
         public async Task Invoke(HttpContext httpContext)
@@ -34,33 +33,49 @@ namespace AngularQS.WebApi.Help
             }
             catch (Exception e)
             {
-                await HandleExceptionAsync(httpContext, e, _sharedlocalizer);
+                await HandleExceptionAsync(httpContext, e);
             }
 
             
         }
 
-        private Task HandleExceptionAsync(HttpContext context, Exception exception, IStringLocalizer<SharedResource> sharedLocalizer)
+        private Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            var code = HttpStatusCode.InternalServerError; 
-           
+            var code = HttpStatusCode.InternalServerError;
+            var language = "en-US";
+            var languageOfHeader = context.Request.Headers.FirstOrDefault(x => x.Key == "AQSLanguage");
+            if (!string.IsNullOrEmpty(languageOfHeader.Value))
+            {
+                language = languageOfHeader.Value;
+            }
+
+
             var errorMessage = string.Empty;
             if (exception is CustomerException)
             {
-                errorMessage = sharedLocalizer[exception.Message];
-            }else if (exception is MyCustomerException)
+                errorMessage = GetResourceValueByKey(exception.Message, language);
+            }
+            else if (exception is MyCustomerException)
             {
                 errorMessage = exception.Message;
             }
             else
             {
-                errorMessage = "The server has errors, please contact your administrator";
+                errorMessage = "";
             }
 
             var result = JsonConvert.SerializeObject(new { error = errorMessage });
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
             return context.Response.WriteAsync(result);
+        }
+
+        private string GetResourceValueByKey(string key,string language)
+        {
+            ResourceManager rm = new ResourceManager("AngularQS.WebApi.Resources.Resources.SharedResource", typeof(Program).Assembly);
+            var culture = new System.Globalization.CultureInfo(language);
+            var result=rm.GetString(key, culture);
+            return result;
         }
     }
 
