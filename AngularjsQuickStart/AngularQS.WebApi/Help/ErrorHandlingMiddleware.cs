@@ -61,7 +61,8 @@ namespace AngularQS.WebApi.Help
             }
             else
             {
-                errorMessage = "";
+                errorMessage = GetResourceValueByKey(exception.Message, language);
+                //errorMessage = "The server has errors, please contact your administrator";
             }
 
             var result = JsonConvert.SerializeObject(new { error = errorMessage });

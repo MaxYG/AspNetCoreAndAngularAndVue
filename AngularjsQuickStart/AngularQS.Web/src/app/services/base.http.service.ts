@@ -27,7 +27,7 @@ export class BaseHttpServoce{
         private alertService:AlertService,
         private router:Router,
         private webConstantService:WebConstantService){      
-            //this.headerOptions.append("AQSLanguage",JSON.parse(localStorage.getItem("AngularQSLanguage")).value); 
+            
     }    
     
     getAll (url:string, data?:Object,):Observable<Object> {

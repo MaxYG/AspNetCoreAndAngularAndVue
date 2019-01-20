@@ -11,6 +11,7 @@ using AngularQS.Repository.Repository;
 using AngularQS.Services.IService;
 using AngularQS.Services.Service;
 using AngularQS.WebApi.Help;
+using AngularQS.WebApi.Resources;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -78,11 +79,15 @@ namespace AngularQS.WebApi
             services.AddScoped<IUserService, UserService>();
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-            /*
+
+
+            /*services.AddMvc(options =>
+            {
+                options.ModelMetadataDetailsProviders.Add(new DisplayNameDetailsProvider());
+            })*/
             services.AddMvc()
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization();
-
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new List<CultureInfo>
@@ -94,7 +99,7 @@ namespace AngularQS.WebApi
                 options.DefaultRequestCulture = new RequestCulture("zh-CN");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
-            });*/
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

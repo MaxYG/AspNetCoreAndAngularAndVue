@@ -6,6 +6,7 @@ using AngularQS.CommandModel;
 using AngularQS.Common;
 using AngularQS.DomainModel;
 using AngularQS.Services.IService;
+using AngularQS.WebApi.Command;
 using AngularQS.WebApi.Help;
 using AngularQS.WebApi.Resources;
 using AngularQS.WebApi.ViewModel;
@@ -76,7 +77,7 @@ namespace AngularQS.WebApi.Controllers
         }
 
         [HttpPost("add")]
-        public void Add([FromBody] UserAddCommand userAddCommand)
+        public void Add([FromBody] AddUserCommand userAddCommand)
         {
             _userService.Add(new UserDomain()
             {
