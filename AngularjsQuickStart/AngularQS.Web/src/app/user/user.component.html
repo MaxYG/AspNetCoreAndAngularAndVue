@@ -10,17 +10,17 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">username</th>
-        <th scope="col">first name</th>
-        <th scope="col">last name</th>
-        <th scope="col">action</th>
+        <th scope="col">{{ 'home.userName' | translate }}</th>
+        <th scope="col">{{ 'home.firstName' | translate }}</th>
+        <th scope="col">{{ 'home.lastName' | translate }}</th>
+        <th scope="col">{{ 'home.action' | translate }}</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of users;index as i">       
         <td>{{i+1}}</td>
         <td>{{user.userName}}</td>
-        <td>{{user.firstName}}</td>
+        <td>{{user.firstName}}  {{ 'home.'+user.firstName | translate }} </td>
         <td>{{user.lastName}}</td>
         <td>            
             <mat-icon (click)="updateUser(user)">edit</mat-icon> &nbsp;

@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Reflection;
+using System.Resources;
 using System.Threading.Tasks;
 using AngularQS.Services;
+using AngularQS.WebApi.Resources;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Newtonsoft.Json;
 
 namespace AngularQS.WebApi.Help
@@ -37,15 +41,27 @@ namespace AngularQS.WebApi.Help
 
         private Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            var code = HttpStatusCode.InternalServerError; 
-           
+            var code = HttpStatusCode.InternalServerError;
+            var language = "en-US";
+            var languageOfHeader = context.Request.Headers.FirstOrDefault(x => x.Key == "AQSLanguage");
+            if (!string.IsNullOrEmpty(languageOfHeader.Value))
+            {
+                language = languageOfHeader.Value;
+            }
+
+
             var errorMessage = string.Empty;
             if (exception is CustomerException)
+            {
+                errorMessage = GetResourceValueByKey(exception.Message, language);
+            }
+            else if (exception is MyCustomerException)
             {
                 errorMessage = exception.Message;
             }
             else
             {
+//                errorMessage = GetResourceValueByKey(exception.Message, language);
                 errorMessage = "The server has errors, please contact your administrator";
             }
 
@@ -53,6 +69,14 @@ namespace AngularQS.WebApi.Help
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
             return context.Response.WriteAsync(result);
+        }
+
+        private string GetResourceValueByKey(string key,string language)
+        {
+            ResourceManager rm = new ResourceManager("AngularQS.WebApi.Resources.Resources.SharedResource", typeof(Program).Assembly);
+            var culture = new System.Globalization.CultureInfo(language);
+            var result=rm.GetString(key, culture);
+            return result;
         }
     }
 

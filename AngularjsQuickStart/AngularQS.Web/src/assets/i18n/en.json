@@ -1,0 +1,20 @@
+{
+    "home": {
+      "TITLE": "Hello Angular with ngx-translate!",
+      "SELECT": "Change language",
+      "login":"please login to continue",
+      "loginButton":"Login",
+      "user":"Username",
+      "password":"password",
+      "userTitle":"User",
+      "userName":"User name",
+      "firstName":"First name",
+      "lastName":"Last name",
+      "action":"Action",
+      "HelloException":"User name is invalid",
+      "HELLO": "hello {{value}}",
+      "Demo":"demo"
+    }
+    
+  }
+  

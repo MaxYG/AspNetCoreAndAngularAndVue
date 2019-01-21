@@ -1,0 +1,12 @@
+.angular-logo {
+    margin: 0 4px 3px 0;
+    height: 35px;
+    vertical-align: middle;
+}
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.mat-menu-content {    
+    padding-top:0px !important;padding-bottom:0px !important;
+}

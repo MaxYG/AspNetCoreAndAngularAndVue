@@ -22,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularQS.DomainModel", "An
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularQS.CommandModel", "AngularQS.CommandModel\AngularQS.CommandModel.csproj", "{B21E08B9-796C-4D2D-8F71-FC8503B54C00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularQS.Common", "AngularQS.Common\AngularQS.Common.csproj", "{19AEBB1F-8B8E-4EB5-B350-E7B496D167BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularQS.Common", "AngularQS.Common\AngularQS.Common.csproj", "{19AEBB1F-8B8E-4EB5-B350-E7B496D167BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

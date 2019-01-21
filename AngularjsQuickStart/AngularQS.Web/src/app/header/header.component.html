@@ -4,7 +4,17 @@
       Angular Demo 
     </span>
     <span class="fill-remaining-space"></span>   
-    <button mat-button (click)="getUsers()">User</button>
+    
+    <button mat-button [matMenuTriggerFor]="menu">{{currentLanguage}}</button>
+    <mat-menu #menu="matMenu" style="padding-top:0px !important;padding-bottom:0px !important;">
+      <button mat-menu-item
+       *ngFor="let language of languages" value="language.value"
+       (click)="setLanguage(language)">
+        {{language.displayName}}
+      </button>      
+    </mat-menu>
+
+    <button mat-button (click)="getUsers()">{{ 'home.userTitle' | translate }}</button>    
     <button mat-button (click)="onLogout()">Logout</button>
 </mat-toolbar>
 

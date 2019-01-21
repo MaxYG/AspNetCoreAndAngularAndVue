@@ -1,0 +1,20 @@
+{
+    "home": {
+      "TITLE": "Hello Angular with ngx-translate!",
+      "SELECT": "Change language",
+      "login":"请登录",
+      "loginButton":"登  录",
+      "user":"用户名",
+      "password":"密码",
+      "userTitle":"用户",
+      "userName":"用户名",
+      "firstName":"姓",
+      "lastName":"名",
+      "action":"操作",
+      "HelloException":"用户名必须是email",
+      "HELLO": "你好 {{value}}",
+      "Demo":"示例"
+    }
+    
+  }
+  

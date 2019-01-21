@@ -21,5 +21,9 @@ namespace AngularQS.Services
         }
     }
 
-    
+
+    public class ConstantHelp
+    {
+        public static string HelloExceptionKey = "HelloException";
+    }
 }

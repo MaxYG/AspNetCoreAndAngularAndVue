@@ -32,7 +32,7 @@ export class AlertComponent implements OnInit{
         });
         let self=this;
         observableMessage.pipe(
-            debounceTime(1000)
+            debounceTime(3000)
         ).subscribe(() => {
             self.alerts=[];
             self.isShow=false;           
