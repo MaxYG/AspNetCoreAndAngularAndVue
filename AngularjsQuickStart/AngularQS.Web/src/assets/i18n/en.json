@@ -11,7 +11,9 @@
       "firstName":"First name",
       "lastName":"Last name",
       "action":"Action",
-      "HelloException":"User name is invalid"
+      "HelloException":"User name is invalid",
+      "HELLO": "hello {{value}}",
+      "Demo":"demo"
     }
     
   }

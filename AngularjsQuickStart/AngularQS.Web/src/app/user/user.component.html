@@ -20,7 +20,7 @@
       <tr *ngFor="let user of users;index as i">       
         <td>{{i+1}}</td>
         <td>{{user.userName}}</td>
-        <td>{{user.firstName}}</td>
+        <td>{{user.firstName}}  {{ 'home.'+user.firstName | translate }} </td>
         <td>{{user.lastName}}</td>
         <td>            
             <mat-icon (click)="updateUser(user)">edit</mat-icon> &nbsp;

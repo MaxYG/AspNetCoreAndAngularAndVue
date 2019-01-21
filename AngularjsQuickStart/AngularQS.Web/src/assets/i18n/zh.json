@@ -11,7 +11,9 @@
       "firstName":"姓",
       "lastName":"名",
       "action":"操作",
-      "HelloException":"用户名必须是email"
+      "HelloException":"用户名必须是email",
+      "HELLO": "你好 {{value}}",
+      "Demo":"示例"
     }
     
   }

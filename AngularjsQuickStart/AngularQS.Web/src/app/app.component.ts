@@ -27,8 +27,14 @@ export class AppComponent {
       translate.use('en');
     }   
     
-    this.userService.getTest().subscribe(x=>{
-      this.displayText=JSON.stringify(x);
-    });
+    // this.userService.getTest().subscribe(x=>{
+    //   this.displayText=JSON.stringify(x);
+    // });
+
+  //   translate.get('home.HELLO', {value: '世界'}).subscribe((res: string) => {
+  //     this.displayText=res;
+  //     // console.log(res);
+  //     //=> 'hello world'
+  // });
   }
 }
