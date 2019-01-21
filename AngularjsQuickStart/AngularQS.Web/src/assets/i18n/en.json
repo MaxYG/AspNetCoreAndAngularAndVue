@@ -10,7 +10,8 @@
       "userName":"User name",
       "firstName":"First name",
       "lastName":"Last name",
-      "action":"Action"
+      "action":"Action",
+      "HelloException":"User name is invalid"
     }
     
   }

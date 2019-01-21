@@ -77,7 +77,7 @@ namespace AngularQS.WebApi.Controllers
         }
 
         [HttpPost("add")]
-        public void Add([FromBody] AddUserCommand userAddCommand)
+        public void Add([FromBody] UserAddCommand userAddCommand)
         {
             _userService.Add(new UserDomain()
             {

@@ -10,7 +10,8 @@
       "userName":"用户名",
       "firstName":"姓",
       "lastName":"名",
-      "action":"操作"
+      "action":"操作",
+      "HelloException":"用户名必须是email"
     }
     
   }

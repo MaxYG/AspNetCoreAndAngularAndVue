@@ -5,11 +5,7 @@ namespace AngularQS.CommandModel
 {
     //            ErrorMessageResourceType = typeof(Resources.SharedResource)
     public class UserCommand{
-//        [Required(ErrorMessage = null,
-//            ErrorMessageResourceName= "HelloException",
-//        ErrorMessageResourceType = typeof(Resources.SharedResource)
-//            )]
-        [Display(Name = "Userame")]
+        [Required(ErrorMessage = "HelloException")]
         public string UserName { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }

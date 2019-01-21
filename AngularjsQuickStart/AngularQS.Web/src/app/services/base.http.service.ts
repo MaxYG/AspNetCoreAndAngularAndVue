@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 import { jsonpCallbackContext } from '@angular/common/http/src/module';
 import { Router } from '@angular/router';
 import { log } from 'util';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Injectable()
@@ -22,10 +23,11 @@ export class BaseHttpServoce{
         'AQSLanguage':JSON.parse(localStorage.getItem("AngularQSLanguage")).value,
         "Accept-Language":JSON.parse(localStorage.getItem("AngularQSLanguage")).allValue==undefined?"en-US":JSON.parse(localStorage.getItem("AngularQSLanguage")).allValue
     });
-
+    
     constructor(private httpClient: HttpClient,
         private alertService:AlertService,
         private router:Router,
+        public translate: TranslateService,
         private webConstantService:WebConstantService){      
             
     }    
@@ -58,7 +60,8 @@ export class BaseHttpServoce{
         );
     }
 
-    handleError(error: any): any {          
+    handleError(error: any): any {   
+         
         if(error.status===401){            
             localStorage.removeItem(this.webConstantService.localStoreKey);
             this.router.navigate(["/login"]);
@@ -66,6 +69,25 @@ export class BaseHttpServoce{
             this.alertService.error("404");           
         }else if(error.status===500){            
             this.alertService.error(error.error.error);           
+        }else if(error.status===400){   
+            let properties=Object.keys(error.error.errors);
+            if(properties.length===0){
+                this.alertService.error(error.error.error);           
+            }else{
+                for(var i=0;i<properties.length;i++){
+                    let exceptions=error.error.errors[properties[i]];
+                    if(exceptions==0){
+                        continue;
+                    }
+                    let exceptionDetail=error.error.errors[properties[i]][0];
+                    let errorMessage=this.translate.get("home."+exceptionDetail);
+                    errorMessage.subscribe(message=>{                      
+                        this.alertService.error(message);
+                    })
+                    break;
+                }
+            }         
+                    
         }else if(error.status===0){            
             this.alertService.error(error.statusText);           
         }else{
