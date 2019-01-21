@@ -19,7 +19,7 @@ export class BaseHttpServoce{
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'OPTIONS, GET, POST',
         'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept, Access-Control-Allow-Origin',
-        'Authorization': 'Bearer '+  JSON.parse(localStorage.getItem(this.webConstantService.localStoreKey)).token,
+        'Authorization': 'Bearer '+ localStorage.getItem(this.webConstantService.localStoreKey)!=null?  JSON.parse(localStorage.getItem(this.webConstantService.localStoreKey)).token:"",
         'AQSLanguage':JSON.parse(localStorage.getItem("AngularQSLanguage")).value,
         "Accept-Language":JSON.parse(localStorage.getItem("AngularQSLanguage")).allValue==undefined?"en-US":JSON.parse(localStorage.getItem("AngularQSLanguage")).allValue
     });

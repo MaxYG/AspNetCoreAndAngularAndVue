@@ -9,7 +9,7 @@ import{AppMaterialModule} from './app-common-part'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppAllModule} from './app-material-module';
-import {AppAllComponentModule} from './app-common-part/app-component-module'
+// import {AppAllComponentModule} from './app-common-part/app-component-module'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -37,7 +37,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent,
     UserComponent,FooterComponent,UserAddModalComponent,UserDeleteComponent,
-    NotFoundComponent
+    NotFoundComponent,UserUpdateModalComponent
   ],
   imports: [
     NgbModule,    
@@ -55,7 +55,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    AppAllModule,AppAllComponentModule
+    AppAllModule
   ],
   entryComponents: [
     UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent
