@@ -5,7 +5,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http'
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
-import{AppMaterialModule} from './app-material'
+import{AppMaterialModule} from './app-common-part'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppAllModule} from './app-material-module';
@@ -26,6 +26,8 @@ import { FooterComponent } from './footer/footer.component';
 import {UserAddModalComponent} from './user/user-add.component'
 import {UserDeleteComponent} from './user/user-delete.component'
 import {UserUpdateModalComponent} from './user/user-update.component'
+import {NotFoundComponent} from './commonComponent/not-found.component'
+// import { CustomTranslateLoader } from './commonComponent/custom-translate-loader';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,"./assets/i18n/", ".json");
@@ -35,7 +37,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent,
     UserComponent,FooterComponent,UserAddModalComponent,UserDeleteComponent,
-    UserUpdateModalComponent
+    NotFoundComponent,UserUpdateModalComponent
   ],
   imports: [
     NgbModule,    
@@ -53,6 +55,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         deps: [HttpClient]
       }
     }),
+
     AppAllModule
   ],
   entryComponents: [

@@ -41,6 +41,7 @@ export class HeaderComponent {
     this.translate.setDefaultLang(language.value);
     localStorage.setItem("AngularQSLanguage",JSON.stringify(language));
   }
+  
   onLogout() {
     localStorage.removeItem(this.webConstantService.localStoreKey);
     this.router.navigate(['/login']);
