@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Newtonsoft.Json;
+using NLog;
 
 namespace AngularQS.WebApi.Help
 {
@@ -44,6 +45,8 @@ namespace AngularQS.WebApi.Help
             var code = HttpStatusCode.InternalServerError;
             var language = "en-US";
             var languageOfHeader = context.Request.Headers.FirstOrDefault(x => x.Key == "AQSLanguage");
+            var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            logger.Info("Current language is: "+ languageOfHeader);
             if (!string.IsNullOrEmpty(languageOfHeader.Value))
             {
                 language = languageOfHeader.Value;
