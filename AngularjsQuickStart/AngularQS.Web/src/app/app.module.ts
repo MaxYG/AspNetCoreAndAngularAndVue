@@ -9,7 +9,6 @@ import{AppMaterialModule} from './app-common-part'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppAllModule} from './app-material-module';
-// import {AppAllComponentModule} from './app-common-part/app-component-module'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -28,6 +27,7 @@ import {UserAddModalComponent} from './user/user-add.component'
 import {UserDeleteComponent} from './user/user-delete.component'
 import {UserUpdateModalComponent} from './user/user-update.component'
 import {NotFoundComponent} from './commonComponent/not-found.component'
+// import { CustomTranslateLoader } from './commonComponent/custom-translate-loader';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,"./assets/i18n/", ".json");
@@ -55,6 +55,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         deps: [HttpClient]
       }
     }),
+
     AppAllModule
   ],
   entryComponents: [
