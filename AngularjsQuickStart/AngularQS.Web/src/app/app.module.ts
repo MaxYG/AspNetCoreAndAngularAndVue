@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppAllModule} from './app-material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FileUploadModule } from 'ng2-file-upload';
 
 import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
@@ -40,14 +41,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NotFoundComponent,UserUpdateModalComponent
   ],
   imports: [
-    NgbModule,    
-    BrowserModule,    
-    routing,        
-    ReactiveFormsModule,    
-    BrowserAnimationsModule,   
-    AppMaterialModule,    
-    HttpClientModule  ,    
-    FormsModule ,        
+    NgbModule, BrowserModule, routing,  ReactiveFormsModule, BrowserAnimationsModule,  
+    AppMaterialModule, HttpClientModule, FormsModule,        
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -55,8 +50,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         deps: [HttpClient]
       }
     }),
-
-    AppAllModule
+    AppAllModule,FileUploadModule
   ],
   entryComponents: [
     UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent
