@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace AngularQS.WebApi.Controllers
 {
@@ -14,24 +18,25 @@ namespace AngularQS.WebApi.Controllers
     [ApiController]
     public class UploadController : ControllerBase
     {
-        [AllowAnonymous]
-        [HttpPost("upload-file")]
-        public JsonResult UploadFile(IFormFile file)
+        private readonly IHostingEnvironment _hostingEnvironment;
+
+        public UploadController(IHostingEnvironment hostingEnvironment)
         {
-            var request = HttpContext.Request;
-           // var file1 = file;
-          
-            return new JsonResult("test file upload");
+            _hostingEnvironment = hostingEnvironment;
         }
 
-       
-    }
 
-    public class CommandFile
-    {
-        public string ContentType { get; set; }
-        public string Date { get; set; }
-        public string Name { get; set; }
-        public long Length { get; set; }
+        [AllowAnonymous]
+        [HttpPost("file")]
+        public async Task<JsonResult> UploadFile(IFormFile file)
+        {
+            
+            var filePath = Path.Combine(_hostingEnvironment.ContentRootPath, "Uploads", file.FileName);
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+            return new JsonResult("test file upload");
+        } 
     }
 }

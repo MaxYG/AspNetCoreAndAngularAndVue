@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +16,14 @@ using AngularQS.WebApi.Resources;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -119,7 +122,6 @@ namespace AngularQS.WebApi
                 .AllowAnyMethod()
                 .AllowAnyHeader());
 
-            app.UseAuthentication();
             app.UseErrorHandlingMiddleware();
 
             var supportedCultures = new[]
@@ -135,10 +137,12 @@ namespace AngularQS.WebApi
                 SupportedUICultures = supportedCultures
             });
 
-            app.UseStaticFiles();
-        
+           
             app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
+
+            app.UseStaticFiles();
+            
 
             app.UseMvc();
 //            loggerFactory.AddNLog();//this will add log towice

@@ -12,16 +12,18 @@
                     <div class="form-group">
                         <label >Picture</label>                       
                       </div>  
+                      <div>
+                        <img src="/Uploads/personImage.png"  class="img-thumbnail">
+                      </div>
                       <div class="form-group">                       
                         <input type="file" ng2FileSelect [uploader]="uploader" />
                       </div>
-                      <div class="form-group">                       
-                        <!-- <button type="button" class=""
-                                (click)="upload()" [disabled]="isReady || isUploading || isSuccess">
-                            <span class="glyphicon glyphicon-upload"></span> Upload
-                        </button>   -->
+                      <div class="form-group">                      
+                       
                         <button mat-raised-button (click)="upload()">Upload</button> 
-                      </div>                                 
+                      </div>  
+                      <!-- <input type="file" #file  (change)="uploadFile(file.files)" style="display:none;">
+                      <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>                                -->
                 </div>
                 
                 <div class="form-row">
