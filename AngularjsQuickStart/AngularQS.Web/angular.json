@@ -46,7 +46,7 @@
               ]
             },
             "stage": {
-              "optimization": true,
+              "optimization": false,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
