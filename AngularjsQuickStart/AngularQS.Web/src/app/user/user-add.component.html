@@ -8,6 +8,24 @@
                         <input type="email" class="form-control" [(ngModel)]="currentUser.userName" id="userName" name="userName" placeholder="please input email">
                       </div>              
                 </div>
+                <div >
+                    <div class="form-group">
+                        <label >Picture</label>                       
+                      </div>  
+                      <div>
+                        <img [src]="imageUrl"  class="img-thumbnail">
+                      </div>
+                      <div class="form-group">                       
+                        <input type="file" ng2FileSelect [uploader]="uploader" />
+                      </div>
+                      <div class="form-group">                      
+                       
+                        <button mat-raised-button (click)="upload()">Upload</button> 
+                      </div>  
+                      <!-- <input type="file" #file  (change)="uploadFile(file.files)" style="display:none;">
+                      <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>                                -->
+                </div>
+                
                 <div class="form-row">
                     <div class="form-group col">
                         <label for="Firstname">Firs name</label>
