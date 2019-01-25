@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using AngularQS.Common;
@@ -83,6 +84,9 @@ namespace AngularQS.WebApi
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 
+//            IFileProvider physicalProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
+            IFileProvider embeddedProvider = new EmbeddedFileProvider(Assembly.GetEntryAssembly());
+            services.AddSingleton<IFileProvider>(embeddedProvider);
 
             /*services.AddMvc(options =>
             {
@@ -142,7 +146,19 @@ namespace AngularQS.WebApi
             app.UseMvcWithDefaultRoute();
 
             app.UseStaticFiles();
-            
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(env.ContentRootPath, @"UploadFiles")),
+                RequestPath = new PathString("/StaticFiles")
+            });
+            app.UseFileServer(new FileServerOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(env.ContentRootPath, "UploadFiles")),
+                RequestPath = "/WebStaticFiles",
+                EnableDirectoryBrowsing = true
+            });
 
             app.UseMvc();
 //            loggerFactory.AddNLog();//this will add log towice

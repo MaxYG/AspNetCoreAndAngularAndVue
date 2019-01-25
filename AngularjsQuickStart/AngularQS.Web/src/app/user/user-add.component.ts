@@ -15,7 +15,7 @@ import {HttpClient, HttpEventType} from '@angular/common/http'
 export class UserAddModalComponent {
     currentUser:User={} as User;
     uploadUrl:string;
-
+    imageUrl:string;
     uploader:FileUploader;
     hasBaseDropZoneOver:boolean;
     hasAnotherDropZoneOver:boolean;
@@ -73,7 +73,9 @@ export class UserAddModalComponent {
 
             this.response = '';
 
-            this.uploader.response.subscribe( res => this.response = res );
+            this.uploader.response.subscribe( res => {
+                this.imageUrl=res;
+            } );
     }
     upload(){
         this.uploader.uploadAll();
