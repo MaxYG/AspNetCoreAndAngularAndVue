@@ -31,6 +31,7 @@ using Microsoft.IdentityModel.Tokens;
 using NLog;
 using NLog.Extensions.Logging;
 using NLog.Web;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace AngularQS.WebApi
 {
@@ -107,6 +108,29 @@ namespace AngularQS.WebApi
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
             });
+
+            //Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Version = "v1",
+                    Title = "AngularQS API",
+                    Description = "This is description",
+                    TermsOfService = "I am aggree",
+                    Contact = new Contact
+                    {
+                        Name = "Tom",
+                        Email = "Tom@test.com",
+                        Url = "http://github.com"
+                    },
+                    License = new License
+                    {
+                        Name = "Use under LICX",
+                        Url = "https://example.com/license"
+                    }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -158,6 +182,19 @@ namespace AngularQS.WebApi
                     Path.Combine(env.ContentRootPath, "UploadFiles")),
                 RequestPath = "/WebStaticFiles",
                 EnableDirectoryBrowsing = true
+            });
+
+            app.UseSwagger(x =>
+            {
+                x.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
+                {
+                    swaggerDoc.Host = httpReq.Host.Value;
+                });
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.RoutePrefix = string.Empty;
             });
 
             app.UseMvc();

@@ -28,6 +28,7 @@ namespace AngularQS.WebApi.Controllers
         }
 
         // GET api/values
+        [Produces("application/json")]
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
