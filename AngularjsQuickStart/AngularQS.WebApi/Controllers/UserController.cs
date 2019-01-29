@@ -61,6 +61,12 @@ namespace AngularQS.WebApi.Controllers
             return new JsonResult(result);
         }
 
+        /// <response code="201">Returns items</response>
+        /// <response code="400">If the item is null</response> 
+        /// <response code="401">You haven't permession to access users</response> 
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         [HttpGet("all")]
         public ActionResult<IEnumerable<UserViewModel>> Gets()
         {

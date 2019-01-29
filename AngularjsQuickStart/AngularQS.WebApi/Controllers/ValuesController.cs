@@ -28,6 +28,7 @@ namespace AngularQS.WebApi.Controllers
         }
 
         // GET api/values
+        [Produces("application/json")]
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
@@ -57,6 +58,14 @@ namespace AngularQS.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        // GET api/values/
+        [Obsolete]
+        [HttpGet("test")]
+        public ActionResult<string> Test(int id)
+        {
+            return "value";
         }
     }
 }
