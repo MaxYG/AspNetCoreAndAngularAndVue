@@ -59,5 +59,13 @@ namespace AngularQS.WebApi.Controllers
         public void Delete(int id)
         {
         }
+
+        // GET api/values/
+        [Obsolete]
+        [HttpGet("test")]
+        public ActionResult<string> Test(int id)
+        {
+            return "value";
+        }
     }
 }
