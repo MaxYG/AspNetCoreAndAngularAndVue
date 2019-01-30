@@ -27,16 +27,14 @@ namespace AngularQS.WebApi.Controllers
         private readonly IUserService _userService;
         private readonly IConfiguration _config;
         private readonly IStringLocalizer<SharedResource> _sharedlocalizer;
-        private readonly IStringLocalizer<UserController> _localizer;
+       
 
         public UserController(IUserService userService, IConfiguration config,
-            IStringLocalizer<SharedResource> sharedlocalizer,
-            IStringLocalizer<UserController> localizer)
+            IStringLocalizer<SharedResource> sharedlocalizer)
         {
             _userService = userService;
             _config = config;
             _sharedlocalizer = sharedlocalizer;
-            _localizer = localizer;
         }
 
         [AllowAnonymous]
@@ -59,6 +57,12 @@ namespace AngularQS.WebApi.Controllers
             //throw new MyCustomerException(_sharedlocalizer["Hello xxx"]);
             var result= _sharedlocalizer["Hello xxx"];
             return new JsonResult(result);
+        }
+
+        [HttpGet("nuit-test")]
+        public ActionResult<string> GetInfo()
+        {
+            return new ActionResult<string>("test");
         }
 
         /// <response code="201">Returns items</response>
