@@ -33,3 +33,8 @@ then in package.json use rimraf command
     'postinstall': 'rimraf node_modules/**/web.config'
  }
 
+
+ branches
+ feature/AspNetCore
+ note other branch, eg: xxxBaseOnAspNetCore, they are service base structure.
+ OtherFeature is extension feature base on AspNetCore, don't merge to AspNetCore
