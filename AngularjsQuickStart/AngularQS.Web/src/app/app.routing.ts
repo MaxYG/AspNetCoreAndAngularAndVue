@@ -6,6 +6,7 @@ import { AuthGuard } from './guards';
 import { LoginLayoutComponent } from './layouts/login-layout.component';
 import { UserComponent } from './user/user.component';
 import {CustomElementComponent} from './main/customElement/custom-element.component'
+import { DynamicComponent } from './main/dynamicComponent';
 
 const appRoutes: Routes = [   
     { 
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
         children: [
           { path: '', component: UserComponent },
           { path: 'customerElement', component: CustomElementComponent },
+          { path: 'dynamicComponent', component: DynamicComponent },
         ]
     },   
     { path: 'login',component: LoginComponent},    

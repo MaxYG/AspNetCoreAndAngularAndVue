@@ -32,6 +32,7 @@ import {NotFoundComponent} from './commonComponent/not-found.component'
 import {CustomElementComponent} from './main/customElement/custom-element.component'
 import { DynamicPopupComponent } from './main/customElement/dynamic-popup.component';
 import { DynamicPopupService } from './main/customElement/dynamic-popop.service'
+import { AdService, HeroJobAdComponent, AdBannerComponent, HeroProfileComponent, AdDirective, DynamicComponent } from './main/dynamicComponent';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,"./assets/i18n/", ".json");
@@ -42,7 +43,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,
     HeaderComponent,AlertComponent, UserComponent,FooterComponent,
     UserAddModalComponent,UserDeleteComponent, NotFoundComponent,
-    UserUpdateModalComponent,DynamicPopupComponent,CustomElementComponent
+    UserUpdateModalComponent,DynamicPopupComponent,CustomElementComponent,
+    AdBannerComponent,HeroJobAdComponent,HeroProfileComponent,AdDirective,
+    DynamicComponent
   ],
   imports: [
     NgbModule, BrowserModule, routing,  ReactiveFormsModule, BrowserAnimationsModule,  
@@ -58,16 +61,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   ],
   entryComponents: [
     UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent,
-    DynamicPopupComponent
+    DynamicPopupComponent,HeroJobAdComponent,HeroProfileComponent
   ],
   providers: [
-    AuthGuard,
-    AuthService,
-    AlertService,
-    WebConstantService,
-    UserService,
-    BaseHttpServoce,
-    DynamicPopupService
+    AuthGuard, AuthService, AlertService, WebConstantService, UserService,
+    BaseHttpServoce, DynamicPopupService, AdService
   ],
   bootstrap: [AppComponent]
 })
