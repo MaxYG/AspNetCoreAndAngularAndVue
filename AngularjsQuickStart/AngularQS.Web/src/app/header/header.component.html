@@ -4,7 +4,13 @@
       Angular Demo 
     </span>
     <span class="fill-remaining-space"></span>   
-    
+
+    <button mat-button [matMenuTriggerFor]="menu1">Feature</button>
+    <mat-menu #menu1="matMenu" style="padding-top:0px !important;padding-bottom:0px !important;">
+      <button mat-menu-item routerLink="/customerElement">Custom element</button>      
+    </mat-menu>
+ 
+
     <button mat-button [matMenuTriggerFor]="menu">{{currentLanguage}}</button>
     <mat-menu #menu="matMenu" style="padding-top:0px !important;padding-bottom:0px !important;">
       <button mat-menu-item

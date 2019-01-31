@@ -29,6 +29,9 @@ import {UserDeleteComponent} from './user/user-delete.component'
 import {UserUpdateModalComponent} from './user/user-update.component'
 import {NotFoundComponent} from './commonComponent/not-found.component'
 // import { CustomTranslateLoader } from './commonComponent/custom-translate-loader';
+import {CustomElementComponent} from './main/customElement/custom-element.component'
+import { DynamicPopupComponent } from './main/customElement/dynamic-popup.component';
+import { DynamicPopupService } from './main/customElement/dynamic-popop.service'
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,"./assets/i18n/", ".json");
@@ -36,9 +39,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,HeaderComponent,AlertComponent,
-    UserComponent,FooterComponent,UserAddModalComponent,UserDeleteComponent,
-    NotFoundComponent,UserUpdateModalComponent
+    AppComponent,HomeComponent,LoginComponent,LoginLayoutComponent,
+    HeaderComponent,AlertComponent, UserComponent,FooterComponent,
+    UserAddModalComponent,UserDeleteComponent, NotFoundComponent,
+    UserUpdateModalComponent,DynamicPopupComponent,CustomElementComponent
   ],
   imports: [
     NgbModule, BrowserModule, routing,  ReactiveFormsModule, BrowserAnimationsModule,  
@@ -53,7 +57,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppAllModule,FileUploadModule
   ],
   entryComponents: [
-    UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent
+    UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent,
+    DynamicPopupComponent
   ],
   providers: [
     AuthGuard,
@@ -61,7 +66,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AlertService,
     WebConstantService,
     UserService,
-    BaseHttpServoce
+    BaseHttpServoce,
+    DynamicPopupService
   ],
   bootstrap: [AppComponent]
 })
