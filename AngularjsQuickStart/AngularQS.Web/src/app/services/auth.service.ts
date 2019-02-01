@@ -16,7 +16,7 @@ export class AuthService{
 
     }
     login(user: User){
-        var loginOperate=this.httpClient.post(this.webConstantService.rootUrl+"api/user/authenticate/",user).pipe(
+        var loginOperate=this.httpClient.post(this.webConstantService.rootUrl+"/api/user/authenticate/",user).pipe(
             catchError(error=>this.handleError(error))            
         );
         loginOperate.subscribe(x=>this.handleLoginSuccess(x));
