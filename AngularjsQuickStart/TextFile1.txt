@@ -38,3 +38,4 @@ then in package.json use rimraf command
  feature/AspNetCore
  note other branch, eg: xxxBaseOnAspNetCore, they are service base structure.
  ExtensionFeature is extension feature base on AspNetCore, don't merge to AspNetCore
+ branches extension/DynamicComponent
