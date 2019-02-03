@@ -13,7 +13,9 @@ namespace AngularQS.Data
     {
         public AngularQSContext(DbContextOptions<AngularQSContext> options)
             : base(options)
-        { }
+        {
+            
+        }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Company> Companies { get; set; }

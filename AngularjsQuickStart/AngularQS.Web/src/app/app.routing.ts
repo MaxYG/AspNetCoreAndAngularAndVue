@@ -7,6 +7,7 @@ import { LoginLayoutComponent } from './layouts/login-layout.component';
 import { UserComponent } from './user/user.component';
 import {CustomElementComponent} from './main/customElement/custom-element.component'
 import { DynamicComponent } from './main/dynamicComponent';
+import {CanvasComponent} from './main/canvasComponent/canvas.component'
 
 const appRoutes: Routes = [   
     { 
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
           { path: '', component: UserComponent },
           { path: 'customerElement', component: CustomElementComponent },
           { path: 'dynamicComponent', component: DynamicComponent },
+          { path: 'canvasComponent', component: CanvasComponent },
         ]
     },   
     { path: 'login',component: LoginComponent},    

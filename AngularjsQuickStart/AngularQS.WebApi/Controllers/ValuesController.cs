@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Localization;
 
 namespace AngularQS.WebApi.Controllers
@@ -22,6 +24,7 @@ namespace AngularQS.WebApi.Controllers
 
         
         [HttpGet("all")]
+        [ValidateAntiForgeryToken]
         public string GetList()
         {
             return _localizer["Hello"];
@@ -32,7 +35,7 @@ namespace AngularQS.WebApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1", "value2",nameof(IEnumerable) };
         }
 
         // GET api/values/5

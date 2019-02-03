@@ -32,6 +32,7 @@ import {NotFoundComponent} from './commonComponent/not-found.component'
 import {CustomElementComponent} from './main/customElement/custom-element.component'
 import { DynamicPopupComponent } from './main/customElement/dynamic-popup.component';
 import { DynamicPopupService } from './main/customElement/dynamic-popop.service'
+import { CanvasComponent } from './main/canvasComponent/canvas.component'
 import { AdService, HeroJobAdComponent, AdBannerComponent, 
   HeroProfileComponent, AdDirective, DynamicComponent } from './main/dynamicComponent';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -48,7 +49,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     UserAddModalComponent,UserDeleteComponent, NotFoundComponent,
     UserUpdateModalComponent,DynamicPopupComponent,CustomElementComponent,
     AdBannerComponent,HeroJobAdComponent,HeroProfileComponent,AdDirective,
-    DynamicComponent
+    DynamicComponent,CanvasComponent
   ],
   imports: [
     NgbModule, BrowserModule, routing,  ReactiveFormsModule, BrowserAnimationsModule,  

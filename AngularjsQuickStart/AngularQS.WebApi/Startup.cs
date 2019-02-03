@@ -74,10 +74,14 @@ namespace AngularQS.WebApi
                         //ClockSkew = new TimeSpan(0,0,1,0)
                     };
                 });
-
-            services.AddDbContext<AngularQSContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            
+            services.AddDbContext<AngularQSContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            /*services.AddDbContext<AngularQSContext>(options =>
+                options.UseSqlServer(
+                    $"Server=(localdb)\\mssqllocaldb;Database=AngularQSDBTestAAA;Trusted_Connection=True;MultipleActiveResultSets=true"));*/
+//                .UseInternalServiceProvider(serviceProvider));
+//            builder.UseSqlServer($"Server=(localdb)\\mssqllocaldb;Database=monsters_db_{Guid.NewGuid()};Trusted_Connection=True;MultipleActiveResultSets=true")
+//                .UseInternalServiceProvider(serviceProvider);
             services.AddScoped<IUnitOfWork, UnitOfWork<AngularQSContext>>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ICompanyRepository, CompanyRepository>();
@@ -205,7 +209,7 @@ namespace AngularQS.WebApi
             app.UseMvc();
 //            loggerFactory.AddNLog();//this will add log towice
             app.AddNLogWeb();
-            LogManager.Configuration.Variables["connectionString"] = Configuration.GetConnectionString("DefaultConnection");
+//            LogManager.Configuration.Variables["connectionString"] = Configuration.GetConnectionString("DefaultConnection");
         }
     }
 }
