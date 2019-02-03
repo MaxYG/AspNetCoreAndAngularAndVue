@@ -1,6 +1,4 @@
 import { Component } from "@angular/core";
-import { templateSourceUrl } from '@angular/compiler';
-import { template } from '@angular/core/src/render3';
 import { AdItem, AdService } from '.';
 
 @Component({

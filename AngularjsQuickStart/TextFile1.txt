@@ -33,6 +33,10 @@ then in package.json use rimraf command
     'postinstall': 'rimraf node_modules/**/web.config'
  }
 
+ service work
+ ng add @angular/pwa
+ ng build --prod
+ http-server -p 8080 -c-1 dist
 
  branches
  feature/AspNetCore

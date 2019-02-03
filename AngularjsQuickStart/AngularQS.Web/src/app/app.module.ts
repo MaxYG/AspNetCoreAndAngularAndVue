@@ -32,7 +32,11 @@ import {NotFoundComponent} from './commonComponent/not-found.component'
 import {CustomElementComponent} from './main/customElement/custom-element.component'
 import { DynamicPopupComponent } from './main/customElement/dynamic-popup.component';
 import { DynamicPopupService } from './main/customElement/dynamic-popop.service'
-import { AdService, HeroJobAdComponent, AdBannerComponent, HeroProfileComponent, AdDirective, DynamicComponent } from './main/dynamicComponent';
+import { CanvasComponent } from './main/canvasComponent/canvas.component'
+import { AdService, HeroJobAdComponent, AdBannerComponent, 
+  HeroProfileComponent, AdDirective, DynamicComponent } from './main/dynamicComponent';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,"./assets/i18n/", ".json");
@@ -45,7 +49,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     UserAddModalComponent,UserDeleteComponent, NotFoundComponent,
     UserUpdateModalComponent,DynamicPopupComponent,CustomElementComponent,
     AdBannerComponent,HeroJobAdComponent,HeroProfileComponent,AdDirective,
-    DynamicComponent
+    DynamicComponent,CanvasComponent
   ],
   imports: [
     NgbModule, BrowserModule, routing,  ReactiveFormsModule, BrowserAnimationsModule,  
@@ -57,7 +61,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    AppAllModule,FileUploadModule
+    AppAllModule,FileUploadModule, 
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   entryComponents: [
     UserAddModalComponent,UserDeleteComponent,UserUpdateModalComponent,
