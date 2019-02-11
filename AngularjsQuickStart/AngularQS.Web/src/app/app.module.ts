@@ -37,6 +37,8 @@ import { AdService, HeroJobAdComponent, AdBannerComponent,
   HeroProfileComponent, AdDirective, DynamicComponent } from './main/dynamicComponent';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { UnlessDirective } from './directive/unless.directive';
+import { DirectiveComponent } from './main/directiveComponent/directive.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient,"./assets/i18n/", ".json");
@@ -49,7 +51,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     UserAddModalComponent,UserDeleteComponent, NotFoundComponent,
     UserUpdateModalComponent,DynamicPopupComponent,CustomElementComponent,
     AdBannerComponent,HeroJobAdComponent,HeroProfileComponent,AdDirective,
-    DynamicComponent,CanvasComponent
+    DynamicComponent,CanvasComponent,UnlessDirective,DirectiveComponent
   ],
   imports: [
     NgbModule, BrowserModule, routing,  ReactiveFormsModule, BrowserAnimationsModule,  

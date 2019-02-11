@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
 import {CustomElementComponent} from './main/customElement/custom-element.component'
 import { DynamicComponent } from './main/dynamicComponent';
 import {CanvasComponent} from './main/canvasComponent/canvas.component'
+import { DirectiveComponent } from './main/directiveComponent';
 
 const appRoutes: Routes = [   
     { 
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
           { path: 'customerElement', component: CustomElementComponent },
           { path: 'dynamicComponent', component: DynamicComponent },
           { path: 'canvasComponent', component: CanvasComponent },
+          { path: 'directiveComponent', component: DirectiveComponent }
         ]
     },   
     { path: 'login',component: LoginComponent},    
