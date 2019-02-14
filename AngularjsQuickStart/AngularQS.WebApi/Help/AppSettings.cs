@@ -21,6 +21,7 @@ namespace AngularQS.Common
             }
         }
     }*/
+
     public class MyDisplayNameAttribute : Attribute
     {
         public MyDisplayNameAttribute(string displayName)
