@@ -2,3 +2,5 @@
  feature/AspNetCore
  note other branch, eg: xxxBaseOnAspNetCore, they are service base structure.
  ExtensionFeature is extension feature base on AspNetCore, don't merge to AspNetCore
+
+VueBaseOnAspNetCore
