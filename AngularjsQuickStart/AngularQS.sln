@@ -24,7 +24,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularQS.CommandModel", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularQS.Common", "AngularQS.Common\AngularQS.Common.csproj", "{19AEBB1F-8B8E-4EB5-B350-E7B496D167BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularQS.WebApiTest", "AngularQS.WebApiTest\AngularQS.WebApiTest.csproj", "{2B70FB57-81EC-425B-AE38-7922EE16166C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularQS.WebApiTest", "AngularQS.WebApiTest\AngularQS.WebApiTest.csproj", "{2B70FB57-81EC-425B-AE38-7922EE16166C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VueQS", "VueQS", "{C3092F4C-2C4D-477E-A78F-D44703B5C178}"
+	ProjectSection(SolutionItems) = preProject
+		Script1.js = Script1.js
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
