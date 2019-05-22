@@ -1,22 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <div class="btn-group" role="group" aria-label="...">  
-      <button type="button" class="btn btn-default">Left</button>  
-      <button type="button" class="btn btn-default">Middle</button>  
-      <button type="button" class="btn btn-default">Right</button>  
-    </div> 
+    <h1>Hello App!</h1>
+   
+    <header>
+    <!-- router-link 定义点击后导航到哪个路径下 -->
+      <router-link to="/home">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </header>
+    <!-- 对应的组件内容渲染到router-view中 -->
+    <router-view></router-view>   
   </div>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 
+
 export default {
-  name: 'app',
+  //name: 'app',
   // components: {
   //   HelloWorld
   // }
+
+  // computed: {
+  //   username () {      
+  //     return this.$route.params.username
+  //   }
+  // },
+  // methods: {
+  //   goBack () {
+  //     window.history.length > 1
+  //       ? this.$router.go(-1)
+  //       : this.$router.push('/')
+  //   }
+  // }
+
 }
 </script>
 

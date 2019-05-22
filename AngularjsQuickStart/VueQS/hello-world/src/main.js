@@ -9,6 +9,10 @@ require('./assets/product.css')
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 
+import router from "./routerManager.js" 
+
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')
+
