@@ -11,7 +11,12 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+              <!-- <a class="nav-link" ><router-link to="/">Home</router-link> <span class="sr-only">(current)</span></a> -->
+              <router-link class="nav-link" to="/">Home</router-link>
+            </li>
+            <li class="nav-item active">
+              <router-link class="nav-link" to="/user">User</router-link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
