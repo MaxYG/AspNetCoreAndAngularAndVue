@@ -10,12 +10,12 @@
     </tr>
   </thead>
   <tbody>
-      <tr v-for="user in users">
+      <!-- <tr v-for="user in users">
           <td scope="row">1</td>
         <td>1111</td>
         <td>1112</td>
         <td>1113</td>
-      </tr>
+      </tr> -->
    
   </tbody>
 </table>
@@ -23,6 +23,6 @@
 <script>
     export default {
         name: 'User',   
-        data:users[] 
+        //data:users[] 
     }
 </script>

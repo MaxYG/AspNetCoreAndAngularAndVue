@@ -1,64 +1,85 @@
 <template>
   <div id="app">
      
-    <header>    
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-              <!-- <a class="nav-link" ><router-link to="/">Home</router-link> <span class="sr-only">(current)</span></a> -->
-              <router-link class="nav-link" to="/">Home</router-link>
-            </li>
-            <li class="nav-item active">
-              <router-link class="nav-link" to="/user">User</router-link>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
-    </header>
+    <el-container>
+  <el-header>
+<MyHeader></MyHeader>
+  </el-header>
+    <el-container >
+  <el-main>
+     <router-view></router-view>   
+  </el-main>
+    </el-container>
+  <el-footer>Footer</el-footer>
+</el-container>
     
-    <router-view></router-view>   
+    
   </div>
 </template>
 
-<script>
 
+
+<script>
+import MyHeader from './components/Home/MyHeader.vue'
 export default {
   name: 'app',
+  components: {
+    MyHeader
+  },  
 }
+
 </script>
 
 <style>
+html,body,#app,.el-container{
+        /*设置内部填充为0，几个布局元素之间没有间距*/
+        padding: 0px;
+         /*外部间距也是如此设置*/
+        margin: 0px;
+        /*统一设置高度为100%*/
+        height: 100%;
+    }
+
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
 }
+
+.el-header, .el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+  }
+  
+  .el-main {
+ 
+    text-align: center;
+    
+  }
+  
+  body > .el-container {
+    margin-bottom: 40px;
+  }
+  
+  .el-container:nth-child(5) .el-aside,
+  .el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+  }
+  
+  .el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+  }
 </style>
