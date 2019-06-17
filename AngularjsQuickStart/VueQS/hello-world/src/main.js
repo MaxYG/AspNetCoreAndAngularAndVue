@@ -17,6 +17,8 @@ Vue.use(VueRouter)
 Vue.use(VueAxios, axios)
 Vue.use(ElementUI);
 import router from "./routerManager.js" 
+Vue.prototype.$axios = axios
+Vue.prototype.$baseUrl="http://localhost:53856/"
 
 new Vue({
   router,
